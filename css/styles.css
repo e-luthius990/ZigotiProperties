@@ -1,0 +1,162 @@
+/* Custom Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+  }
+  
+  /* Navbar */
+  nav {
+    transition: background 0.3s ease;
+    height: 50px;
+  }
+
+  nav .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav.scrolled {
+    background: rgba(248, 245, 245, 0.323);
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: rgba(184, 180, 180, 0.171);
+    background-blend-mode: overlay;
+  }
+
+  /* Team Member Cards */
+.team-member {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+  
+  /* Property Cards */
+  .property-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .property-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Swiper Carousel Styles */
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet {
+  background: #fff;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #007BFF;
+  opacity: 1;
+}
+
+/* Custom Swiper Navigation Arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #007BFF; /* Arrow color */
+  background: rgba(255, 255, 255, 0.8); /* Background color */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(255, 255, 255, 1); /* Hover background color */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px; /* Arrow size */
+}
+  
+  /* Service Cards */
+  .service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Virtual Tour Section */
+.virtual-tour-iframe {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+  /* Contact Page Styles */
+.contact-info svg {
+  transition: transform 0.3s ease;
+}
+
+.contact-info svg:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile Menu Transition */
+#mobile-menu {
+  transition: all 0.3s ease;
+}
+
+#mobile-menu.hidden {
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+}
+
+#mobile-menu:not(.hidden) {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+  
+  /* Footer */
+  footer {
+    background: #1a365d;
+  }
+  
+  footer a {
+    transition: color 0.3s ease;
+  }
+  
+  footer a:hover {
+    color: #3b82f6
+  }
+
+  footer .social-icons a {
+    transition: color 0.3s ease;
+  }
+  
+  footer .social-icons a:hover {
+    color: #3b82f6; /* Blue color on hover */
+  }

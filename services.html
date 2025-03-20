@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zigoti Properties</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="font-sans">
+ 
+  <!-- Navbar -->
+<nav class="bg-white shadow-md fixed w-full z-10">
+  <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+    <!-- Logo -->
+    <a href="index.html">
+      <img src="images/Zigoti-properties-New-Logo.png" alt="Zigoti Properties Logo" class="h-10">
+    </a>
+
+    <!-- Hamburger Menu (Mobile) -->
+    <div class="md:hidden">
+      <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Navigation Links (Desktop) -->
+    <ul class="hidden md:flex space-x-6">
+      <li><a href="index.html" class="text-gray-700 hover:text-blue-700">Home</a></li>
+      <li><a href="about.html" class="text-gray-700 hover:text-blue-700">About Us</a></li>
+      <li><a href="listings.html" class="text-gray-700 hover:text-blue-700">Listings</a></li>
+      <li><a href="services.html" class="text-gray-700 hover:text-blue-700">Services</a></li>
+      <li><a href="virtual-tour.html" class="text-gray-700 hover:text-blue-700">Virtual Tour</a></li>
+      <li><a href="contact.html" class="text-gray-700 hover:text-blue-700">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <!-- Mobile Menu (Hidden by Default) -->
+  <div id="mobile-menu" class="md:hidden hidden bg-white">
+    <ul class="px-6 py-4 space-y-4">
+      <li><a href="index.html" class="block text-gray-700 hover:text-blue-700">Home</a></li>
+      <li><a href="about.html" class="block text-gray-700 hover:text-blue-700">About Us</a></li>
+      <li><a href="listings.html" class="block text-gray-700 hover:text-blue-700">Listings</a></li>
+      <li><a href="services.html" class="block text-gray-700 hover:text-blue-700">Services</a></li>
+      <li><a href="virtual-tour.html" class="block text-gray-700 hover:text-blue-700">Virtual Tour</a></li>
+      <li><a href="contact.html" class="block text-gray-700 hover:text-blue-700">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <!-- Services Section -->
+  <section class="container mx-auto px-6 py-12 mt-16">
+    <h2 class="text-3xl font-bold text-center mb-8" data-aos="fade-up">Our Services</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Service 1: Property Sales -->
+      <div class="service-card bg-white rounded-lg shadow-md p-6 text-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="flex justify-center">
+          <svg class="w-12 h-12 text-blue-700 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-4">Property Sales</h3>
+        <p class="text-gray-700 mb-4">Find your dream home with our extensive property listings. We offer a wide range of options to suit your needs.</p>
+        <a href="listings.html" class="btn bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800">Learn More</a>
+      </div>
+
+      <!-- Service 2: Property Rentals -->
+      <div class="service-card bg-white rounded-lg shadow-md p-6 text-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="flex justify-center">
+          <svg class="w-12 h-12 text-blue-700 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-4">Property Rentals</h3>
+        <p class="text-gray-700 mb-4">Looking for a place to rent? We have a variety of rental properties available for short-term and long-term stays.</p>
+        <a href="listings.html" class="btn bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800">Learn More</a>
+      </div>
+
+      <!-- Service 3: Property Management -->
+      <div class="service-card bg-white rounded-lg shadow-md p-6 text-center" data-aos="fade-up" data-aos-delay="300">
+        <div class="flex justify-center">
+          <svg class="w-12 h-12 text-blue-700 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-4">Property Management</h3>
+        <p class="text-gray-700 mb-4">We offer comprehensive property management services to ensure your investment is well-maintained and profitable.</p>
+        <a href="services.html" class="btn bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800">Learn More</a>
+      </div>
+
+      <!-- Service 4: Real Estate Consultancy -->
+      <div class="service-card bg-white rounded-lg shadow-md p-6 text-center" data-aos="fade-up" data-aos-delay="400">
+        <div class="flex justify-center">
+          <svg class="w-12 h-12 text-blue-700 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-4">Real Estate Consultancy</h3>
+        <p class="text-gray-700 mb-4">Our expert consultants provide tailored advice to help you make informed decisions about your real estate investments.</p>
+        <a href="services.html" class="btn bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-blue-500">Home</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-blue-500">About Us</a></li>
+            <li><a href="listings.html" class="text-gray-400 hover:text-blue-500">Listings</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-blue-500">Services</a></li>
+            <li><a href="virtual-tour.html" class="text-gray-400 hover:text-blue-500">Virtual Tour</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-blue-500">Contact Us</a></li>
+          </ul>
+        </div>
+  
+        <!-- Contact Information -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+          <ul class="space-y-2">
+            <li class="text-gray-400">+256 700 123 456</li>
+            <li class="text-gray-400">info@zigotiproperties.com</li>
+            <li class="text-gray-400">Plot 123, Kampala Road, Kampala, Uganda</li>
+          </ul>
+        </div>
+  
+        <!-- Social Media -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="https://facebook.com" class="text-gray-400 hover:text-blue-500">
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="https://twitter.com" class="text-gray-400 hover:text-blue-500">
+              <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a href="https://linkedin.com" class="text-gray-400 hover:text-blue-500">
+              <i class="fab fa-linkedin fa-lg"></i>
+            </a>
+            <a href="https://instagram.com" class="text-gray-400 hover:text-blue-500">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Copyright -->
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+        <p class="text-gray-400">&copy; 2023 Zigoti Properties Uganda Limited. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Custom JS -->
+  <script src="js/app.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+</body>
+</html>

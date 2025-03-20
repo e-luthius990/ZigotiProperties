@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zigoti Properties</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="font-sans">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md fixed w-full z-10">
+    <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html">
+        <img src="images/Zigoti-properties-New-Logo.png" alt="Zigoti Properties Logo" class="h-10">
+      </a>
+
+      <!-- Hamburger Menu (Mobile) -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Navigation Links (Desktop) -->
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="index.html" class="text-gray-700 hover:text-blue-700">Home</a></li>
+        <li><a href="about.html" class="text-gray-700 hover:text-blue-700">About Us</a></li>
+        <li><a href="listings.html" class="text-gray-700 hover:text-blue-700">Listings</a></li>
+        <li><a href="services.html" class="text-gray-700 hover:text-blue-700">Services</a></li>
+        <li><a href="virtual-tour.html" class="text-gray-700 hover:text-blue-700">Virtual Tour</a></li>
+        <li><a href="contact.html" class="text-gray-700 hover:text-blue-700">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Mobile Menu (Hidden by Default) -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white">
+      <ul class="px-6 py-4 space-y-4">
+        <li><a href="index.html" class="block text-gray-700 hover:text-blue-700">Home</a></li>
+        <li><a href="about.html" class="block text-gray-700 hover:text-blue-700">About Us</a></li>
+        <li><a href="listings.html" class="block text-gray-700 hover:text-blue-700">Listings</a></li>
+        <li><a href="services.html" class="block text-gray-700 hover:text-blue-700">Services</a></li>
+        <li><a href="virtual-tour.html" class="block text-gray-700 hover:text-blue-700">Virtual Tour</a></li>
+        <li><a href="contact.html" class="block text-gray-700 hover:text-blue-700">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contact Us Section -->
+  <section class="container mx-auto px-6 py-12 mt-16">
+    <h2 class="text-3xl font-bold text-center mb-8" data-aos="fade-up">Contact Us</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Contact Information -->
+      <div class="bg-white p-8 rounded-lg shadow-md" data-aos="fade-right">
+        <h3 class="text-2xl font-semibold mb-6">Get in Touch</h3>
+        <div class="space-y-6">
+          <!-- Phone Number -->
+          <div class="flex items-center">
+            <svg class="w-6 h-6 text-blue-700 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+            <p class="text-gray-700">+256 700 123 456</p>
+          </div>
+
+          <!-- Email -->
+          <div class="flex items-center">
+            <svg class="w-6 h-6 text-blue-700 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+            <p class="text-gray-700">info@zigotiproperties.com</p>
+          </div>
+
+          <!-- Social Media -->
+          <div class="flex items-center">
+            <svg class="w-6 h-6 text-blue-700 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+            </svg>
+            <div class="flex space-x-4">
+              <a href="https://facebook.com" class="text-gray-700 hover:text-blue-700">Facebook</a>
+              <a href="https://twitter.com" class="text-gray-700 hover:text-blue-700">Twitter</a>
+              <a href="https://linkedin.com" class="text-gray-700 hover:text-blue-700">LinkedIn</a>
+            </div>
+          </div>
+
+          <!-- Location -->
+          <div class="flex items-center">
+            <svg class="w-6 h-6 text-blue-700 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+            </svg>
+            <p class="text-gray-700">Plot 123, Kampala Road, Kampala, Uganda</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="fade-left">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7536223157963!2d32.582213314753894!3d0.3165995640127085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbb93c5695ab7%3A0x8e21c89b9b0d7f0e!2sKampala%20Road%2C%20Kampala%2C%20Uganda!5e0!3m2!1sen!2sus!4v1633023226784!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-blue-500">Home</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-blue-500">About Us</a></li>
+            <li><a href="listings.html" class="text-gray-400 hover:text-blue-500">Listings</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-blue-500">Services</a></li>
+            <li><a href="virtual-tour.html" class="text-gray-400 hover:text-blue-500">Virtual Tour</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-blue-500">Contact Us</a></li>
+          </ul>
+        </div>
+  
+        <!-- Contact Information -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+          <ul class="space-y-2">
+            <li class="text-gray-400">+256 700 123 456</li>
+            <li class="text-gray-400">info@zigotiproperties.com</li>
+            <li class="text-gray-400">Plot 123, Kampala Road, Kampala, Uganda</li>
+          </ul>
+        </div>
+  
+        <!-- Social Media -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="https://facebook.com" class="text-gray-400 hover:text-blue-500">
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="https://twitter.com" class="text-gray-400 hover:text-blue-500">
+              <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a href="https://linkedin.com" class="text-gray-400 hover:text-blue-500">
+              <i class="fab fa-linkedin fa-lg"></i>
+            </a>
+            <a href="https://instagram.com" class="text-gray-400 hover:text-blue-500">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Copyright -->
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+        <p class="text-gray-400">&copy; 2023 Zigoti Properties Uganda Limited. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
