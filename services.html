@@ -52,58 +52,64 @@
 </nav>
 
   <!-- Services Section -->
-  <section class="container mx-auto px-6 py-12 mt-16">
-    <h2 class="text-3xl font-bold text-center mb-8" data-aos="fade-up">Our Services</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <!-- Service 1: Property Sales -->
-      <div class="service-card bg-white rounded-lg shadow-md p-6 text-center" data-aos="fade-up" data-aos-delay="100">
-        <div class="flex justify-center">
-          <svg class="w-12 h-12 text-blue-700 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold mb-4">Property Sales</h3>
-        <p class="text-gray-700 mb-4">Find your dream home with our extensive property listings. We offer a wide range of options to suit your needs.</p>
-        <a href="listings.html" class="btn bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800">Learn More</a>
-      </div>
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <ul class="space-y-8">
+          <!-- Service 1: Property Sales & Purchases -->
+          <li>
+            <h3 class="text-xl font-bold">Property Sales and Acquisition</h3>
+            <ul class="list-disc list-inside mt-2 text-gray-700">
+              <li>Buying and selling of residential, commercial, industrial and farm properties.</li>
+              <li>Negotiation and closing support.</li>
+              <li>Market analysis to ensure competitive pricing.</li>
+            </ul>
+          </li>
 
-      <!-- Service 2: Property Rentals -->
-      <div class="service-card bg-white rounded-lg shadow-md p-6 text-center" data-aos="fade-up" data-aos-delay="200">
-        <div class="flex justify-center">
-          <svg class="w-12 h-12 text-blue-700 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold mb-4">Property Rentals</h3>
-        <p class="text-gray-700 mb-4">Looking for a place to rent? We have a variety of rental properties available for short-term and long-term stays.</p>
-        <a href="listings.html" class="btn bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800">Learn More</a>
-      </div>
+          <!-- Service 2: Property Management -->
+          <li>
+            <h3 class="text-xl font-bold">Property Management</h3>
+            <ul class="list-disc list-inside mt-2 text-gray-700">
+              <li>Comprehensive property maintenance and repairs.</li>
+              <li>Tenant screening and lease management.</li>
+              <li>Financial reporting and rent collection.</li>
+            </ul>
+          </li>
 
-      <!-- Service 3: Property Management -->
-      <div class="service-card bg-white rounded-lg shadow-md p-6 text-center" data-aos="fade-up" data-aos-delay="300">
-        <div class="flex justify-center">
-          <svg class="w-12 h-12 text-blue-700 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold mb-4">Property Management</h3>
-        <p class="text-gray-700 mb-4">We offer comprehensive property management services to ensure your investment is well-maintained and profitable.</p>
-        <a href="services.html" class="btn bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800">Learn More</a>
-      </div>
+          <!-- Service 3: Land Acquisition -->
+          <li>
+            <h3 class="text-xl font-bold">Property Rentals and Leasing</h3>
+            <ul class="list-disc list-inside mt-2 text-gray-700">
+              <li>Identification and acquisition of prime land parcels.</li>
+              <li>Legal assistance with title processing and documentation.</li>
+              <li>Due diligence to ensure clear ownership and no encumbrances.</li>
+            </ul>
+          </li>
 
-      <!-- Service 4: Real Estate Consultancy -->
-      <div class="service-card bg-white rounded-lg shadow-md p-6 text-center" data-aos="fade-up" data-aos-delay="400">
-        <div class="flex justify-center">
-          <svg class="w-12 h-12 text-blue-700 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold mb-4">Real Estate Consultancy</h3>
-        <p class="text-gray-700 mb-4">Our expert consultants provide tailored advice to help you make informed decisions about your real estate investments.</p>
-        <a href="services.html" class="btn bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-800">Learn More</a>
+          <!-- Service 4: Real Estate Consultancy -->
+          <li>
+            <h3 class="text-xl font-bold">Real Estate Consultancy</h3>
+            <ul class="list-disc list-inside mt-2 text-gray-700">
+              <li>Expert advice on property investment opportunities.</li>
+              <li>Market trend analysis and forecasting.</li>
+              <li>Legal and regulatory compliance guidance.</li>
+            </ul>
+          </li>
+
+          <!--Service 5: Property Valuation-->
+          <li>
+            <h3 class="text-xl font-bold">Property Valuation</h3>
+            <ul class="list-disc list-inside mt-2 text-gray-700">
+              <li>Accurate assessment of property value for sales, rentals, or investment.</li>
+              <li>Professional reports for financial institution, businesses, and individuals.</li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
   </section>
+
 
   <!-- Footer -->
   <footer class="bg-gray-800 text-white py-8">

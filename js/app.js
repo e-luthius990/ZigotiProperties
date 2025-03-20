@@ -21,3 +21,15 @@ AOS.init({
   menuToggle.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
   });
+
+  // GSAP Animations for Services List
+gsap.from(".services-list li", {
+  opacity: 0,
+  y: 50,
+  stagger: 0.2,
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".services-list",
+    start: "top 80%",
+  },
+});
