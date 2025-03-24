@@ -9,129 +9,133 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="css/styles.css" rel="stylesheet">
 </head>
-<body class="font-sans">
+<body class="font-sans bg-gray-100">
  
-  <!-- Navbar -->
-<nav class="bg-white shadow-md w-full z-10">
-  <div class="container mx-auto px-4 py-2 flex justify-between items-center">
-    <!-- Logo -->
-    <a href="index.html">
-      <img src="images/Zigoti-properties-New-Logo.png" alt="Zigoti Properties Logo" class="h-8">
-    </a>
-
-    <!-- Hamburger Menu (Mobile) -->
-    <div class="md:hidden">
-      <button id="menu-toggle" class="text-gray-700 focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      </button>
+  <nav class="bg-white shadow-md w-full z-10 relative">
+    <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html">
+        <img src="images/Zigoti-properties-New-Logo.png" alt="Zigoti Properties Logo" class="h-8">
+      </a>
+      
+      <!-- Hamburger Menu (Mobile) -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+          <svg id="menu-open-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+          <svg id="menu-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+  
+      <!-- Navigation Links (Desktop) -->
+      <div class="hidden md:block">
+        <ul class="flex space-x-4">
+          <li><a href="index.html" class="text-gray-800 hover:text-blue-600">Home</a></li>
+          <li><a href="about.html" class="text-gray-800 hover:text-blue-600">About Us</a></li>
+          <li><a href="services.html" class="text-gray-800 hover:text-blue-600">Services</a></li>
+          <li><a href="virtual-tour.html" class="text-gray-800 hover:text-blue-600">Virtual Tour</a></li>
+          <li><a href="contact.html" class="text-gray-800 hover:text-blue-600">Contact Us</a></li>
+        </ul>
+      </div>
     </div>
+  
+    <!-- Mobile Menu (Hidden by Default) -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white w-full absolute left-0 top-full shadow-lg transition-all duration-300 transform opacity-0 translate-y-1">
+      <div class="px-6 py-4 space-y-4">
+        <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-700">Home</a>
+        <a href="about.html" class="block py-2 text-gray-700 hover:text-blue-700">About Us</a>
+        <a href="services.html" class="block py-2 text-gray-700 hover:text-blue-700">Services</a>
+        <a href="virtual-tour.html" class="block py-2 text-gray-700 hover:text-blue-700">Virtual Tour</a>
+        <a href="contact.html" class="block py-2 text-gray-700 hover:text-blue-700">Contact Us</a>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Navigation Links (Desktop) -->
-    <ul class="hidden md:flex space-x-6">
-      <li><a href="index.html" class="text-gray-700 hover:text-blue-700">Home</a></li>
-      <li><a href="about.html" class="text-gray-700 hover:text-blue-700">About Us</a></li>
-      <li><a href="listings.html" class="text-gray-700 hover:text-blue-700">Listings</a></li>
-      <li><a href="services.html" class="text-gray-700 hover:text-blue-700">Services</a></li>
-      <li><a href="virtual-tour.html" class="text-gray-700 hover:text-blue-700">Virtual Tour</a></li>
-      <li><a href="contact.html" class="text-gray-700 hover:text-blue-700">Contact Us</a></li>
-    </ul>
+<!-- Hero Section -->
+<section class="relative bg-blue-700 text-white py-20 hero-pattern">
+  <div class="absolute inset-0 bg-blue-800 opacity-90"></div>
+  <div class="container mx-auto px-6 relative z-10 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
+      <p class="text-xl max-w-3xl mx-auto">Your trusted partner in Ugandan real estate with over 15 years of excellence in property solutions.</p>
   </div>
-
-  <!-- Mobile Menu (Hidden by Default) -->
-  <div id="mobile-menu" class="md:hidden hidden bg-white">
-    <ul class="px-6 py-4 space-y-4">
-      <li><a href="index.html" class="block text-gray-700 hover:text-blue-700">Home</a></li>
-      <li><a href="about.html" class="block text-gray-700 hover:text-blue-700">About Us</a></li>
-      <li><a href="listings.html" class="block text-gray-700 hover:text-blue-700">Listings</a></li>
-      <li><a href="services.html" class="block text-gray-700 hover:text-blue-700">Services</a></li>
-      <li><a href="virtual-tour.html" class="block text-gray-700 hover:text-blue-700">Virtual Tour</a></li>
-      <li><a href="contact.html" class="block text-gray-700 hover:text-blue-700">Contact Us</a></li>
-    </ul>
-  </div>
-</nav>
+</section>
 
   <!-- Services Section -->
-  <section class="py-16">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
-      <div class="bg-white p-8 rounded-lg shadow-lg">
-        <ul class="space-y-8">
-          <!-- Service 1: Property Sales & Purchases -->
-          <li>
-            <h3 class="text-xl font-bold">Property Sales and Acquisition</h3>
+  <section class="container mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-800">Property Sales and Buys</h3>
             <ul class="list-disc list-inside mt-2 text-gray-700">
-              <li>Buying and selling of residential, commercial, industrial and farm properties.</li>
+              <li>Buying and selling of residential, commercial and farm properties.</li>
+            </li>
               <li>Negotiation and closing support.</li>
               <li>Market analysis to ensure competitive pricing.</li>
             </ul>
-          </li>
-
-          <!-- Service 2: Property Management -->
-          <li>
-            <h3 class="text-xl font-bold">Property Management</h3>
+            
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-800">Property Management</h3>
             <ul class="list-disc list-inside mt-2 text-gray-700">
               <li>Comprehensive property maintenance and repairs.</li>
               <li>Tenant screening and lease management.</li>
               <li>Financial reporting and rent collection.</li>
             </ul>
-          </li>
-
-          <!-- Service 3: Land Acquisition -->
-          <li>
-            <h3 class="text-xl font-bold">Property Rentals and Leasing</h3>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <h3 class="text-xl font-bold text-gray-800">Land Acquisition</h3>
             <ul class="list-disc list-inside mt-2 text-gray-700">
               <li>Identification and acquisition of prime land parcels.</li>
               <li>Legal assistance with title processing and documentation.</li>
               <li>Due diligence to ensure clear ownership and no encumbrances.</li>
             </ul>
-          </li>
-
-          <!-- Service 4: Real Estate Consultancy -->
-          <li>
-            <h3 class="text-xl font-bold">Real Estate Consultancy</h3>
-            <ul class="list-disc list-inside mt-2 text-gray-700">
-              <li>Expert advice on property investment opportunities.</li>
-              <li>Market trend analysis and forecasting.</li>
-              <li>Legal and regulatory compliance guidance.</li>
-            </ul>
-          </li>
-
-          <!--Service 5: Property Valuation-->
-          <li>
-            <h3 class="text-xl font-bold">Property Valuation</h3>
-            <ul class="list-disc list-inside mt-2 text-gray-700">
-              <li>Accurate assessment of property value for sales, rentals, or investment.</li>
-              <li>Professional reports for financial institution, businesses, and individuals.</li>
-            </ul>
-          </li>
-        </ul>
+        </div>
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-xl font-bold text-gray-800">Real Estate Consultancy</h3>
+          <ul class="list-disc list-inside mt-2 text-gray-700">
+            <li>Expert advice on property investment opportunities.</li>
+            <li>Market trend analysis and forecasting.</li>
+            <li>Legal and regulatory compliance guidance.</li>
+          </ul>
       </div>
+      <div class="bg-white shadow-md rounded-lg p-6">
+        <h3 class="text-xl font-bold text-gray-800">Property valuation</h3>
+        <ul class="list-disc list-inside mt-2 text-gray-700">
+          <li>Accurate assessment of property value for sales, rentals, or investment.</li>
+          <li>Professional reports for financial institution, businesses, and individuals.</li>
+        </ul>
     </div>
-  </section>
-
+    </div>
+</section>
 
   <!-- Footer -->
-  <footer class="border-t border-gray bg-white-800 text-black py-8">
-    <div class="container mx-auto px-6">
+  <footer class="border-t border-gray bg-gray-800 text-white mt-12">
+    <div class="container mx-auto px-6 py-8">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Quick Links -->
         <div>
-          <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
-          <ul class="space-y-2">
-            <li><a href="index.html" class="text-black-400 hover:text-blue-500">Home</a></li>
-            <li><a href="about.html" class="text-black-400 hover:text-blue-500">About Us</a></li>
-            <li><a href="listings.html" class="text-black-400 hover:text-blue-500">Listings</a></li>
-            <li><a href="services.html" class="text-black-400 hover:text-blue-500">Services</a></li>
-            <li><a href="virtual-tour.html" class="text-black-400 hover:text-blue-500">Virtual Tour</a></li>
-            <li><a href="contact.html" class="text-black-400 hover:text-blue-500">Contact Us</a></li>
+          <h3 class="text-xl font-semibold mb-4">Property Listings</h3>
+          <ul class="mt-4">
+            <li><a href="properties/residential.html" class="text-gray-400 hover:text-white">Residential Properties</a></li>
+            <li><a href="properties/commercial.html" class="text-gray-400 hover:text-white">Commercial Properties</a></li>
           </ul>
         </div>
+
+        <div>
+          <h3 class="text-xl font-bold">About Zigoti Properties</h3>
+          <ul class="mt-4">
+              <li><a href="agents.html" class="text-gray-400 hover:text-white">Our Agents</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white">Research</a></li>
+              <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
+          </ul>
+      </div>
   
         <!-- Social Media -->
         <div>
-          <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+          <h3 class="text-xl font-semibold">Follow Us</h3>
           <div class="flex space-x-4">
             <a href="https://facebook.com" class="text-gray-400 hover:text-blue-500">
               <i class="fab fa-facebook fa-lg"></i>
@@ -150,8 +154,8 @@
       </div>
   
       <!-- Copyright -->
-      <div class="border-t border-gray mt-8 pt-8 text-center">
-        <p class="text-black-400">&copy; 2023 Zigoti Properties Uganda Limited. All rights reserved.</p>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 Zigoti Properties Uganda Limited. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -160,12 +164,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <!-- Custom JS -->
   <script src="js/app.js"></script>
-  <script>
-    // Initialize AOS
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  </script>
 </body>
 </html>

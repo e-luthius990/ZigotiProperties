@@ -20,12 +20,43 @@ body {
     background: rgba(248, 245, 245, 0.323);
     backdrop-filter: blur(10px);
   }
+
+  /* Optional smooth transition */
+  #mobile-menu {
+    transition: all 0.3s ease;
+  }
   
   /* Hero Section */
   .hero {
     background-color: rgba(184, 180, 180, 0.171);
     background-blend-mode: overlay;
   }
+
+  /* About Us*/
+
+  .hero-pattern {
+    background-image: url('images/about-pattern.svg');
+    background-size: cover;
+    background-position: center;
+}
+.stat-card {
+    transition: all 0.3s ease;
+}
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -38px;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #3b82f6;
+    border: 3px solid white;
+}
 
   /* Team Member Cards */
 .team-member {
@@ -35,6 +66,21 @@ body {
 .team-member:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Agents */
+.agent-card {
+  transition: all 0.3s ease;
+}
+.agent-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.social-icon {
+  transition: all 0.3s ease;
+}
+.social-icon:hover {
+  transform: scale(1.2);
 }
   
   /* Property Cards */

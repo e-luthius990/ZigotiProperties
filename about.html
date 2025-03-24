@@ -9,132 +9,238 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="css/styles.css" rel="stylesheet">
 </head>
-<body class="font-sans">
-  <!-- Navbar -->
-  <nav class="bg-white shadow-md w-full z-10">
+<body class="font-sans bg-gray-100">
+
+  <nav class="bg-white shadow-md w-full z-10 relative">
     <div class="container mx-auto px-4 py-2 flex justify-between items-center">
       <!-- Logo -->
       <a href="index.html">
         <img src="images/Zigoti-properties-New-Logo.png" alt="Zigoti Properties Logo" class="h-8">
       </a>
-
+      
       <!-- Hamburger Menu (Mobile) -->
       <div class="md:hidden">
         <button id="menu-toggle" class="text-gray-700 focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg id="menu-open-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+          <svg id="menu-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </button>
       </div>
-
+  
       <!-- Navigation Links (Desktop) -->
-      <ul class="hidden md:flex space-x-6">
-        <li><a href="index.html" class="text-gray-700 hover:text-blue-700">Home</a></li>
-        <li><a href="about.html" class="text-gray-700 hover:text-blue-700">About Us</a></li>
-        <li><a href="listings.html" class="text-gray-700 hover:text-blue-700">Listings</a></li>
-        <li><a href="services.html" class="text-gray-700 hover:text-blue-700">Services</a></li>
-        <li><a href="virtual-tour.html" class="text-gray-700 hover:text-blue-700">Virtual Tour</a></li>
-        <li><a href="contact.html" class="text-gray-700 hover:text-blue-700">Contact Us</a></li>
-      </ul>
+      <div class="hidden md:block">
+        <ul class="flex space-x-4">
+          <li><a href="index.html" class="text-gray-800 hover:text-blue-600">Home</a></li>
+          <li><a href="about.html" class="text-gray-800 hover:text-blue-600">About Us</a></li>
+          <li><a href="services.html" class="text-gray-800 hover:text-blue-600">Services</a></li>
+          <li><a href="virtual-tour.html" class="text-gray-800 hover:text-blue-600">Virtual Tour</a></li>
+          <li><a href="contact.html" class="text-gray-800 hover:text-blue-600">Contact Us</a></li>
+        </ul>
+      </div>
     </div>
-
+  
     <!-- Mobile Menu (Hidden by Default) -->
-    <div id="mobile-menu" class="md:hidden hidden bg-white">
-      <ul class="px-6 py-4 space-y-4">
-        <li><a href="index.html" class="block text-gray-700 hover:text-blue-700">Home</a></li>
-        <li><a href="about.html" class="block text-gray-700 hover:text-blue-700">About Us</a></li>
-        <li><a href="listings.html" class="block text-gray-700 hover:text-blue-700">Listings</a></li>
-        <li><a href="services.html" class="block text-gray-700 hover:text-blue-700">Services</a></li>
-        <li><a href="virtual-tour.html" class="block text-gray-700 hover:text-blue-700">Virtual Tour</a></li>
-        <li><a href="contact.html" class="block text-gray-700 hover:text-blue-700">Contact Us</a></li>
-      </ul>
+    <div id="mobile-menu" class="md:hidden hidden bg-white w-full absolute left-0 top-full shadow-lg transition-all duration-300 transform opacity-0 translate-y-1">
+      <div class="px-6 py-4 space-y-4">
+        <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-700">Home</a>
+        <a href="about.html" class="block py-2 text-gray-700 hover:text-blue-700">About Us</a>
+        <a href="services.html" class="block py-2 text-gray-700 hover:text-blue-700">Services</a>
+        <a href="virtual-tour.html" class="block py-2 text-gray-700 hover:text-blue-700">Virtual Tour</a>
+        <a href="contact.html" class="block py-2 text-gray-700 hover:text-blue-700">Contact Us</a>
+      </div>
     </div>
   </nav>
+  
+  <!-- Hero Section -->
+  <section class="relative bg-blue-700 text-white py-20 hero-pattern">
+    <div class="absolute inset-0 bg-blue-800 opacity-90"></div>
+    <div class="container mx-auto px-6 relative z-10 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">About Zigoti Properties</h1>
+        <p class="text-xl max-w-3xl mx-auto">Your trusted partner in Ugandan real estate with over 15 years of excellence in property solutions.</p>
+    </div>
+</section>
 
-  <!-- About Us Section -->
-  <section class="container mx-auto px-6 py-12 mt-16">
-    <!-- Who We Are -->
-    <div class="mb-16">
-      <h2 class="text-3xl font-bold  mb-8">Who We Are</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- About Content -->
+<section class="container mx-auto px-6 py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
-          <p class="text-black-700 mb-4">
-            Zigoti Properties Uganda Limited is a leading real estate company in Uganda, dedicated to providing top-quality property solutions for individuals, businesses, and investors. with a strong commitment to integrity, professionalism, and customer satisfaction, we offer a comprehensive range of real estate services, including Property Sales, Rentals, Management, and Consultancy. Our team of experienced professionals understands the dynamic Ugandan real estate market and works diligently to connect clients with the best property opportunities whether you are buying, selling, or investing. Zigoti Properties Uganda LTD is your trusted partner for all your real estate needs.
-          </p>
-          <p class="text-black-700 mb-4">
-            Our team of professionals is committed to delivering exceptional service, ensuring that every client finds the perfect property to meet their needs.
-          </p>
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Story</h2>
+            <p class="text-gray-600 mb-4">Founded in 2008, Zigoti Properties Uganda Limited has grown from a small local agency to one of the most respected real estate firms in the country. Our journey began with a simple mission: to provide honest, professional property services that put our clients first.</p>
+            <p class="text-gray-600 mb-6">Today, we manage a diverse portfolio of residential and commercial properties across Uganda, helping thousands of clients find their perfect properties while maintaining the highest standards of integrity and service.</p>
+            <div class="flex flex-wrap gap-4">
+                <div class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold">Trusted Since 2008</div>
+                <div class="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold">500+ Happy Clients</div>
+                <div class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold">Nationwide Coverage</div>
+            </div>
         </div>
-      </div>
+        <div class="rounded-xl overflow-hidden shadow-xl">
+            <img src="images/jason-dent-w3eFhqXjkZE-unsplash.jpg" alt="Zigoti Properties Office" class="w-full h-auto object-cover">
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="stat-card bg-white p-8 rounded-lg text-center shadow-md">
+                <div class="text-4xl font-bold text-blue-600 mb-2">15+</div>
+                <div class="text-gray-600">Years Experience</div>
+            </div>
+            <div class="stat-card bg-white p-8 rounded-lg text-center shadow-md">
+                <div class="text-4xl font-bold text-blue-600 mb-2">1,200+</div>
+                <div class="text-gray-600">Properties Sold</div>
+            </div>
+            <div class="stat-card bg-white p-8 rounded-lg text-center shadow-md">
+                <div class="text-4xl font-bold text-blue-600 mb-2">50+</div>
+                <div class="text-gray-600">Expert Agents</div>
+            </div>
+            <div class="stat-card bg-white p-8 rounded-lg text-center shadow-md">
+                <div class="text-4xl font-bold text-blue-600 mb-2">98%</div>
+                <div class="text-gray-600">Client Satisfaction</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mission & Values -->
+<section class="container mx-auto px-6 py-16">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Mission & Values</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Guiding principles that define who we are and how we work</p>
     </div>
 
-    <!-- Our Mission -->
-    <div class="mb-16">
-      <h2 class="text-3xl font-bold mb-8">Our Mission</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
-          <p class="text-black-700 mb-4">
-            At Zigoti Properties Uganda LTD, our mission is to redefine real estate in rural areas by providing innovative, transparent, and customer-centric property solutions. We are committed to helping individuals, businesses, and investors find exceptional properties that align with their needs and aspirations.
-          </p>
-          <p class="text-black-700 mb-4">
-            Through integrity, professionalism, and market expertise, we strive to create long-term value for our clients and partners. Our goal is to enhance communities by delivering sustainable, high-quality real estate services while fostering trust and excellence in every transaction.
-            At Zigoti Properties, we don't just sell properties - we build lasting relationships and empower dreams.
-          </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="text-blue-500 text-3xl mb-4">
+                <i class="fas fa-bullseye"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Our Mission</h3>
+            <p class="text-gray-600">To transform Uganda's real estate landscape by providing innovative, client-focused property solutions that deliver exceptional value and build lasting relationships.</p>
         </div>
-      </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="text-blue-500 text-3xl mb-4">
+                <i class="fas fa-eye"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Our Vision</h3>
+            <p class="text-gray-600">To be Uganda's most trusted real estate partner, recognized for our integrity, market expertise, and commitment to client success.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <div class="text-blue-500 text-3xl mb-4">
+                <i class="fas fa-hand-holding-heart"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3">Our Values</h3>
+            <ul class="text-gray-600 space-y-2">
+                <li class="flex items-start">
+                    <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                    <span>Integrity in all dealings</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                    <span>Client-first approach</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                    <span>Market innovation</span>
+                </li>
+                <li class="flex items-start">
+                    <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
+                    <span>Community impact</span>
+                </li>
+            </ul>
+        </div>
     </div>
+</section>
 
-    <!-- Our Team -->
-    <div>
-      <h2 class="text-3xl font-bold text-center mb-8">Our Team</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Team Member 1 -->
-        <div class="team-member bg-white rounded-lg shadow-md p-6 text-center">
-          <img src="images/christopher-campbell-team.jpg" alt="Team Member 1" class="w-32 h-32 mx-auto rounded-full mb-4">
-          <h3 class="text-xl font-semibold mb-2">John Doe</h3>
-          <p class="text-gray-600">CEO & Founder</p>
-          <p class="text-gray-700 mt-2">John has over 15 years of experience in real estate and is passionate about helping clients find their dream homes.</p>
+<!-- Timeline -->
+<section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Journey</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">Key milestones in our growth story</p>
         </div>
 
-        <!-- Team Member 2 -->
-        <div class="team-member bg-white rounded-lg shadow-md p-6 text-center">
-          <img src="images/sergio-de-paula team.jpg" alt="Team Member 2" class="w-32 h-32 mx-auto rounded-full mb-4">
-          <h3 class="text-xl font-semibold mb-2">Jane Smith</h3>
-          <p class="text-gray-600">Sales Manager</p>
-          <p class="text-gray-700 mt-2">Jane specializes in property sales and has a proven track record of delivering exceptional results.</p>
-        </div>
+        <div class="relative max-w-3xl mx-auto">
+            <div class="absolute left-8 md:left-1/2 h-full w-0.5 bg-blue-200 transform -translate-x-1/2"></div>
+            
+            <div class="mb-12 relative pl-16 md:pl-0 md:flex items-center">
+                <div class="md:w-1/2 md:pr-12 md:text-right">
+                    <h3 class="text-xl font-bold text-gray-800">Company Founded</h3>
+                    <div class="text-blue-600 font-medium mb-2">2008</div>
+                    <p class="text-gray-600">Established in Kampala with 5 employees and a vision to revolutionize real estate services in Uganda.</p>
+                </div>
+                <div class="hidden md:block md:w-1/2"></div>
+            </div>
 
-        <!-- Team Member 3 -->
-        <div class="team-member bg-white rounded-lg shadow-md p-6 text-center">
-          <img src="images/christopher-campbell-team.jpg" alt="Team Member 3" class="w-32 h-32 mx-auto rounded-full mb-4">
-          <h3 class="text-xl font-semibold mb-2">Michael Brown</h3>
-          <p class="text-gray-600">Property Consultant</p>
-          <p class="text-gray-700 mt-2">Michael provides expert advice to clients, ensuring they make informed decisions about their investments.</p>
+            <div class="mb-12 relative pl-16 md:pl-0 md:flex items-center">
+                <div class="hidden md:block md:w-1/2 md:pr-12"></div>
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-bold text-gray-800">First Major Development</h3>
+                    <div class="text-blue-600 font-medium mb-2">2012</div>
+                    <p class="text-gray-600">Completed our first major residential development project in Kololo, setting new standards for quality.</p>
+                </div>
+            </div>
+
+            <div class="mb-12 relative pl-16 md:pl-0 md:flex items-center">
+                <div class="md:w-1/2 md:pr-12 md:text-right">
+                    <h3 class="text-xl font-bold text-gray-800">National Expansion</h3>
+                    <div class="text-blue-600 font-medium mb-2">2015</div>
+                    <p class="text-gray-600">Opened regional offices in Entebbe and Jinja, expanding our service coverage across Uganda.</p>
+                </div>
+                <div class="hidden md:block md:w-1/2"></div>
+            </div>
+
+            <div class="relative pl-16 md:pl-0 md:flex items-center">
+                <div class="hidden md:block md:w-1/2 md:pr-12"></div>
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-bold text-gray-800">Award-Winning Service</h3>
+                    <div class="text-blue-600 font-medium mb-2">2020</div>
+                    <p class="text-gray-600">Recognized as Uganda's Best Real Estate Agency at the Property Awards Africa.</p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
+
+<!-- Team CTA -->
+<section class="bg-blue-700 text-white py-16">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6">Meet Our Expert Team</h2>
+        <p class="text-xl mb-8 max-w-2xl mx-auto">Our success is driven by a team of passionate real estate professionals dedicated to your satisfaction.</p>
+        <a href="agents.html" class="inline-block bg-white text-blue-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300">View Our Agents</a>
+    </div>
+</section>
+
 
   <!-- Footer -->
-  <footer class="border-t border-gray bg-white-800 text-black py-8">
-    <div class="container mx-auto px-6">
+  <footer class="border-t border-gray bg-gray-800 text-white mt-12">
+    <div class="container mx-auto px-6 py-8">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Quick Links -->
         <div>
-          <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
-          <ul class="space-y-2">
-            <li><a href="index.html" class="text-black-400 hover:text-blue-500">Home</a></li>
-            <li><a href="about.html" class="text-black-400 hover:text-blue-500">About Us</a></li>
-            <li><a href="listings.html" class="text-black-400 hover:text-blue-500">Listings</a></li>
-            <li><a href="services.html" class="text-black-400 hover:text-blue-500">Services</a></li>
-            <li><a href="virtual-tour.html" class="text-black-400 hover:text-blue-500">Virtual Tour</a></li>
-            <li><a href="contact.html" class="text-black-400 hover:text-blue-500">Contact Us</a></li>
+          <h3 class="text-xl font-semibold mb-4">Property Listings</h3>
+          <ul class="mt-4">
+            <li><a href="properties/residential.html" class="text-gray-400 hover:text-white">Residential Properties</a></li>
+            <li><a href="properties/commercial.html" class="text-gray-400 hover:text-white">Commercial Properties</a></li>
           </ul>
         </div>
 
+        <div>
+          <h3 class="text-xl font-bold">About Zigoti Properties</h3>
+          <ul class="mt-4">
+              <li><a href="agents.html" class="text-gray-400 hover:text-white">Our Agents</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-white">Research</a></li>
+              <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
+          </ul>
+      </div>
+  
         <!-- Social Media -->
         <div>
-          <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+          <h3 class="text-xl font-semibold">Follow Us</h3>
           <div class="flex space-x-4">
             <a href="https://facebook.com" class="text-gray-400 hover:text-blue-500">
               <i class="fab fa-facebook fa-lg"></i>
@@ -153,8 +259,8 @@
       </div>
   
       <!-- Copyright -->
-      <div class="border-t border-gray mt-8 pt-8 text-center">
-        <p class="text-gray-400">&copy; 2023 Zigoti Properties Uganda Limited. All rights reserved.</p>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 Zigoti Properties Uganda Limited. All rights reserved.</p>
       </div>
     </div>
   </footer>
