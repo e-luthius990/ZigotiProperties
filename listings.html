@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Listings - Zigoti Properties</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body class="font-sans bg-gray-50">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-300">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center">
+        <img src="images/Zigoti-properties-New-Logo.png" alt="Zigoti Properties Logo" class="h-10 md:h-12">
+      </a>
+      <ul class="hidden md:flex space-x-8">
+        <li><a href="index.html" class="text-gray-700 hover:text-blue-700 transition">Home</a></li>
+        <li><a href="about.html" class="text-gray-700 hover:text-blue-700 transition">About Us</a></li>
+        <li><a href="listings.html" class="text-blue-700 font-medium">Listings</a></li>
+        <li><a href="services.html" class="text-gray-700 hover:text-blue-700 transition">Services</a></li>
+        <li><a href="virtual-tour.html" class="text-gray-700 hover:text-blue-700 transition">Virtual Tour</a></li>
+        <li><a href="contact.html" class="text-gray-700 hover:text-blue-700 transition">Contact Us</a></li>
+      </ul>
+      <button class="md:hidden focus:outline-none">
+        <i class="fas fa-bars text-gray-700 text-xl"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative bg-blue-700 text-white py-20 hero-pattern">
+    <div class="text-center px-4" data-aos="fade-up">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Explore Properties</h1>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">Discover your perfect home or commercial space in Uganda's most desirable locations</p>
+      <div class="flex justify-center space-x-4">
+        <a href="#residential" class="bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-lg font-medium transition">Residential</a>
+        <a href="commercial.html" class="bg-white hover:bg-gray-100 text-blue-700 px-6 py-3 rounded-lg font-medium transition">Commercial</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Residential Properties Section -->
+  <section id="residential" class="container mx-auto px-6 py-16">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-4">Residential Properties</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Find your dream home from our curated selection of luxury apartments, villas, and family houses</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Residential Property 1 -->
+      <div class="property-card bg-white rounded-xl shadow-md overflow-hidden relative" data-aos="fade-up" data-aos-delay="100">
+        <span class="category-badge bg-blue-700 text-white px-3 py-1 rounded-full text-sm font-medium">Residential</span>
+        <!-- Swiper Carousel -->
+        <div class="swiper-container relative">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/Kira-House-for-sale-1-592x444.jpg" alt="Luxury Apartment" class="w-full h-64 object-cover">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/etienne-beauregard-riverin-B0aCvAVSX8E-unsplash (1).jpg" alt="Luxury Apartment" class="w-full h-64 object-cover">
+            </div>
+          </div>
+          <div class="swiper-button-next text-white"></div>
+          <div class="swiper-button-prev text-white"></div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Luxury Apartment in Kololo</h3>
+          <div class="flex items-center text-gray-600 mb-3">
+            <i class="fas fa-map-marker-alt mr-2"></i>
+            <span>Kampala, Uganda</span>
+          </div>
+          <div class="flex justify-between items-center mb-4">
+            <div class="flex items-center">
+              <i class="fas fa-bed mr-2 text-gray-600"></i>
+              <span class="text-gray-600">3 Beds</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-bath mr-2 text-gray-600"></i>
+              <span class="text-gray-600">2 Baths</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-ruler-combined mr-2 text-gray-600"></i>
+              <span class="text-gray-600">180m²</span>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <p class="text-blue-700 font-bold text-xl">$250,000</p>
+            <a href="#" class="text-blue-700 hover:text-blue-800 font-medium transition">View Details <i class="fas fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Residential Property 2 -->
+      <div class="property-card bg-white rounded-xl shadow-md overflow-hidden relative" data-aos="fade-up" data-aos-delay="200">
+        <span class="category-badge bg-blue-700 text-white px-3 py-1 rounded-full text-sm font-medium">Residential</span>
+        <!-- Swiper Carousel -->
+        <div class="swiper-container relative">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/jason-dent-w3eFhqXjkZE-unsplash.jpg" alt="Modern Villa" class="w-full h-64 object-cover">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/rwobuyenje estate aerial.jpg" alt="Modern Villa" class="w-full h-64 object-cover">
+            </div>
+          </div>
+          <div class="swiper-button-next text-white"></div>
+          <div class="swiper-button-prev text-white"></div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Modern Villa in Entebbe</h3>
+          <div class="flex items-center text-gray-600 mb-3">
+            <i class="fas fa-map-marker-alt mr-2"></i>
+            <span>Entebbe, Uganda</span>
+          </div>
+          <div class="flex justify-between items-center mb-4">
+            <div class="flex items-center">
+              <i class="fas fa-bed mr-2 text-gray-600"></i>
+              <span class="text-gray-600">4 Beds</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-bath mr-2 text-gray-600"></i>
+              <span class="text-gray-600">3 Baths</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-ruler-combined mr-2 text-gray-600"></i>
+              <span class="text-gray-600">350m²</span>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <p class="text-blue-700 font-bold text-xl">$450,000</p>
+            <a href="#" class="text-blue-700 hover:text-blue-800 font-medium transition">View Details <i class="fas fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Residential Property 3 -->
+      <div class="property-card bg-white rounded-xl shadow-md overflow-hidden relative" data-aos="fade-up" data-aos-delay="300">
+        <span class="category-badge bg-blue-700 text-white px-3 py-1 rounded-full text-sm font-medium">Residential</span>
+        <!-- Swiper Carousel -->
+        <div class="swiper-container relative">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/sean-pollock-PhYq704ffdA-unsplash.jpg" alt="Family House" class="w-full h-64 object-cover">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/brandon-griggs-wR11KBaB86U-unsplash.jpg" alt="Family House" class="w-full h-64 object-cover">
+            </div>
+          </div>
+          <div class="swiper-button-next text-white"></div>
+          <div class="swiper-button-prev text-white"></div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Family House in Naguru</h3>
+          <div class="flex items-center text-gray-600 mb-3">
+            <i class="fas fa-map-marker-alt mr-2"></i>
+            <span>Kampala, Uganda</span>
+          </div>
+          <div class="flex justify-between items-center mb-4">
+            <div class="flex items-center">
+              <i class="fas fa-bed mr-2 text-gray-600"></i>
+              <span class="text-gray-600">5 Beds</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-bath mr-2 text-gray-600"></i>
+              <span class="text-gray-600">4 Baths</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-ruler-combined mr-2 text-gray-600"></i>
+              <span class="text-gray-600">420m²</span>
+            </div>
+          </div>
+          <div class="flex justify-between items-center">
+            <p class="text-blue-700 font-bold text-xl">$380,000</p>
+            <a href="#" class="text-blue-700 hover:text-blue-800 font-medium transition">View Details <i class="fas fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-10">
+      <a href="#" class="inline-block bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-lg font-medium transition">
+        View All Residential Properties <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Commercial Properties Section -->
+  <section id="commercial" class="bg-gray-100 py-16">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-4">Commercial Properties</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Premium office spaces, retail locations, and commercial buildings for your business needs</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Commercial Property 1 -->
+        <div class="property-card bg-white rounded-xl shadow-md overflow-hidden relative" data-aos="fade-up" data-aos-delay="100">
+          <span class="category-badge bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">Commercial</span>
+          <!-- Swiper Carousel -->
+          <div class="swiper-container relative">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/commercial-1.jpg" alt="Office Space" class="w-full h-64 object-cover">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/commercial-2.jpg" alt="Office Space" class="w-full h-64 object-cover">
+              </div>
+            </div>
+            <div class="swiper-button-next text-white"></div>
+            <div class="swiper-button-prev text-white"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Office Space in Nakasero</h3>
+            <div class="flex items-center text-gray-600 mb-3">
+              <i class="fas fa-map-marker-alt mr-2"></i>
+              <span>Kampala, Uganda</span>
+            </div>
+            <div class="flex justify-between items-center mb-4">
+              <div class="flex items-center">
+                <i class="fas fa-building mr-2 text-gray-600"></i>
+                <span class="text-gray-600">Office</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-door-open mr-2 text-gray-600"></i>
+                <span class="text-gray-600">12 Units</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-ruler-combined mr-2 text-gray-600"></i>
+                <span class="text-gray-600">800m²</span>
+              </div>
+            </div>
+            <div class="flex justify-between items-center">
+              <p class="text-blue-700 font-bold text-xl">$750,000</p>
+              <a href="#" class="text-blue-700 hover:text-blue-800 font-medium transition">View Details <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Commercial Property 2 -->
+        <div class="property-card bg-white rounded-xl shadow-md overflow-hidden relative" data-aos="fade-up" data-aos-delay="200">
+          <span class="category-badge bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">Commercial</span>
+          <!-- Swiper Carousel -->
+          <div class="swiper-container relative">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/commercial-3.jpg" alt="Retail Space" class="w-full h-64 object-cover">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/commercial-4.jpg" alt="Retail Space" class="w-full h-64 object-cover">
+              </div>
+            </div>
+            <div class="swiper-button-next text-white"></div>
+            <div class="swiper-button-prev text-white"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Retail Space in Acacia Mall</h3>
+            <div class="flex items-center text-gray-600 mb-3">
+              <i class="fas fa-map-marker-alt mr-2"></i>
+              <span>Kisementi, Uganda</span>
+            </div>
+            <div class="flex justify-between items-center mb-4">
+              <div class="flex items-center">
+                <i class="fas fa-store mr-2 text-gray-600"></i>
+                <span class="text-gray-600">Retail</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-door-open mr-2 text-gray-600"></i>
+                <span class="text-gray-600">5 Shops</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-ruler-combined mr-2 text-gray-600"></i>
+                <span class="text-gray-600">300m²</span>
+              </div>
+            </div>
+            <div class="flex justify-between items-center">
+              <p class="text-blue-700 font-bold text-xl">$520,000</p>
+              <a href="#" class="text-blue-700 hover:text-blue-800 font-medium transition">View Details <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Commercial Property 3 -->
+        <div class="property-card bg-white rounded-xl shadow-md overflow-hidden relative" data-aos="fade-up" data-aos-delay="300">
+          <span class="category-badge bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">Commercial</span>
+          <!-- Swiper Carousel -->
+          <div class="swiper-container relative">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="images/commercial-5.jpg" alt="Mixed-Use Building" class="w-full h-64 object-cover">
+              </div>
+              <div class="swiper-slide">
+                <img src="images/commercial-6.jpg" alt="Mixed-Use Building" class="w-full h-64 object-cover">
+              </div>
+            </div>
+            <div class="swiper-button-next text-white"></div>
+            <div class="swiper-button-prev text-white"></div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Mixed-Use Building</h3>
+            <div class="flex items-center text-gray-600 mb-3">
+              <i class="fas fa-map-marker-alt mr-2"></i>
+              <span>Kampala Road, Uganda</span>
+            </div>
+            <div class="flex justify-between items-center mb-4">
+              <div class="flex items-center">
+                <i class="fas fa-building mr-2 text-gray-600"></i>
+                <span class="text-gray-600">Mixed Use</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-door-open mr-2 text-gray-600"></i>
+                <span class="text-gray-600">8 Units</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-ruler-combined mr-2 text-gray-600"></i>
+                <span class="text-gray-600">1200m²</span>
+              </div>
+            </div>
+            <div class="flex justify-between items-center">
+              <p class="text-blue-700 font-bold text-xl">$1,200,000</p>
+              <a href="#" class="text-blue-700 hover:text-blue-800 font-medium transition">View Details <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-10">
+        <a href="#" class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition">
+          View All Commercial Properties <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-blue-700 text-white py-16">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-6" data-aos="fade-up">Can't Find What You're Looking For?</h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Our team can help you find the perfect property that meets your specific requirements.</p>
+      <a href="contact.html" class="inline-block bg-white hover:bg-gray-100 text-blue-700 px-8 py-3 rounded-lg font-medium text-lg transition" data-aos="fade-up" data-aos-delay="200">
+        Contact Our Agents <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- About -->
+        <div>
+          <img src="images/Zigoti-properties-New-Logo-white.png" alt="Zigoti Properties Logo" class="h-10 mb-4">
+          <p class="text-gray-400">Zigoti Properties is Uganda's premier real estate agency, offering exceptional residential and commercial properties since 2010.</p>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a></li>
+            <li><a href="listings.html" class="text-white font-medium">Listings</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+            <li><a href="virtual-tour.html" class="text-gray-400 hover:text-white transition">Virtual Tour</a></li>
+          </ul>
+        </div>
+  
+        <!-- Contact Information -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+          <ul class="space-y-3 text-gray-400">
+            <li class="flex items-start">
+              <i class="fas fa-phone-alt mt-1 mr-3"></i>
+              <span>+256 700 123 456</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-envelope mt-1 mr-3"></i>
+              <span>info@zigotiproperties.com</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+              <span>Plot 123, Kampala Road, Kampala, Uganda</span>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Social Media -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+          <div class="flex space-x-4 mb-6">
+            <a href="https://facebook.com" class="bg-gray-700 hover:bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com" class="bg-gray-700 hover:bg-blue-400 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://linkedin.com" class="bg-gray-700 hover:bg-blue-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://instagram.com" class="bg-gray-700 hover:bg-pink-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+          <h4 class="text-lg font-semibold mb-2">Newsletter</h4>
+          <form class="flex">
+            <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full">
+            <button type="submit" class="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-r-lg transition">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+  
+      <!-- Copyright -->
+      <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+        <p>&copy; 2023 Zigoti Properties Uganda Limited. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

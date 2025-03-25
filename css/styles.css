@@ -1,13 +1,86 @@
 /* Custom Styles */
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --secondary: #f59e0b;
+}
+
 body {
-    font-family: 'Suisse Regular', sans-serif;
-    color: #333;
-  }
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.hero-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.property-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.featured-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--secondary);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 10;
+}
   
   /* Navbar */
   nav {
     transition: background 0.3s ease;
-    height: 50px;
   }
 
   nav .container {
@@ -24,12 +97,6 @@ body {
   /* Optional smooth transition */
   #mobile-menu {
     transition: all 0.3s ease;
-  }
-  
-  /* Hero Section */
-  .hero {
-    background-color: rgba(184, 180, 180, 0.171);
-    background-blend-mode: overlay;
   }
 
   /* About Us*/
@@ -58,7 +125,27 @@ body {
     border: 3px solid white;
 }
 
-  /* Team Member Cards */
+/* Lisitngs */
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero-properties.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.property-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.property-card {
+  transition: all 0.3s ease;
+}
+.category-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+}
+
+/* Team Member Cards */
 .team-member {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -92,72 +179,30 @@ body {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
-
-  /* Swiper Carousel Styles */
-.swiper-container {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-pagination-bullet {
-  background: #fff;
-  opacity: 0.5;
-}
-
-.swiper-pagination-bullet-active {
-  background: #007BFF;
-  opacity: 1;
-}
-
-/* Custom Swiper Navigation Arrows */
-.swiper-button-next,
-.swiper-button-prev {
-  color: #007BFF; /* Arrow color */
-  background: rgba(255, 255, 255, 0.8); /* Background color */
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s ease;
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background: rgba(255, 255, 255, 1); /* Hover background color */
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 20px; /* Arrow size */
-}
   
-  /* Service Cards */
   .service-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
   }
-  
   .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #1d4ed8;
   }
-
-  /* Virtual Tour Section */
-.virtual-tour-iframe {
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+  .hero-pattern {
+    background-image: url('images/service-hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .icon-box {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+  }
 
   /* Contact Page Styles */
 .contact-info svg {
