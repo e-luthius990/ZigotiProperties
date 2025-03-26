@@ -11,54 +11,56 @@
 </head>
 <body class="font-sans bg-gray-100">
 
-    <nav class="bg-white shadow-md w-full z-10 relative">
-        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
-          <!-- Logo -->
-          <a href="index.html">
-            <img src="images/Zigoti-properties-New-Logo.png" alt="Zigoti Properties Logo" class="h-8">
-          </a>
-          
-          <!-- Hamburger Menu (Mobile) -->
-          <div class="md:hidden">
-            <button id="menu-toggle" class="text-gray-700 focus:outline-none">
-              <svg id="menu-open-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-              </svg>
-              <svg id="menu-close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
-            </button>
-          </div>
+    <!-- Navigation -->
+  <nav class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-300">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center">
+        <img src="images/Zigoti-properties-New-Logo.png" alt="Zigoti Properties Logo" class="h-10 md:h-12">
+      </a>
       
-          <!-- Navigation Links (Desktop) -->
-          <div class="hidden md:block">
-            <ul class="flex space-x-4">
-              <li><a href="index.html" class="text-gray-800 hover:text-blue-600">Home</a></li>
-              <li><a href="about.html" class="text-gray-800 hover:text-blue-600">About Us</a></li>
-              <li><a href="services.html" class="text-gray-800 hover:text-blue-600">Services</a></li>
-              <li><a href="virtual-tour.html" class="text-gray-800 hover:text-blue-600">Virtual Tour</a></li>
-              <li><a href="contact.html" class="text-gray-800 hover:text-blue-600">Contact Us</a></li>
-            </ul>
-          </div>
-        </div>
+      <!-- Desktop Navigation -->
+      <div class="hidden lg:flex space-x-8">
+        <a href="index.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Home</a>
+        <a href="about.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">About Us</a>
+        <a href="services.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Services</a>
+        <a href="virtual-tour.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Virtual Tour</a>
+        <a href="contact.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Contact</a>
+      </div>
       
-        <!-- Mobile Menu (Hidden by Default) -->
-        <div id="mobile-menu" class="md:hidden hidden bg-white w-full absolute left-0 top-full shadow-lg transition-all duration-300 transform opacity-0 translate-y-1">
-          <div class="px-6 py-4 space-y-4">
-            <a href="index.html" class="block py-2 text-gray-700 hover:text-blue-700">Home</a>
-            <a href="about.html" class="block py-2 text-gray-700 hover:text-blue-700">About Us</a>
-            <a href="services.html" class="block py-2 text-gray-700 hover:text-blue-700">Services</a>
-            <a href="virtual-tour.html" class="block py-2 text-gray-700 hover:text-blue-700">Virtual Tour</a>
-            <a href="contact.html" class="block py-2 text-gray-700 hover:text-blue-700">Contact Us</a>
-          </div>
-        </div>
-      </nav>
-      
+      <!-- Mobile Menu Button -->
+      <div class="lg:hidden">
+        <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+          <svg id="menu-open-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+          <svg id="menu-close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden hidden bg-white w-full absolute left-0 top-full shadow-lg transition-all duration-300 transform opacity-0 -translate-y-2">
+      <div class="px-6 py-4 space-y-3">
+        <a href="index.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">Home</a>
+        <a href="about.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">About Us</a>
+        <a href="services.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">Services</a>
+        <a href="virtual-tour.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">Virtual Tour</a>
+        <a href="contact.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+      </div>
+    </div>
+  </nav>
+  
   <!-- Agents Header -->
-<section class="bg-blue-700 text-white py-20">
-    <div class="container mx-auto px-6 text-center">
+<section class="relative bg-cover bg-center py-20" style="background-image: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80')">
+    <!-- Dark overlay for better text contrast -->
+    <div class="absolute inset-0 bg-black/50"></div>
+    
+    <div class="container relative mx-auto px-6 text-center">
         <h1 class="text-4xl font-bold mb-4">Meet Our Expert Agents</h1>
-        <p class="text-xl max-w-2xl mx-auto">Our team of dedicated real estate professionals is ready to help you find your dream property in Uganda.</p>
+        <p class="text-xl max-w-2xl mx-auto">Our team of dedicated real estate professionals is ready to help you find your dream property.</p>
     </div>
 </section>
 
@@ -207,121 +209,88 @@
     </div>
 </section>
 
-<!-- Testimonials Section -->
-<section class="bg-gray-100 py-16">
+ <!-- Footer -->
+ <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
     <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">What Our Clients Say</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <div class="flex items-center mb-4">
-                    <div class="text-yellow-400 mr-2">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-                <p class="text-gray-600 mb-4">"Sarah helped us find our dream home in Kampala. Her knowledge of the local market was invaluable throughout the process."</p>
-                <div class="flex items-center">
-                    <img src="images/client1.jpg" alt="Client" class="w-10 h-10 rounded-full mr-3 object-cover">
-                    <div>
-                        <h4 class="font-bold text-gray-800">Robert Mugisha</h4>
-                        <p class="text-sm text-gray-600">Homeowner</p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <div class="flex items-center mb-4">
-                    <div class="text-yellow-400 mr-2">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-                <p class="text-gray-600 mb-4">"David's expertise in commercial properties helped us secure the perfect office space for our growing business."</p>
-                <div class="flex items-center">
-                    <img src="images/client2.jpg" alt="Client" class="w-10 h-10 rounded-full mr-3 object-cover">
-                    <div>
-                        <h4 class="font-bold text-gray-800">Angela Nansamba</h4>
-                        <p class="text-sm text-gray-600">Business Owner</p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <div class="flex items-center mb-4">
-                    <div class="text-yellow-400 mr-2">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-                <p class="text-gray-600 mb-4">"Grace's attention to detail and negotiation skills saved us thousands on our luxury villa purchase. Highly recommended!"</p>
-                <div class="flex items-center">
-                    <img src="images/client3.jpg" alt="Client" class="w-10 h-10 rounded-full mr-3 object-cover">
-                    <div>
-                        <h4 class="font-bold text-gray-800">James & Fiona Kigozi</h4>
-                        <p class="text-sm text-gray-600">Investors</p>
-                    </div>
-                </div>
-            </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <!-- About -->
+        <div>
+          <img src="images/Zigoti-properties-New-Logo.png" alt="Zigoti Properties Logo" class="h-10 mb-4">
+          <p class="mb-4">
+            Zigoti Properties is Uganda's premier real estate agency, specializing in commercial, residential, and land properties.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
         </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="border-t border-gray bg-gray-800 text-white mt-12">
-<div class="container mx-auto px-6 py-8">
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <!-- Quick Links -->
-    <div>
-      <h3 class="text-xl font-semibold mb-4">Property Listings</h3>
-      <ul class="mt-4">
-        <li><a href="properties/residential.html" class="text-gray-400 hover:text-white">Residential Properties</a></li>
-        <li><a href="properties/commercial.html" class="text-gray-400 hover:text-white">Commercial Properties</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <h3 class="text-xl font-bold">About Zigoti Properties</h3>
-      <ul class="mt-4">
-          <li><a href="agents.html" class="text-gray-400 hover:text-white">Our Agents</a></li>
-          <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
-          <li><a href="#" class="text-gray-400 hover:text-white">Research</a></li>
-          <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
-      </ul>
-  </div>
-
-    <!-- Social Media -->
-    <div>
-      <h3 class="text-xl font-semibold">Follow Us</h3>
-      <div class="flex space-x-4">
-        <a href="https://facebook.com" class="text-gray-400 hover:text-blue-500">
-          <i class="fab fa-facebook fa-lg"></i>
-        </a>
-        <a href="https://twitter.com" class="text-gray-400 hover:text-blue-500">
-          <i class="fab fa-twitter fa-lg"></i>
-        </a>
-        <a href="https://linkedin.com" class="text-gray-400 hover:text-blue-500">
-          <i class="fab fa-linkedin fa-lg"></i>
-        </a>
-        <a href="https://instagram.com" class="text-gray-400 hover:text-blue-500">
-          <i class="fab fa-instagram fa-lg"></i>
-        </a>
+        
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-white text-lg font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="residentialandcommercial.html" class="hover:text-white transition">Residential & commercial Properties</a></li>
+            <li><a href="landsandplots.html" class="hover:text-white transition">Lands & Plots</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <!-- Services -->
+        <div>
+          <h3 class="text-white text-lg font-semibold mb-4">Our Services</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white transition">Property Valuation</a></li>
+            <li><a href="#" class="hover:text-white transition">Property Management</a></li>
+            <li><a href="#" class="hover:text-white transition">Real Estate Consulting</a></li>
+            <li><a href="#" class="hover:text-white transition">Investment Advisory</a></li>
+            <li><a href="#" class="hover:text-white transition">Legal Services</a></li>
+            <li><a href="#" class="hover:text-white transition">Virtual Tours</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact -->
+        <div>
+          <h3 class="text-white text-lg font-semibold mb-4">Contact Us</h3>
+          <address class="not-italic">
+            <p class="mb-2 flex items-center">
+              <i class="fas fa-map-marker-alt mr-3 text-blue-400"></i> 
+              <span>95H7+CM Zigoti,Uganda<br>Mityana Road, Uganda</span>
+            </p>
+            <p class="mb-2 flex items-center">
+              <i class="fas fa-phone-alt mr-3 text-blue-400"></i> +256 707346556
+            </p>
+            <p class="mb-2 flex items-center">
+              <i class="fas fa-envelope mr-3 text-blue-400"></i> zigotiproperties@gmail.com
+            </p>
+            <p class="mb-2 flex items-center">
+              <i class="fas fa-clock mr-3 text-blue-400"></i> Mon-Fri: 8:00 AM - 5:00 PM
+            </p>
+          </address>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p>&copy; 2023 Zigoti Properties Uganda Limited. All rights reserved.</p>
+        <div class="mt-2 text-sm">
+          <a href="#" class="hover:text-white transition">Privacy Policy</a> | 
+          <a href="#" class="hover:text-white transition">Terms of Service</a>
+        </div>
       </div>
     </div>
-  </div>
-
-  <!-- Copyright -->
-  <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-    <p>&copy; 2025 Zigoti Properties Uganda Limited. All rights reserved.</p>
-  </div>
-</div>
-</footer>
+  </footer>
 
 <script src="js/app.js"></script>
 </body>
