@@ -53,6 +53,19 @@ menuToggle.addEventListener('click', () => {
   menuOpenIcon.classList.toggle('hidden');
   menuCloseIcon.classList.toggle('hidden');
 });
+
+ // FAQ toggle functionality
+ document.querySelectorAll('.faq-header').forEach(header => {
+  header.addEventListener('click', () => {
+    const content = header.nextElementSibling;
+    const icon = header.querySelector('i');
+    
+    content.classList.toggle('hidden');
+    icon.classList.toggle('transform');
+    icon.classList.toggle('rotate-180');
+  });
+});
+
   // Sticky Navbar
   window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');

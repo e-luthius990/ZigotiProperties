@@ -230,6 +230,102 @@ body {
   pointer-events: auto;
 }
 
+/* Survey*/
+.survey-process {
+  counter-reset: step;
+}
+.survey-step:before {
+  counter-increment: step;
+  content: counter(step);
+  @apply absolute -left-4 top-0 bg-blue-600 text-white font-bold rounded-full w-8 h-8 flex items-center justify-center;
+}
+.feature-card:hover .feature-icon {
+  @apply transform scale-110 bg-blue-600 text-white;
+}
+
+/* Management*/
+.gradient-bg {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+}
+.process-step {
+  counter-increment: step-counter;
+}
+.process-step:before {
+  content: counter(step-counter);
+  @apply absolute -left-4 top-0 bg-blue-600 text-white font-bold rounded-full w-8 h-8 flex items-center justify-center;
+}
+.benefit-card:hover {
+  @apply transform -translate-y-2 shadow-xl;
+}
+.benefit-card:hover .benefit-icon {
+  @apply transform scale-110 bg-blue-600 text-white;
+}
+.service-card:hover {
+  @apply shadow-xl transform -translate-y-1 border-blue-500;
+}
+.testimonial-card:hover {
+  @apply shadow-lg transform scale-105;
+}
+.nav-link {
+  position: relative;
+}
+.nav-link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #2563eb;
+  transition: width 0.3s ease;
+}
+.nav-link:hover:after {
+  width: 100%;
+}
+
+/* Consultancy*/
+.service-card {
+  transition: all 0.3s ease;
+  border-bottom: 4px solid transparent;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  border-bottom-color: #2563eb;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+.process-step {
+  position: relative;
+  padding-left: 3rem;
+}
+.process-step:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #2563eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+.process-step:nth-child(1):before { content: "1"; }
+.process-step:nth-child(2):before { content: "2"; }
+.process-step:nth-child(3):before { content: "3"; }
+.process-step:nth-child(4):before { content: "4"; }
+.process-step:not(:last-child):after {
+  content: "";
+  position: absolute;
+  left: 1.25rem;
+  top: 2.5rem;
+  bottom: -2rem;
+  width: 2px;
+  background-color: #e5e7eb;
+}
+
   
   /* Footer */
   footer {

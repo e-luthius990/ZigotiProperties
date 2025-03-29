@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Estate Consultancy Services | Zigoti Properties</title>
+
+  <meta name="description" content="Expert real estate consultancy services in Uganda. Zigoti Properties offers strategic property advice, market analysis, and investment guidance for residential and commercial clients.">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
+  
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="css/styles.css" rel="stylesheet">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-300">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center">
+        <img src="images/logos/Zigoti-properties-New-Logo.png" alt="Zigoti Properties Logo" class="h-10 md:h-12">
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <div class="hidden lg:flex space-x-8">
+        <a href="index.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Home</a>
+        <a href="about.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">About Us</a>
+        <a href="services.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Services</a>
+        <a href="virtual-tour.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Virtual Tour</a>
+        <a href="contact.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Contact</a>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <div class="lg:hidden">
+        <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+          <svg id="menu-open-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+          <svg id="menu-close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden hidden bg-white w-full absolute left-0 top-full shadow-lg transition-all duration-300 transform opacity-0 -translate-y-2">
+      <div class="px-6 py-4 space-y-3">
+        <a href="index.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">Home</a>
+        <a href="about.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">About Us</a>
+        <a href="services.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">Services</a>
+        <a href="virtual-tour.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">Virtual Tour</a>
+        <a href="contact.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Introduction Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Professional Real Estate Advisory Services</h2>
+        <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600">
+          At Zigoti Properties, we provide comprehensive real estate consultancy services designed to help you make informed decisions in Uganda's property market. Our team of experienced consultants combines local market knowledge with global best practices to deliver tailored solutions for residential, commercial, and investment properties.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div class="bg-gray-50 p-8 rounded-lg">
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Approach</h3>
+          <p class="text-gray-600 mb-4">
+            We take a client-centric approach, focusing on understanding your unique needs, financial objectives, and long-term goals. Our methodology combines thorough market research, financial analysis, and risk assessment to provide actionable recommendations.
+          </p>
+          <ul class="space-y-2 text-gray-600">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+              <span>Data-driven market analysis</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+              <span>Customized investment strategies</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+              <span>Risk assessment and mitigation</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="bg-gray-50 p-8 rounded-lg">
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Why Choose Us</h3>
+          <p class="text-gray-600 mb-4">
+            With years of experience in Uganda's real estate sector, we offer unparalleled insights and connections that give our clients a competitive advantage in the property market.
+          </p>
+          <ul class="space-y-2 text-gray-600">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+              <span>Deep local market expertise</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+              <span>Independent and unbiased advice</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-600 mt-1 mr-3"></i>
+              <span>Confidential and discreet service</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Consultancy Services</h2>
+        <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">Comprehensive advisory services tailored to your specific real estate needs</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="service-card bg-white p-8 rounded-lg shadow-md">
+          <div class="text-blue-600 text-4xl mb-4">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Market Analysis</h3>
+          <p class="text-gray-600 mb-4">
+            In-depth analysis of Uganda's real estate market trends, pricing dynamics, and emerging opportunities to inform your investment decisions.
+          </p>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li class="flex items-start">
+              <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+              <span>Neighborhood assessments</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+              <span>Supply and demand analysis</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+              <span>Future development impact studies</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="service-card bg-white p-8 rounded-lg shadow-md">
+          <div class="text-blue-600 text-4xl mb-4">
+            <i class="fas fa-hand-holding-usd"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Investment Advisory</h3>
+          <p class="text-gray-600 mb-4">
+            Strategic guidance for property investors, including portfolio analysis, acquisition strategies, and exit planning.
+          </p>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li class="flex items-start">
+              <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+              <span>ROI projections</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+              <span>Risk assessment</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+              <span>Tax implications</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Service 3 -->
+        <div class="service-card bg-white p-8 rounded-lg shadow-md">
+          <div class="text-blue-600 text-4xl mb-4">
+            <i class="fas fa-building"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Commercial Real Estate</h3>
+          <p class="text-gray-600 mb-4">
+            Expert advice for businesses on office space, retail locations, and industrial properties to support your operational needs.
+          </p>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li class="flex items-start">
+              <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+              <span>Location strategy</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+              <span>Lease vs. buy analysis</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+              <span>Workplace optimization</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Service 4 -->
+        <div class="service-card bg-white p-8 rounded-lg shadow-md">
+          <div class="text-blue-600 text-4xl mb-4">
+            <i class="fas fa-home"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Residential Advisory</h3>
+          <p class="text-gray-600 mb-4">
+            Personalized guidance for home buyers and sellers to navigate Uganda's residential property market with confidence.
+          </p>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li class="flex items-start">
+              <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+              <span>Property valuation</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+              <span>Neighborhood selection</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+              <span>Negotiation strategy</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Service 5 -->
+        <div class="service-card bg-white p-8 rounded-lg shadow-md">
+          <div class="text-blue-600 text-4xl mb-4">
+            <i class="fas fa-map-marked-alt"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Land Acquisition</h3>
+          <p class="text-gray-600 mb-4">
+            Strategic advice for land purchases, including due diligence, zoning analysis, and development potential assessment.
+          </p>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li class="flex items-start">
+              <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+              <span>Title verification</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+              <span>Development feasibility</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+              <span>Infrastructure assessment</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Service 6 -->
+        <div class="service-card bg-white p-8 rounded-lg shadow-md">
+          <div class="text-blue-600 text-4xl mb-4">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Legal & Regulatory</h3>
+          <p class="text-gray-600 mb-4">
+            Guidance on Uganda's real estate laws, regulations, and compliance requirements to protect your interests.
+          </p>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li class="flex items-start">
+              <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+              <span>Contract review</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+              <span>Permitting process</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
+              <span>Dispute resolution</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Consultancy Process</h2>
+        <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">A structured approach to delivering exceptional real estate advice</p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto space-y-12">
+        <!-- Step 1 -->
+        <div class="process-step" data-aos="fade-up">
+          <h3 class="text-2xl font-bold text-gray-800 mb-3">Initial Consultation</h3>
+          <p class="text-gray-600">
+            We begin by understanding your objectives, requirements, and constraints through detailed discussions. This helps us tailor our approach to your specific situation.
+          </p>
+        </div>
+        
+        <!-- Step 2 -->
+        <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-2xl font-bold text-gray-800 mb-3">Research & Analysis</h3>
+          <p class="text-gray-600">
+            Our team conducts comprehensive market research, property evaluations, and financial analysis to gather all relevant data for informed decision-making.
+          </p>
+        </div>
+        
+        <!-- Step 3 -->
+        <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-2xl font-bold text-gray-800 mb-3">Strategy Development</h3>
+          <p class="text-gray-600">
+            Based on our findings, we develop customized strategies and recommendations that align with your goals and risk tolerance.
+          </p>
+        </div>
+        
+        <!-- Step 4 -->
+        <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+          <h3 class="text-2xl font-bold text-gray-800 mb-3">Implementation Support</h3>
+          <p class="text-gray-600">
+            We provide ongoing support to help you execute the strategy, including property viewings, negotiations, and transaction coordination.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <!-- About -->
+        <div>
+          <img src="images/logos/white zig logo.png" alt="Zigoti Properties Logo" class="h-10 mb-4">
+          <p class="mb-4">
+            Zigoti Properties is Uganda's premier real estate agency, specializing in commercial, residential, and land properties.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-white text-lg font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="services.html" class="hover:text-white transition">Our Services</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <!-- Services -->
+        <div>
+          <h3 class="text-white text-lg font-semibold mb-4">Our Services</h3>
+          <ul class="space-y-2">
+            <li><a href="landsurveying.html" class="hover:text-white transition">Land Surveying</a></li>
+            <li><a href="management.html" class="hover:text-white transition">Property Management</a></li>
+            <li><a href="consulting.html" class="hover:text-white transition">Real Estate Consulting</a></li>
+            <li><a href="legalservices.html" class="hover:text-white transition">Legal Services</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact -->
+        <div>
+          <h3 class="text-white text-lg font-semibold mb-4">Contact Us</h3>
+          <address class="not-italic">
+            <p class="mb-2 flex items-center">
+              <i class="fas fa-map-marker-alt mr-3 text-blue-400"></i> 
+              <span>95H7+CM Zigoti,Uganda<br>Mityana Road, Uganda</span>
+            </p>
+            <p class="mb-2 flex items-center">
+              <i class="fas fa-phone-alt mr-3 text-blue-400"></i> +256 707346556
+            </p>
+            <p class="mb-2 flex items-center">
+              <i class="fas fa-envelope mr-3 text-blue-400"></i> zigotiproperties@gmail.com
+            </p>
+            <p class="mb-2 flex items-center">
+              <i class="fas fa-clock mr-3 text-blue-400"></i> Mon-Fri: 8:00 AM - 5:00 PM
+            </p>
+          </address>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p>&copy; 2023 Zigoti Properties Uganda Limited. All rights reserved.</p>
+        <div class="mt-2 text-sm">
+          <a href="#" class="hover:text-white transition">Privacy Policy</a> | 
+          <a href="#" class="hover:text-white transition">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
