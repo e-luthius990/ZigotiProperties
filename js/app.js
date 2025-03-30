@@ -6,6 +6,37 @@
   once: true
 });
 
+// Lazy loading for images that might be outside initial viewport 
+
+    document.addEventListener("DOMContentLoaded", function() {
+      // Native lazy loading for browsers that support it
+      if ('loading' in HTMLImageElement.prototype) {
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+        lazyImages.forEach(img => {
+          // If the image is already in the viewport, load it immediately
+          if (img.getBoundingClientRect().top < window.innerHeight) {
+            img.src = img.dataset.src;
+          }
+        });
+      } else {
+        // Fallback for browsers that don't support native lazy loading
+        const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+        const lazyImageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const lazyImage = entry.target;
+              lazyImage.src = lazyImage.dataset.src;
+              lazyImageObserver.unobserve(lazyImage);
+            }
+          });
+        });
+
+        lazyImages.forEach(lazyImage => {
+          lazyImageObserver.observe(lazyImage);
+        });
+      }
+    });
+
 // Back to top button
 const backToTopButton = document.getElementById('back-to-top');
 
