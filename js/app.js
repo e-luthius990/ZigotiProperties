@@ -85,6 +85,15 @@ menuToggle.addEventListener('click', () => {
   menuCloseIcon.classList.toggle('hidden');
 });
 
+// Close mobile menu when clicking on a link
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden', 'opacity-0', '-translate-y-2');
+    menuOpenIcon.classList.remove('hidden');
+    menuCloseIcon.classList.add('hidden');
+  });
+});
+
  // FAQ toggle functionality
  document.querySelectorAll('.faq-header').forEach(header => {
   header.addEventListener('click', () => {

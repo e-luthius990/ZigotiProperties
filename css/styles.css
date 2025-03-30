@@ -204,6 +204,39 @@ body {
     margin-bottom: 1.5rem;
   }
 
+  /* Custom styles for iframes */
+  .tour-iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
+    background: #000;
+  }
+  
+  .tour-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .tour-card:hover .tour-iframe {
+    transform: scale(1.02);
+  }
+  
+  /* Loading state for iframes */
+  .iframe-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.2rem;
+  }
+
   /* Contact Page Styles */
 .contact-info svg {
   transition: transform 0.3s ease;
@@ -230,41 +263,47 @@ body {
   pointer-events: auto;
 }
 
-/* Survey*/
-.survey-process {
-  counter-reset: step;
-}
-.survey-step:before {
-  counter-increment: step;
-  content: counter(step);
-  @apply absolute -left-4 top-0 bg-blue-600 text-white font-bold rounded-full w-8 h-8 flex items-center justify-center;
-}
-.feature-card:hover .feature-icon {
-  @apply transform scale-110 bg-blue-600 text-white;
-}
-
 /* Management*/
 .gradient-bg {
   background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
 }
 .process-step {
   counter-increment: step-counter;
+  position: relative;
+  padding-left: 2rem;
 }
 .process-step:before {
   content: counter(step-counter);
-  @apply absolute -left-4 top-0 bg-blue-600 text-white font-bold rounded-full w-8 h-8 flex items-center justify-center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+  border-radius: 9999px;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .benefit-card:hover {
-  @apply transform -translate-y-2 shadow-xl;
+  transform: translateY(-0.5rem);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 .benefit-card:hover .benefit-icon {
-  @apply transform scale-110 bg-blue-600 text-white;
+  transform: scale(1.1);
+  background-color: #2563eb;
+  color: white;
 }
 .service-card:hover {
-  @apply shadow-xl transform -translate-y-1 border-blue-500;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-0.25rem);
+  border-color: #3b82f6;
 }
 .testimonial-card:hover {
-  @apply shadow-lg transform scale-105;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: scale(1.05);
 }
 .nav-link {
   position: relative;
