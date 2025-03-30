@@ -5,13 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zigoti Properties</title>
 
-  <meta name="description" content="Zigoti Properties offers premium residential and commercial real estate solutions across Uganda. Find your dream property today.">
+  <meta name="description" content="Zigoti Properties, Your Gateway to Premium Real Estate in Uganda! Discover Homes, Prime Land & Smart Investments. Live, Own, Thrive!.">
 
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
  
-  
-  
   <!-- Preload critical resources -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
@@ -24,6 +22,11 @@
   
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Add Intersection Observer polyfill for older browsers -->
+  <script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.12.0/intersection-observer.js"></script>
+  <!-- Add lazy loading polyfill -->
+  <script src="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.0.1/dist/loading-attribute-polyfill.min.js"></script>
 </head>
 <body class="bg-gray-50">
 
@@ -32,7 +35,7 @@
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
       <!-- Logo -->
       <a href="index.html" class="flex items-center">
-        <img src="images/logos/Zigoti-properties-New-Logo.png" alt="Zigoti Properties Logo" class="h-10 md:h-12">
+        <img src="images/logos/Zigoti-properties-New-Logo.png" alt="Zigoti Properties Logo" class="h-10 md:h-12" loading="lazy">
       </a>
       
       <!-- Desktop Navigation -->
@@ -105,7 +108,7 @@
         <!-- Residential & Commercial Properties -->
         <div class="property-card bg-white rounded-xl overflow-hidden shadow-md">
           <div class="relative">
-            <img src="images/Kira-House-for-sale-1-592x444.jpg" alt="Luxury Residential Properties" class="w-full h-64 md:h-80 object-cover">
+            <img src="images/Kira-House-for-sale-1-592x444.jpg" alt="Luxury Residential Properties" class="w-full h-64 md:h-80 object-cover" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
             <div class="absolute bottom-0 left-0 p-6">
               <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">Residential & Commercial</h3>
@@ -126,7 +129,7 @@
         <!-- Lands & Plots -->
         <div class="property-card bg-white rounded-xl overflow-hidden shadow-md">
           <div class="relative">
-            <img src="images/lands and plots/ricardo-gomez-angel-TbwnUGV4kok-unsplash.jpg" alt="Prime Commercial Properties" class="w-full h-64 md:h-80 object-cover">
+            <img src="images/lands and plots/ricardo-gomez-angel-TbwnUGV4kok-unsplash.jpg" alt="Prime Commercial Properties" class="w-full h-64 md:h-80 object-cover" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
             <div class="absolute bottom-0 left-0 p-6">
               <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">Lands & Plots</h3>
@@ -162,7 +165,7 @@
           <div class="property-card bg-white rounded-lg overflow-hidden shadow-md relative">
             <div class="featured-badge">Featured</div>
             <div class="relative overflow-hidden h-48">
-              <img src="images/rwobuyenje estate aerial.jpg" alt="Luxury Apartment in Kololo" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+              <img src="images/rwobuyenje estate aerial.jpg" alt="Luxury Apartment in Kololo" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy">
               <div class="absolute inset-0 bg-black opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
             </div>
             <div class="p-5">
@@ -187,7 +190,7 @@
           <!-- Property 2 -->
           <div class="property-card bg-white rounded-lg overflow-hidden shadow-md relative">
             <div class="relative overflow-hidden h-48">
-              <img src="images/lands and plots/tomasz-bazylinski-V3p5NSMh_lo-unsplash.jpg" alt="Office Space in Nakasero" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+              <img src="images/lands and plots/tomasz-bazylinski-V3p5NSMh_lo-unsplash.jpg" alt="Office Space in Nakasero" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy">
               <div class="absolute inset-0 bg-black opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
             </div>
             <div class="p-5">
@@ -213,7 +216,7 @@
           <div class="property-card bg-white rounded-lg overflow-hidden shadow-md relative">
             <div class="featured-badge">Featured</div>
             <div class="relative overflow-hidden h-48">
-              <img src="images/lands and plots/sveta-fedarava-v1ar8e1dOjg-unsplash.jpg" alt="Waterfront Villa in Entebbe" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+              <img src="images/lands and plots/sveta-fedarava-v1ar8e1dOjg-unsplash.jpg" alt="Waterfront Villa in Entebbe" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy">
               <div class="absolute inset-0 bg-black opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
             </div>
             <div class="p-5">
@@ -240,7 +243,7 @@
   </section>
 
   <!-- Call to Action -->
-  <section class="py-16 bg-gray-400 text-white">
+  <section class="py-16 bg-blue-300 text-white">
     <div class="container mx-auto px-6 text-center">
       <div class="max-w-3xl mx-auto">
         <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Find Your Perfect Property?</h2>
@@ -261,7 +264,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         <!-- About -->
         <div>
-          <img src="images/logos/white zig logo.png" alt="Zigoti Properties Logo" class="h-10 mb-4">
+          <img src="images/logos/white zig logo.png" alt="Zigoti Properties Logo" class="h-10 mb-4" loading="lazy">
           <p class="mb-4">
             Zigoti Properties is Uganda's premier real estate agency, specializing in commercial, residential, and land properties.
           </p>
