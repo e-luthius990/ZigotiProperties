@@ -37,6 +37,7 @@
       background-color: #f9fafb;
       margin: 0;
       padding: 0;
+      line-height: 1.5;
     }
     nav {
       background-color: white;
@@ -50,8 +51,67 @@
       position: relative;
       background-size: cover;
       background-position: center;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('images/landfarm2.jpg');
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
     }
+    
+    /* Aspect ratio containers for images to prevent layout shifts */
+    .img-container {
+      position: relative;
+      overflow: hidden;
+    }
+    .img-container::before {
+      content: "";
+      display: block;
+      padding-bottom: 75%; /* Default aspect ratio (4:3) */
+    }
+    .img-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-img-container::before {
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    }
+    .property-img-container::before {
+      padding-bottom: 66.66%; /* 3:2 aspect ratio */
+    }
+    
+    /* Set explicit dimensions for logos */
+    .logo {
+      width: 160px;
+      height: 48px;
+    }
+    .footer-logo {
+      width: 160px;
+      height: 40px;
+    }
+    
+    /* Button styles to prevent size changes */
+    .btn-primary, .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 180px;
+      height: 56px;
+      box-sizing: border-box;
+    }
+    
+    /* Mobile menu dimensions */
+    #mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    }
+    #mobile-menu.active {
+      max-height: 500px;
+      opacity: 1;
+    }
+    
     /* Add more critical styles as needed */
   </style>
 </head>
@@ -62,7 +122,7 @@
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
       <!-- Logo -->
       <a href="index.html" class="flex items-center">
-        <img src="images/logos/Zigoti-properties-New-Logo.png" alt="Zigoti Properties Logo" class="h-10 md:h-12" loading="lazy">
+        <img src="images/logos/Zigoti-properties-New-Logo.png" alt="Zigoti Properties Logo" class="logo" width="160" height="48" loading="eager">
       </a>
       
       <!-- Desktop Navigation -->
@@ -76,7 +136,7 @@
       
       <!-- Mobile Menu Button -->
       <div class="lg:hidden">
-        <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+        <button id="menu-toggle" class="text-gray-700 focus:outline-none" aria-label="Toggle menu" aria-expanded="false">
           <svg id="menu-open-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
@@ -88,7 +148,7 @@
     </div>
     
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="lg:hidden hidden bg-white w-full absolute left-0 top-full shadow-lg transition-all duration-300 transform opacity-0 -translate-y-2">
+    <div id="mobile-menu" class="lg:hidden hidden bg-white w-full absolute left-0 top-full shadow-lg transition-all duration-300">
       <div class="px-6 py-4 space-y-3">
         <a href="index.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">Home</a>
         <a href="about.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">About Us</a>
@@ -106,8 +166,8 @@
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Discover Your Dream Property</h1>
         <p class="text-xl text-gray-200 mb-8">Zigoti Properties offers premium real estate solutions with unmatched expertise and personalized service.</p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a href="landsandplots.html" class="btn-primary text-white px-8 py-3 rounded-lg font-semibold text-lg">Lands & Plots</a>
-          <a href="residentialandcommercial.html" class="btn-secondary border-2 border-white text-white px-8 py-3 rounded-lg font-semibold text-lg">Residential & Commercial</a>
+          <a href="landsandplots.html" class="btn-primary bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors duration-300">Lands & Plots</a>
+          <a href="residentialandcommercial.html" class="btn-secondary border-2 border-white text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-white hover:bg-opacity-10 transition-colors duration-300">Residential & Commercial</a>
         </div>
       </div>
     </div>
@@ -134,8 +194,8 @@
 
         <!-- Lands & Plots -->
         <div class="property-card bg-white rounded-xl overflow-hidden shadow-md">
-          <div class="relative">
-            <img src="images/landsandplots/ricardo-gomez-angel-TbwnUGV4kok-unsplash.jpg" alt="Prime Commercial Properties" class="w-full h-64 md:h-80 object-cover" loading="lazy">
+          <div class="img-container property-img-container">
+            <img src="images/landsandplots/ricardo-gomez-angel-TbwnUGV4kok-unsplash.jpg" alt="Prime Commercial Properties" class="w-full" loading="lazy" width="600" height="400">
             <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
             <div class="absolute bottom-0 left-0 p-6">
               <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">Lands & Plots</h3>
@@ -155,8 +215,8 @@
 
         <!-- Residential & Commercial Properties -->
         <div class="property-card bg-white rounded-xl overflow-hidden shadow-md">
-          <div class="relative">
-            <img src="images/Kira-House-for-sale-1-592x444.jpg" alt="Luxury Residential Properties" class="w-full h-64 md:h-80 object-cover" loading="lazy">
+          <div class="img-container property-img-container">
+            <img src="images/Kira-House-for-sale-1-592x444.jpg" alt="Luxury Residential Properties" class="w-full" loading="lazy" width="592" height="444">
             <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
             <div class="absolute bottom-0 left-0 p-6">
               <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">Residential & Commercial</h3>
@@ -184,9 +244,9 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Property 1 -->
           <div class="property-card bg-white rounded-lg overflow-hidden shadow-md relative">
-            <div class="featured-badge">Featured</div>
-            <div class="relative overflow-hidden h-48">
-              <img src="images/landsandplots/frames-for-your-heart-2d4lAQAlbDA-unsplash.jpg" alt="Luxury Apartment in Kololo" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy">
+            <div class="featured-badge absolute top-4 left-4 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded z-10">Featured</div>
+            <div class="img-container property-img-container">
+              <img src="images/landsandplots/frames-for-your-heart-2d4lAQAlbDA-unsplash.jpg" alt="Luxury Apartment in Kololo" class="w-full transition-transform duration-500 hover:scale-105" loading="lazy" width="600" height="400">
               <div class="absolute inset-0 bg-black opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
             </div>
             <div class="p-5">
@@ -210,8 +270,8 @@
 
           <!-- Property 2 -->
           <div class="property-card bg-white rounded-lg overflow-hidden shadow-md relative">
-            <div class="relative overflow-hidden h-48">
-              <img src="images/landsandplots/tomasz-bazylinski-V3p5NSMh_lo-unsplash.jpg" alt="Office Space in Nakasero" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy">
+            <div class="img-container property-img-container">
+              <img src="images/landsandplots/tomasz-bazylinski-V3p5NSMh_lo-unsplash.jpg" alt="Office Space in Nakasero" class="w-full transition-transform duration-500 hover:scale-105" loading="lazy" width="600" height="400">
               <div class="absolute inset-0 bg-black opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
             </div>
             <div class="p-5">
@@ -235,9 +295,9 @@
 
           <!-- Property 3 -->
           <div class="property-card bg-white rounded-lg overflow-hidden shadow-md relative">
-            <div class="featured-badge">Featured</div>
-            <div class="relative overflow-hidden h-48">
-              <img src="images/landsandplots/sveta-fedarava-v1ar8e1dOjg-unsplash.jpg" alt="Waterfront Villa in Entebbe" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105" loading="lazy">
+            <div class="featured-badge absolute top-4 left-4 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded z-10">Featured</div>
+            <div class="img-container property-img-container">
+              <img src="images/landsandplots/sveta-fedarava-v1ar8e1dOjg-unsplash.jpg" alt="Waterfront Villa in Entebbe" class="w-full transition-transform duration-500 hover:scale-105" loading="lazy" width="600" height="400">
               <div class="absolute inset-0 bg-black opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
             </div>
             <div class="p-5">
@@ -264,22 +324,22 @@
   </section>
 
   <!-- Call to Action -->
-<section class="py-16 bg-blue-400 text-white">
-  <div class="container mx-auto px-6 text-center">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Find Your Perfect Property?</h2>
-      <p class="text-xl mb-8">Our expert agents are here to guide you through every step of the process, from property search to closing.</p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="https://wa.me/256707346556" class="btn-primary text-white px-8 py-3 rounded-lg font-semibold text-lg">
-          <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
-        </a>
-        <a href="tel:+256707346556" class="btn-secondary border-2 border-white text-white px-8 py-3 rounded-lg font-semibold text-lg">
-          <i class="fas fa-phone-alt mr-2"></i> Call Now
-        </a>
+  <section class="py-16 bg-blue-400 text-white">
+    <div class="container mx-auto px-6 text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Find Your Perfect Property?</h2>
+        <p class="text-xl mb-8">Our expert agents are here to guide you through every step of the process, from property search to closing.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="https://wa.me/256707346556" class="btn-primary bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold text-lg transition-colors duration-300">
+            <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
+          </a>
+          <a href="tel:+256707346556" class="btn-secondary border-2 border-white text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-white hover:bg-opacity-10 transition-colors duration-300">
+            <i class="fas fa-phone-alt mr-2"></i> Call Now
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
@@ -287,21 +347,21 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         <!-- About -->
         <div>
-          <img src="images/logos/whiteziglogo.png" alt="Zigoti Properties Logo" class="h-10 mb-4" loading="lazy">
+          <img src="images/logos/whiteziglogo.png" alt="Zigoti Properties Logo" class="footer-logo mb-4" width="160" height="40" loading="lazy">
           <p class="mb-4">
             Zigoti Properties is Uganda's premier real estate agency, specializing in commercial, residential, and land properties.
           </p>
           <div class="flex space-x-4">
-            <a href="https://www.facebook.com/eluthius990/" class="text-gray-400 hover:text-white transition">
+            <a href="https://www.facebook.com/eluthius990/" class="text-gray-400 hover:text-white transition" aria-label="Facebook">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://x.com/zigotiproperty" class="text-gray-400 hover:text-white transition">
+            <a href="https://x.com/zigotiproperty" class="text-gray-400 hover:text-white transition" aria-label="Twitter">
               <i class="fab fa-twitter"></i>
             </a>
-            <a href="https://www.linkedin.com/company/zigoti-properties" class="text-gray-400 hover:text-white transition">
+            <a href="https://www.linkedin.com/company/zigoti-properties" class="text-gray-400 hover:text-white transition" aria-label="LinkedIn">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="https://www.instagram.com/zigotiproperties" class="text-gray-400 hover:text-white transition">
+            <a href="https://www.instagram.com/zigotiproperties" class="text-gray-400 hover:text-white transition" aria-label="Instagram">
               <i class="fab fa-instagram"></i>
             </a>
           </div>
@@ -362,7 +422,7 @@
   </footer>
 
   <!-- Back to Top Button -->
-  <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+  <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-blue-700" aria-label="Back to top">
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
     </svg>
