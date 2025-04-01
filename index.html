@@ -73,24 +73,9 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-section relative">
-    <!-- Background Image Container -->
-    <div class="absolute inset-0 -z-10">
-      <img
-        src="images/landfarmwbp.webp"
-        sizes="(max-width: 640px) 100vw, 80vw"
-        alt="Luxury property with modern architecture"
-        loading="eager"
-        fetchpriority="high"
-        width="1200"
-        height="675"
-        class="w-full h-full object-cover"
-      >
-    </div>
-  
-    <!-- Content (unchanged but with critical CSS) -->
-    <div class="container mx-auto px-6 z-10 min-h-screen flex items-center justify-center">
-      <div class="max-w-2xl text-center mx-auto hero-content">
+  <section class="hero-section relative bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('images/landfarmwbp.webp');">
+    <div class="container mx-auto px-6 z-10">
+      <div class="max-w-2xl text-center mx-auto">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Discover Your Dream Property</h1>
         <p class="text-xl text-gray-200 mb-8">Zigoti Properties offers premium real estate solutions with unmatched expertise and personalized service.</p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
@@ -98,6 +83,13 @@
           <a href="residentialandcommercial.html" class="btn-secondary border-2 border-white text-white px-8 py-3 rounded-lg font-semibold text-lg">Residential & Commercial</a>
         </div>
       </div>
+    </div>
+    <div class="absolute bottom-10 left-0 right-0 flex justify-center">
+      <a href="#listings" class="text-white animate-bounce">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+      </a>
     </div>
   </section>
 
