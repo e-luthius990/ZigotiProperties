@@ -25,6 +25,22 @@
   
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    .hero-section {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('images/landfarm.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    .hero-content {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s forwards;
+    }
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body class="bg-gray-50">
 
@@ -71,9 +87,9 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-section relative bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('images/landfarm2.jpg');">
+  <section class="hero-section relative">
     <div class="container mx-auto px-6 z-10">
-      <div class="max-w-2xl text-center mx-auto" data-aos="fade-up">
+      <div class="max-w-2xl text-center mx-auto hero-content">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Discover Your Dream Property</h1>
         <p class="text-xl text-gray-200 mb-8">Zigoti Properties offers premium real estate solutions with unmatched expertise and personalized service.</p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
