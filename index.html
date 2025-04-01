@@ -16,6 +16,7 @@
   <!-- Preload critical resources -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
+  <link rel="preload" href="images/landfarm.jpg" as="image">
   
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -28,17 +29,21 @@
 
   <style>
     .hero-section {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('images/land farm.jpg');
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('images/landfarm.jpg');
       background-size: cover;
       background-position: center;
+      position: relative;
     }
     .hero-content {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 0.6s forwards;
+      opacity: 1; /* Changed from 0 to eliminate render delay */
+      will-change: transform, opacity; /* Optimizes animations */
     }
-    @keyframes fadeInUp {
-      to { opacity: 1; transform: translateY(0); }
+    .animate-bounce {
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
   </style>
 </head>
@@ -87,7 +92,7 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-section relative">
+  <section class="hero-section">
     <div class="container mx-auto px-6 z-10">
       <div class="max-w-2xl text-center mx-auto hero-content">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Discover Your Dream Property</h1>
