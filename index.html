@@ -16,9 +16,6 @@
   <!-- Preload critical resources -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
-
-  <!-- Preload critical image -->
-  <link rel="preload" as="image" href="images/plots.webp" fetchpriority="high">
   
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -76,20 +73,32 @@
 
   <!-- Optimized Hero Section -->
 <section class="hero-section relative min-h-[90vh] flex items-center bg-gray-900">
+
+  <!-- Fixed & Optimized Hero Image -->
+<div class="absolute inset-0">
+  <!-- Fallback background color if image fails to load -->
+  <div class="absolute inset-0 bg-gray-800"></div>
   
-  <!-- Background with optimized loading -->
-  <div class="absolute inset-0 overflow-hidden">
-    <img 
-      src="images/plots.webp" 
-      alt="Dream property landscape" 
-      class="w-full h-full object-cover"
-      loading="eager"
-      fetchpriority="high"
-      width="1920"
-      height="1080"
-    >
-    <div class="absolute inset-0 bg-black/40"></div>
-  </div>
+  <!-- Optimized Image -->
+  <img
+    src="images/landfarmxx-1920.webp" 
+    srcset="images/landfarmxx-800.webp 800w, 
+            images/landfarmxx-1200.webp 1200w,
+            images/landfarmxx-1920.webp 1920w"
+    sizes="100vw"
+    alt="Dream property landscape"
+    class="absolute inset-0 w-full h-full object-cover"
+    loading="eager"
+    fetchpriority="high"
+    width="1920"
+    height="1080"
+    decoding="async"
+    onerror="this.style.display='none'"
+  >
+  
+  <!-- Contrast Overlay -->
+  <div class="absolute inset-0 bg-black/80"></div>
+</div>
   
   <!-- Content -->
   <div class="container mx-auto px-6 z-10">
