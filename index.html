@@ -8,7 +8,6 @@
 
   <!-- Preload critical resources -->
   <link rel="preload" href="css/styles.css" as="style">
-  <link rel="preload" href="images/landfarmxx-800.webp" as="image" media="(max-width: 800px)">
   <link rel="preload" href="images/landfarmxx.webp" as="image" media="(min-width: 801px)">
 
   <!-- Preconnect to external domains -->
@@ -22,6 +21,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Preload critical font if using custom font -->
+  <link rel="preload" href="/fonts/your-font.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Critical CSS -->
   <style>
@@ -184,27 +186,33 @@
 
   <!-- Optimized Hero Section with responsive images -->
   <section class="hero-section" aria-labelledby="hero-heading">
+    
     <div class="container mx-auto px-6 z-10">
       <div class="max-w-2xl text-center mx-auto hero-content">
-        <!-- Added explicit line-height to heading -->
-        <h1 id="hero-heading" class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.2] min-h-[1.2em]">
+        <!-- Optimized H1 Heading -->
+        <h1 id="hero-heading" 
+            class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.2] min-h-[1.2em]"
+            style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">
           Discover Your Dream Property
         </h1>
-        <!-- Added min-height to paragraph -->
-        <p class="text-xl text-gray-200 mb-8 min-h-[1.5em]">
+        
+        <!-- Paragraph with system font fallback -->
+        <p class="text-xl text-gray-200 mb-8 min-h-[1.5em]"
+           style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'">
           Zigoti Properties offers premium real estate solutions with unmatched expertise and personalized service.
         </p>
-        <!-- Added fixed height to button container -->
+        
+        <!-- Button container -->
         <div class="flex flex-col sm:flex-row justify-center gap-4 h-14">
-          <!-- Added explicit width to button -->
-          <a href="exploreproperties.html" class="btn-primary text-white px-8 py-3 rounded-lg font-semibold text-lg transition-transform hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white w-[220px] sm:w-auto">
+          <a href="exploreproperties.html" 
+             class="btn-primary text-white px-8 py-3 rounded-lg font-semibold text-lg transition-transform hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white w-[220px] sm:w-auto">
             Explore All Properties
           </a>
         </div>
       </div>
     </div>
     
-    <!-- Added fixed dimensions to scroll indicator -->
+    <!-- Scroll indicator -->
     <div class="scroll-indicator w-6 h-10 mx-auto mt-8">
       <a href="#listings" aria-label="Scroll to listings" class="text-white block w-full h-full">
         <svg class="animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" width="24" height="24">
