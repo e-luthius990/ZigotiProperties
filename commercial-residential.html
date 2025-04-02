@@ -3,21 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | Zigoti Properties</title>
-  
-  <!-- Favicon -->
+  <title>Explore All Properties | Zigoti Properties</title>
+
+  <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-  
-  <!-- Preload critical resources -->
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="css/styles.css" rel="stylesheet">
   
@@ -38,8 +33,8 @@
       <div class="hidden lg:flex space-x-8">
         <a href="index.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Home</a>
         <a href="about.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">About Us</a>
+        <a href="properties.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Properties</a>
         <a href="services.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Services</a>
-        <a href="virtual-tour.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Virtual Tour</a>
         <a href="contact.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Contact</a>
       </div>
       
@@ -61,85 +56,90 @@
       <div class="px-6 py-4 space-y-3">
         <a href="index.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">Home</a>
         <a href="about.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">About Us</a>
+        <a href="properties.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">Properties</a>
         <a href="services.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">Services</a>
-        <a href="virtual-tour.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">Virtual Tour</a>
         <a href="contact.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium">Contact</a>
       </div>
     </div>
   </nav>
 
-<!-- About Content -->
-<section class="container mx-auto px-6 py-16">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <div data-aos="fade-right">
-            <h2 class="text-3xl font-bold text-gray-800 mb-6">About Us</h2>
-            <p class="text-gray-600 mb-4">Zigoti Properties Uganda Limited is a leading real estate company in uganda, dedicated to providing top-quality property solutions for individuals, businesses, and investors. With a strong commitment to integrity, professionalism, and customer satisfaction, we offer a comprehensive range of real estate services, including property sales, rentals, Management, and consultancy.</p>
-            <p class="text-gray-600 mb-6">Our team of experienced professionals understands the dynamics of Ugand's real estate market and works diligently to connect clients with the best property opportunities. Whether you are buying, selling, or investing, Zigoti Properties Uganda Limited is your trusted partner for all your real estate needs.</p>
-        </div>
-        <div class="rounded-xl overflow-hidden shadow-xl">
-            <img src="images/us.avif" alt="Zigoti Properties Office" class="w-full h-auto object-cover">
-        </div>
-    </div>
-</section>
+  <!-- Properties Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Explore Commercial & Residential Properties</h2>
+        <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Discover our wide range of properties across Uganda</p>
+      </div>
 
-<!-- Mission & Values -->
-<section class="container mx-auto px-6 py-16">
-    <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Mission & Values</h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">Guiding principles that define who we are and how we work</p>
-    </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300" data-aos="fade-up">
-            <div class="text-blue-500 text-3xl mb-4">
-                <i class="fas fa-bullseye"></i>
+        <!-- Commercial Properties -->
+        <div class="property-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+          <div class="relative h-48">
+            <img src="images/commercial.jpg" alt="Commercial Properties" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div class="bg-blue-100 p-3 rounded-full mr-4">
+                <i class="fas fa-building text-blue-600 text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800">Commercial Properties</h3>
             </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3">Our Mission</h3>
-            <p class="text-gray-600">To transform Uganda's real estate landscape by providing innovative, client-focused property solutions that deliver exceptional value and build lasting relationships.</p>
+            <p class="text-gray-600 mb-4">Office spaces, retail shops, warehouses and other commercial real estate opportunities.</p>
+            <a href="commercial-properties.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+              View Listings
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </a>
+          </div>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-mdhover:shadow-lg transition duration-300" data-aos="fade-up">
-            <div class="text-blue-500 text-3xl mb-4">
-                <i class="fas fa-eye"></i>
-            </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3">Our Vision</h3>
-            <p class="text-gray-600">To be Uganda's most trusted real estate partner, recognized for our integrity, market expertise, and commitment to client success.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300" data-aos="fade-up">
-            <div class="text-blue-500 text-3xl mb-4">
-                <i class="fas fa-hand-holding-heart"></i>
-            </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3">Our Values</h3>
-            <ul class="text-gray-600 space-y-2">
-                <li class="flex items-start">
-                    <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
-                    <span>Integrity in all dealings</span>
-                </li>
-                <li class="flex items-start">
-                    <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
-                    <span>Client-first approach</span>
-                </li>
-                <li class="flex items-start">
-                    <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
-                    <span>Market innovation</span>
-                </li>
-                <li class="flex items-start">
-                    <i class="fas fa-check text-blue-500 mt-1 mr-2"></i>
-                    <span>Community impact</span>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
 
-<!-- Team CTA -->
-<section class="bg-blue-700 text-white py-16">
+        <!-- Residential Properties -->
+        <div class="property-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+          <div class="relative h-48">
+            <img src="images/residentialandcommercialimage/kigo/house1.jpg" alt="Residential Properties" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <div class="bg-orange-100 p-3 rounded-full mr-4">
+                <i class="fas fa-home text-orange-600 text-xl"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800">Residential Properties</h3>
+            </div>
+            <p class="text-gray-600 mb-4">Houses, apartments, and vacation homes for sale or rent in prime locations.</p>
+            <a href="residential-properties.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+              View Listings
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 bg-blue-400 text-white">
     <div class="container mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold mb-6">Meet Our Expert Team</h2>
-        <p class="text-xl mb-8 max-w-2xl mx-auto">Our success is driven by a team of passionate real estate professionals dedicated to your satisfaction.</p>
-        <a href="agents.html" class="inline-block bg-white text-blue-700 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300">View Our Agents</a>
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Find Your Perfect Property?</h2>
+        <p class="text-xl mb-8">Our expert agents are here to guide you through every step of the process, from property search to closing.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a href="https://wa.me/256707346556" class="bg-green-500 hover:bg-green-600 transition-colors text-white px-8 py-3 rounded-lg font-semibold text-lg">
+            <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
+          </a>
+          <a href="tel:+256707346556" class="border-2 border-white hover:bg-white hover:text-blue-400 transition-colors text-white px-8 py-3 rounded-lg font-semibold text-lg">
+            <i class="fas fa-phone-alt mr-2"></i> Call Now
+          </a>
+        </div>
+      </div>
     </div>
 </section>
-
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-gray-300 pt-16 pb-8">
@@ -152,16 +152,16 @@
             Zigoti Properties is Uganda's premier real estate agency, specializing in commercial, residential, and land properties.
           </p>
           <div class="flex space-x-4">
-            <a href="https://www.facebook.com/eluthius990/" class="text-gray-400 hover:text-white transition">
+            <a href="#" class="text-gray-400 hover:text-white transition">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="https://x.com/zigotiproperty" class="text-gray-400 hover:text-white transition">
+            <a href="#" class="text-gray-400 hover:text-white transition">
               <i class="fab fa-twitter"></i>
             </a>
-            <a href="https://www.linkedin.com/company/zigoti-properties" class="text-gray-400 hover:text-white transition">
+            <a href="#" class="text-gray-400 hover:text-white transition">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="https://www.instagram.com/zigotiproperties" class="text-gray-400 hover:text-white transition">
+            <a href="#" class="text-gray-400 hover:text-white transition">
               <i class="fab fa-instagram"></i>
             </a>
           </div>
@@ -169,13 +169,13 @@
         
         <!-- Quick Links -->
         <div>
-          <h3 class="text-white text-lg font-semibold mb-4">Quick Links</h3>
-          <ul class="space-y-2">
-            <li><a href="exploreourservices.html" class="hover:text-white transition">Our Services</a></li>
-            <li><a href="agents.html" class="hover:text-white transition">Agents</a></li>
-            <li><a href="exploreproperties.html" class="hover:text-white transition">Explore Properties</a></li>
-          </ul>
-        </div>
+            <h3 class="text-white text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li><a href="exploreourservices.html" class="hover:text-white transition">Our Services</a></li>
+              <li><a href="agents.html" class="hover:text-white transition">Agents</a></li>
+              <li><a href="exploreproperties.html" class="hover:text-white transition">Explore Properties</a></li>
+            </ul>
+          </div>
         
         <!-- Services -->
         <div>
@@ -221,7 +221,7 @@
   </footer>
 
   <!-- Back to Top Button -->
-  <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+  <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300" aria-label="Back to top">
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
     </svg>
@@ -231,6 +231,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="js/app.js"></script>
-
+  
 </body>
 </html>
