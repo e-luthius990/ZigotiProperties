@@ -8,8 +8,8 @@
 
   <!-- Preload critical resources -->
   <link rel="preload" href="css/styles.css" as="style">
-  <link rel="preload" href="images/landfarmxx.avif" as="image" fetchpriority="high" media="(min-width: 801px)">
-  <link rel="preload" href="images/landfarmxx-800.avif" as="image" fetchpriority="high" media="(max-width: 800px)">
+  <link rel="preload" href="images/landmark.jpg" as="image" fetchpriority="high" media="(min-width: 801px)">
+
 
   <!-- Preconnect to external domains -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -180,34 +180,10 @@
     
     <!-- Responsive background image with modern formats -->
     <picture class="absolute inset-0 z-0">
-      <!-- AVIF format (smallest) -->
-      <source 
-        srcset="images/landfarmxx.avif 1x" 
-        type="image/avif"
-        media="(min-width: 801px)"
-      >
-      <source 
-        srcset="images/landfarmxx-800.avif 1x" 
-        type="image/avif"
-        media="(max-width: 800px)"
-      >
-      
-      <!-- WebP fallback -->
-      <source 
-        srcset="images/landfarmxx-800.webp 1x" 
-        type="image/webp"
-        media="(min-width: 801px)"
-      >
-      <source 
-        srcset="images/landfarmxx-800.webp 1x" 
-        type="image/webp"
-        media="(max-width: 800px)"
-      >
-      
+
       <!-- JPEG fallback -->
       <img 
-        src="images/landfarm.jpg" 
-        srcset="images/landfarm-800.jpg 800w, images/landfarm.jpg 1920w"
+        src="images/landmark.jpg" 
         alt="Beautiful properties in Uganda"
         width="1920"
         height="1080"
