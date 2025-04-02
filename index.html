@@ -26,6 +26,23 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+  <style>
+    @keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 1s ease-out forwards;
+}
+  </style>
+
 </head>
 <body class="bg-gray-50">
 
@@ -71,26 +88,37 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero-section relative bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('images/plot1c.webp');">
-    <div class="container mx-auto px-6 z-10">
-      <div class="max-w-2xl text-center mx-auto">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Discover Your Dream Property</h1>
-        <p class="text-xl text-gray-200 mb-8">Zigoti Properties offers premium real estate solutions with unmatched expertise and personalized service.</p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a href="landsandplots.html" class="btn-primary text-white px-8 py-3 rounded-lg font-semibold text-lg">Lands & Plots</a>
-          <a href="residentialandcommercial.html" class="btn-secondary border-2 border-white text-white px-8 py-3 rounded-lg font-semibold text-lg">Residential & Commercial</a>
-        </div>
+  <!-- Enhanced Hero Section -->
+<section class="hero-section relative min-h-[90vh] flex items-center bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('images/plots.jpg');">
+  <div class="absolute inset-0 bg-black/30"></div>
+  
+  <div class="container mx-auto px-6 z-10">
+    <div class="max-w-2xl text-center mx-auto animate-fade-in-up">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+        <span class="text-amber-400">Discover</span> Your Dream Property
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-100 mb-8 max-w-lg mx-auto leading-relaxed">
+        Zigoti Properties offers premium real estate solutions with unmatched expertise and personalized service.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="landsandplots.html" class="btn-primary bg-amber-500 hover:bg-amber-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+          Explore Lands & Plots
+        </a>
+        <a href="residentialandcommercial.html" class="btn-secondary bg-transparent hover:bg-white/10 border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+          View Residential & Commercial
+        </a>
       </div>
     </div>
-    <div class="absolute bottom-10 left-0 right-0 flex justify-center">
-      <a href="#listings" class="text-white animate-bounce">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-        </svg>
-      </a>
-    </div>
-  </section>
+  </div>
+  
+  <div class="absolute bottom-10 left-0 right-0 flex justify-center">
+    <a href="#listings" aria-label="Scroll to listings" class="text-white animate-bounce hover:text-amber-400 transition-colors duration-300">
+      <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </a>
+  </div>
+</section>
 
   <!-- Property Listings Section -->
   <section id="listings" class="py-16 bg-gray-50">
