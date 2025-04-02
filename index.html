@@ -16,6 +16,9 @@
   <!-- Preload critical resources -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
+
+  <!-- Preload critical image -->
+  <link rel="preload" as="image" href="images/plots.webp" fetchpriority="high">
   
   <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -25,23 +28,6 @@
   
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 1s ease-out forwards;
-}
-  </style>
 
 </head>
 <body class="bg-gray-50">
@@ -88,10 +74,24 @@
     </div>
   </nav>
 
-  <!-- Enhanced Hero Section -->
-<section class="hero-section relative min-h-[90vh] flex items-center bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('images/plots.jpg');">
-  <div class="absolute inset-0 bg-black/30"></div>
+  <!-- Optimized Hero Section -->
+<section class="hero-section relative min-h-[90vh] flex items-center bg-gray-900">
   
+  <!-- Background with optimized loading -->
+  <div class="absolute inset-0 overflow-hidden">
+    <img 
+      src="images/plots.webp" 
+      alt="Dream property landscape" 
+      class="w-full h-full object-cover"
+      loading="eager"
+      fetchpriority="high"
+      width="1920"
+      height="1080"
+    >
+    <div class="absolute inset-0 bg-black/40"></div>
+  </div>
+  
+  <!-- Content -->
   <div class="container mx-auto px-6 z-10">
     <div class="max-w-2xl text-center mx-auto animate-fade-in-up">
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
@@ -111,6 +111,7 @@
     </div>
   </div>
   
+  <!-- Scroll indicator -->
   <div class="absolute bottom-10 left-0 right-0 flex justify-center">
     <a href="#listings" aria-label="Scroll to listings" class="text-white animate-bounce hover:text-amber-400 transition-colors duration-300">
       <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
