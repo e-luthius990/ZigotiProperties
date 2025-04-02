@@ -189,31 +189,28 @@
     
     <div class="container mx-auto px-6 z-10">
       <div class="max-w-2xl text-center mx-auto hero-content">
-        <!-- Optimized H1 Heading -->
-        <h1 id="hero-heading" 
-            class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.2] min-h-[1.2em]"
-            style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';">
+        <!-- Optimized H1 Heading - Removed inline styles -->
+        <h1 id="hero-heading" class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.2]">
           Discover Your Dream Property
         </h1>
         
-        <!-- Paragraph with system font fallback -->
-        <p class="text-xl text-gray-200 mb-8 min-h-[1.5em]"
-           style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'">
+        <!-- Paragraph - Removed inline styles and min-height -->
+        <p class="text-xl text-gray-200 mb-8">
           Zigoti Properties offers premium real estate solutions with unmatched expertise and personalized service.
         </p>
         
-        <!-- Button container -->
-        <div class="flex flex-col sm:flex-row justify-center gap-4 h-14">
+        <!-- Button container - Removed fixed height -->
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
           <a href="exploreproperties.html" 
-             class="btn-primary text-white px-8 py-3 rounded-lg font-semibold text-lg transition-transform hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white w-[220px] sm:w-auto">
+             class="btn-primary text-white px-8 py-3 rounded-lg font-semibold text-lg transition-transform hover:scale-105 focus:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white">
             Explore All Properties
           </a>
         </div>
       </div>
     </div>
     
-    <!-- Scroll indicator -->
-    <div class="scroll-indicator w-6 h-10 mx-auto mt-8">
+    <!-- Scroll indicator - Moved to bottom of viewport -->
+    <div class="scroll-indicator absolute bottom-8 left-1/2 transform -translate-x-1/2 w-6 h-10">
       <a href="#listings" aria-label="Scroll to listings" class="text-white block w-full h-full">
         <svg class="animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" width="24" height="24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
