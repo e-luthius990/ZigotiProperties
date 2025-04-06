@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rental Property vs. Commercial Investment in Uganda | Zigoti Properties</title>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="css/styles.css" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .blog-content {
+      line-height: 1.8;
+    }
+    .blog-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #2d3748;
+    }
+    .blog-content h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #2d3748;
+    }
+    .blog-content p {
+      margin-bottom: 1.25rem;
+      color: #4a5568;
+    }
+    .pros-cons-list {
+      margin-bottom: 1.5rem;
+    }
+    .pros-cons-list li {
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: flex-start;
+    }
+    .pros-cons-list li:before {
+      margin-right: 0.5rem;
+      margin-top: 0.25rem;
+    }
+    .pros li:before {
+      content: "✓";
+      color: #10b981;
+    }
+    .cons li:before {
+      content: "✗";
+      color: #ef4444;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+    }
+    .comparison-table th, .comparison-table td {
+      border: 1px solid #e2e8f0;
+      padding: 0.75rem;
+      text-align: left;
+    }
+    .comparison-table th {
+      background-color: #f7fafc;
+      font-weight: 600;
+    }
+    .comparison-table tr:nth-child(even) {
+      background-color: #f7fafc;
+    }
+    .blog-header {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/comvsre.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-300">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center">
+        <img src="images/logos/Zigoti-properties-New-Logo.png" alt="Zigoti Properties Logo" class="h-10 md:h-12">
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <div class="hidden lg:flex space-x-8">
+        <a href="index.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Home</a>
+        <a href="about.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">About Us</a>
+        <a href="properties.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Properties</a>
+        <a href="services.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Services</a>
+        <a href="blog.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Blog</a>
+        <a href="contact.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Contact</a>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <div class="lg:hidden">
+        <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+          <svg id="menu-open-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+          <svg id="menu-close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden hidden bg-white w-full absolute left-0 top-full shadow-lg transition-all duration-300 transform opacity-0 -translate-y-2">
+      <div class="px-6 py-4 space-y-3">
+        <a href="index.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">Home</a>
+        <a href="about.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">About Us</a>
+        <a href="properties.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">Properties</a>
+        <a href="services.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">Services</a>
+        <a href="blog.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">Blog</a>
+        <a href="contact.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Blog Header -->
+  <header class="blog-header text-white py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Rental Property vs. Commercial Investment in Uganda</h1>
+      <p class="text-xl max-w-3xl mx-auto">Comparing the pros and cons of residential and commercial real estate investments</p>
+    </div>
+  </header>
+
+  <!-- Blog Content -->
+  <main class="container mx-auto px-4 py-12 max-w-4xl">
+    <article class="blog-content bg-white rounded-lg shadow-md p-8 md:p-12">
+      <div class="mb-8">
+        <p class="text-gray-600 italic">Published on <span class="font-semibold">April 7, 2025</span> by <span class="font-semibold">Zigoti Properties Team</span></p>
+      </div>
+
+      <p class="lead">Investing in real estate is one of the most reliable ways to build wealth in Uganda. However, choosing between <strong>residential rental properties</strong> and <strong>commercial real estate investments</strong> can be challenging. Each option has its own advantages, risks, and potential returns.</p>
+
+      <p>In this blog, we'll compare rental property investments with commercial real estate in Uganda, examining factors such as:</p>
+      
+      <ul class="list-disc pl-6 mb-8">
+        <li><strong>Rental income potential</strong></li>
+        <li><strong>Tenant stability</strong></li>
+        <li><strong>Market demand</strong></li>
+        <li><strong>Maintenance costs</strong></li>
+        <li><strong>Long-term appreciation</strong></li>
+      </ul>
+
+      <p>By the end, you'll have a clearer understanding of which investment aligns with your financial goals.</p>
+
+      <h2>1. Understanding Rental Property Investments in Uganda</h2>
+
+      <h3>What is a Rental Property?</h3>
+      <p>A rental property is a residential unit (house, apartment, or flat) leased to tenants for a monthly fee. In Uganda, residential rentals are popular in urban areas like <strong>Kampala, Entebbe, Jinja, and Mbarara</strong>, where demand for housing is high.</p>
+
+      <h3>Pros of Rental Properties</h3>
+      <ul class="pros-cons-list pros">
+        <li><strong>Steady Cash Flow</strong> – Monthly rent provides a consistent income stream.</li>
+        <li><strong>High Demand</strong> – Uganda's growing population and urbanization increase demand for housing.</li>
+        <li><strong>Lower Entry Costs</strong> – Residential properties are generally cheaper than commercial spaces.</li>
+        <li><strong>Easier to Finance</strong> – Banks and mortgage lenders offer better loan terms for residential properties.</li>
+        <li><strong>Flexibility</strong> – Can be sold or repurposed easily if needed.</li>
+      </ul>
+
+      <h3>Cons of Rental Properties</h3>
+      <ul class="pros-cons-list cons">
+        <li><strong>Higher Tenant Turnover</strong> – Tenants may move frequently, leading to vacancies.</li>
+        <li><strong>Maintenance Costs</strong> – Landlords often handle repairs, utilities, and property upkeep.</li>
+        <li><strong>Rent Control Risks</strong> – Government policies or economic downturns can limit rental increases.</li>
+      </ul>
+
+      <h3>Best Areas for Rental Properties in Uganda</h3>
+      <ul class="list-disc pl-6 mb-8">
+        <li><strong>Kampala (Kololo, Nakasero, Naguru, Ntinda)</strong> – High demand from expats and professionals.</li>
+        <li><strong>Entebbe</strong> – Popular for short-term rentals due to tourism.</li>
+        <li><strong>Jinja & Mbarara</strong> – Growing middle-class demand.</li>
+      </ul>
+
+      <h2>2. Understanding Commercial Real Estate Investments in Uganda</h2>
+
+      <h3>What is Commercial Real Estate?</h3>
+      <p>Commercial properties are used for business purposes, such as:</p>
+      <ul class="list-disc pl-6 mb-4">
+        <li><strong>Office spaces</strong></li>
+        <li><strong>Retail shops & malls</strong></li>
+        <li><strong>Warehouses & industrial buildings</strong></li>
+        <li><strong>Hotels & guesthouses</strong></li>
+      </ul>
+
+      <h3>Pros of Commercial Investments</h3>
+      <ul class="pros-cons-list pros">
+        <li><strong>Higher Rental Yields</strong> – Businesses pay more per square meter than residential tenants.</li>
+        <li><strong>Longer Lease Terms</strong> – Commercial leases often last <strong>3-10 years</strong>, reducing turnover.</li>
+        <li><strong>Triple Net Leases (NNN)</strong> – Tenants may cover maintenance, taxes, and insurance.</li>
+        <li><strong>Strong Appreciation Potential</strong> – Prime locations (e.g., Kampala CBD) gain value quickly.</li>
+        <li><strong>Professional Tenants</strong> – Businesses are more reliable than individual renters.</li>
+      </ul>
+
+      <h3>Cons of Commercial Investments</h3>
+      <ul class="pros-cons-list cons">
+        <li><strong>Higher Initial Costs</strong> – Commercial properties require larger capital investments.</li>
+        <li><strong>Economic Sensitivity</strong> – Businesses may close during downturns, leading to vacancies.</li>
+        <li><strong>Complex Financing</strong> – Fewer mortgage options; often requires cash or private funding.</li>
+        <li><strong>Regulatory Hurdles</strong> – Zoning laws and permits can be restrictive.</li>
+      </ul>
+
+      <h3>Best Areas for Commercial Investments in Uganda</h3>
+      <ul class="list-disc pl-6 mb-8">
+        <li><strong>Kampala CBD (Nakasero, Speke Road, Garden City)</strong> – Prime office and retail space.</li>
+        <li><strong>Industrial Areas (Namanve, Kasese, Luzira)</strong> – Growing demand for warehouses.</li>
+        <li><strong>Tourist Hubs (Entebbe, Fort Portal, Jinja)</strong> – Hotels and shopping centers thrive.</li>
+      </ul>
+
+      <h2>3. Key Differences: Rental Property vs. Commercial Investment</h2>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Factor</th>
+            <th>Residential Rental</th>
+            <th>Commercial Real Estate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Income Potential</strong></td>
+            <td>Moderate (monthly)</td>
+            <td>High (long-term leases)</td>
+          </tr>
+          <tr>
+            <td><strong>Tenant Stability</strong></td>
+            <td>Short-term (1-2 yrs)</td>
+            <td>Long-term (3-10 yrs)</td>
+          </tr>
+          <tr>
+            <td><strong>Initial Investment</strong></td>
+            <td>Lower</td>
+            <td>Higher</td>
+          </tr>
+          <tr>
+            <td><strong>Maintenance Costs</strong></td>
+            <td>Landlord covers</td>
+            <td>Often tenant covers</td>
+          </tr>
+          <tr>
+            <td><strong>Financing Options</strong></td>
+            <td>Easier to secure</td>
+            <td>Limited, stricter terms</td>
+          </tr>
+          <tr>
+            <td><strong>Market Demand</strong></td>
+            <td>Always high</td>
+            <td>Depends on economy</td>
+          </tr>
+          <tr>
+            <td><strong>Risk Level</strong></td>
+            <td>Lower risk</td>
+            <td>Higher risk</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>4. Which is the Better Investment in Uganda?</h2>
+
+      <h3>Choose Rental Properties If:</h3>
+      <ul class="list-disc pl-6 mb-6">
+        <li>You want <strong>stable, lower-risk income</strong>.</li>
+        <li>You have <strong>limited capital</strong> for initial investment.</li>
+        <li>You prefer <strong>easier property management</strong>.</li>
+      </ul>
+
+      <h3>Choose Commercial Real Estate If:</h3>
+      <ul class="list-disc pl-6 mb-6">
+        <li>You seek <strong>higher returns</strong> and long-term leases.</li>
+        <li>You have <strong>significant capital</strong> for upfront costs.</li>
+        <li>You understand <strong>business trends and location value</strong>.</li>
+      </ul>
+
+      <h2>5. Final Verdict</h2>
+
+      <p>Both <strong>rental properties</strong> and <strong>commercial real estate</strong> offer lucrative opportunities in Uganda. Your choice depends on:</p>
+      <ul class="list-disc pl-6 mb-6">
+        <li><strong>Your budget</strong></li>
+        <li><strong>Risk tolerance</strong></li>
+        <li><strong>Investment goals</strong></li>
+      </ul>
+
+      <p>For beginners, <strong>residential rentals</strong> are safer and easier to manage. For experienced investors with capital, <strong>commercial properties</strong> can deliver higher profits.</p>
+
+      <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mt-8">
+        <h3 class="text-blue-800 font-bold mb-2">Want to Invest in Ugandan Real Estate?</h3>
+        <p class="text-blue-700">Consult with a local real estate expert to assess the best opportunities based on your financial situation.</p>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-gray-200">
+        <p class="text-gray-600"><strong>Which do you prefer—rental properties or commercial investments?</strong></p>
+
+        <!-- Social Sharing Section -->
+        <section class="mb-8">
+            <h3 class="text-lg font-semibold text-gray-700 mb-4">Share this article:</h3>
+            <div class="flex space-x-4">
+                <!-- Facebook -->
+                <button onclick="shareOnFacebook()" 
+                   class="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full w-10 h-10 flex items-center justify-center cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                    </svg>
+                </button>
+                
+                <!-- Twitter -->
+                <button onclick="shareOnTwitter()"
+                   class="bg-blue-400 hover:bg-blue-500 text-white p-2 rounded-full w-10 h-10 flex items-center justify-center cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                    </svg>
+                </button>
+                
+                <!-- LinkedIn -->
+                <button onclick="shareOnLinkedIn()"
+                   class="bg-blue-700 hover:bg-blue-800 text-white p-2 rounded-full w-10 h-10 flex items-center justify-center cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                    </svg>
+                </button>
+                
+                <!-- WhatsApp -->
+                <button onclick="shareOnWhatsApp()"
+                   class="bg-green-500 hover:bg-green-600 text-white p-2 rounded-full w-10 h-10 flex items-center justify-center cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                    </svg>
+                </button>
+                
+                <!-- Email -->
+                <button onclick="shareViaEmail()"
+                   class="bg-gray-600 hover:bg-gray-700 text-white p-2 rounded-full w-10 h-10 flex items-center justify-center cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <div class="mt-4 flex space-x-4">
+          <span class="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-800 text-sm font-medium">
+            UgandaRealEstate
+          </span>
+          <span class="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-800 text-sm font-medium">
+            PropertyInvestment
+          </span>
+          <span class="inline-flex items-center px-3 py-1 rounded-full bg-gray-100 text-gray-800 text-sm font-medium">
+            InvestInUganda
+          </span>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-700 text-gray-300 pt-16 pb-8">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <!-- Brand Column -->
+        <div>
+          <div class="mb-6">
+            <p class="mt-4 text-gray-400">Zigoti Properties your trusted partner in real estate solutions across Uganda.</p>
+          </div>
+          
+          <div class="flex space-x-4">
+            <a href="https://www.facebook.com/eluthius990/" class="bg-gray-800 hover:bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://x.com/zigotiproperty" class="bg-gray-800 hover:bg-blue-400 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/zigoti-properties" class="bg-gray-800 hover:bg-blue-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/zigotiproperties" class="bg-gray-800 hover:bg-pink-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-white text-lg font-semibold mb-4 uppercase tracking-wider">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="explore-our-services.html" class="hover:text-white transition flex items-center">
+              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> Our Services</a></li>
+            <li><a href="agents.html" class="hover:text-white transition flex items-center">
+              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> Agents</a></li>
+            <li><a href="exploreproperties.html" class="hover:text-white transition flex items-center">
+              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> Explore Properties</a></li>
+            <li><a href="about.html" class="hover:text-white transition flex items-center">
+              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> About Us</a></li>
+          </ul>
+        </div>
+        
+        <!-- Services -->
+        <div>
+          <h3 class="text-white text-lg font-semibold mb-4 uppercase tracking-wider">Our Services</h3>
+          <ul class="space-y-3">
+            <li><a href="land-surveying.html" class="hover:text-white transition flex items-center">
+              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> Land Surveying</a></li>
+            <li><a href="property-management.html" class="hover:text-white transition flex items-center">
+              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> Property Management</a></li>
+            <li><a href="real-estate-consulting.html" class="hover:text-white transition flex items-center">
+              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> Real Estate Consulting</a></li>
+            <li><a href="legal-services.html" class="hover:text-white transition flex items-center">
+              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> Legal Services</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact -->
+        <div>
+          <h3 class="text-white text-lg font-semibold mb-4 uppercase tracking-wider">Contact Us</h3>
+          <address class="not-italic space-y-4">
+            <div class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-400"></i> 
+              <div>
+                <p class="text-gray-400">95H7+CM Zigoti, Uganda</p>
+                <p class="text-gray-400">Mityana Road, Uganda</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-phone-alt mr-3 text-blue-400"></i> 
+              <div>
+                <p class="text-gray-400">+256 707346556</p>
+                <p class="text-gray-400 text-sm">Office Line</p>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-envelope mr-3 text-blue-400"></i> 
+              <a href="mailto:zigotiproperties@gmail.com" class="text-gray-400 hover:text-white transition">zigotiproperties2023@gmail.com</a>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-clock mr-3 text-blue-400"></i> 
+              <div>
+                <p class="text-gray-400">Mon-Fri: 8:00 AM - 5:00 PM</p>
+                <p class="text-gray-400 text-sm">Sat: 9:00 AM - 1:00 PM</p>
+              </div>
+            </div>
+          </address>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2023 Zigoti Properties Uganda Limited. All rights reserved.</p>
+        <div class="flex space-x-6">
+          <a href="#" class="text-gray-500 hover:text-white transition text-sm">Privacy Policy</a>
+          <a href="#" class="text-gray-500 hover:text-white transition text-sm">Terms of Service</a>
+          <a href="#" class="text-gray-500 hover:text-white transition text-sm">Sitemap</a>
+          <a href="#" class="text-gray-500 hover:text-white transition text-sm">FAQ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300" aria-label="Back to top">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+    </svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/app.js"></script>
+  
+</body>
+</html>
