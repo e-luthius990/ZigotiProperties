@@ -7,16 +7,17 @@
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="css/styles.css" rel="stylesheet">
+ 
 </head>
-<body class="font-sans bg-blue-50">
+<body class="font-sans bg-white">
  
   <!-- Navigation -->
   <nav class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-300">
@@ -62,147 +63,326 @@
     </div>
   </nav>
 
-  <!-- Services Section -->
-  <section id="services" class="container mx-auto px-6 py-16">
-    <div class="text-center mb-16">
-      <h2 class="text-3xl font-bold text-gray-800 mb-4">Tailored Real Estate Solutions</h2>
-      <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
-      <p class="text-gray-600 max-w-3xl mx-auto">
-        We offer a comprehensive range of professional services designed to meet all your real estate needs in Uganda.
+  <section class="relative h-screen md:h-[70vh] flex items-center justify-center text-white">
+    <!-- Background Image with inline CSS -->
+    <div 
+      class="absolute inset-0"
+      style="
+        background-image: url('images/servicexxxx.avif');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      "
+    ></div>
+  
+    <!-- Black Overlay -->
+    <div class="absolute inset-0 bg-black opacity-70"></div>
+  
+    <!-- Content -->
+    <div class="relative z-10 text-center px-6">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Our Services</h2>
+      <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8">
+        We provide a wide range of tailored solutions to meet your unique needs—whether you're buying, selling, or investing in property.
       </p>
+      <a 
+        href="explore-our-services.html" 
+        class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+      >
+        Explore Services
+      </a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="container mx-auto px-6 py-16"> 
+    <!-- All Services Content -->
+    <div class="service-content active" id="all-content">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Comprehensive <span class="text-blue-600">Services</span></h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">We offer a full spectrum of real estate services to meet all your property needs in Uganda.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Property Sales and Buys -->
+        <div class="service-card bg-white rounded-xl shadow-lg p-8" data-aos="fade-up">
+          <div class="icon-box bg-blue-100 text-blue-600">
+            <i class="fas fa-home text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Property Sales & Purchases</h3>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+              <span>Buying and selling residential, commercial and farm properties</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+              <span>Expert negotiation and closing support</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+              <span>Comprehensive market analysis for competitive pricing</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Property Management -->
+        <div class="service-card bg-white rounded-xl shadow-lg p-8" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon-box bg-blue-100 text-blue-600">
+            <i class="fas fa-building text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Property Management</h3>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+              <span>Complete property maintenance and repair coordination</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+              <span>Rigorous tenant screening and lease administration</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+              <span>Transparent financial reporting and rent collection</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Land Acquisition -->
+        <div class="service-card bg-white rounded-xl shadow-lg p-8" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon-box bg-blue-100 text-blue-600">
+            <i class="fas fa-map-marked-alt text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Land Acquisition</h3>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+              <span>Identification of prime land parcels across Uganda</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+              <span>Legal assistance with title processing and documentation</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+              <span>Thorough due diligence to ensure clear ownership</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Real Estate Consultancy -->
+        <div class="service-card bg-white rounded-xl shadow-lg p-8" data-aos="fade-up">
+          <div class="icon-box bg-blue-100 text-blue-600">
+            <i class="fas fa-chart-line text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Real Estate Consultancy</h3>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+              <span>Strategic property investment advice</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+              <span>In-depth market trend analysis and forecasting</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+              <span>Legal and regulatory compliance guidance</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Property Valuation -->
+        <div class="service-card bg-white rounded-xl shadow-lg p-8" data-aos="fade-up" data-aos-delay="100">
+          <div class="icon-box bg-blue-100 text-blue-600">
+            <i class="fas fa-search-dollar text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Property Valuation</h3>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+              <span>Accurate assessment of property values</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+              <span>Professional reports for financial institutions</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+              <span>Detailed valuation for sales, rentals and investments</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Investment Opportunities -->
+        <div class="service-card bg-white rounded-xl shadow-lg p-8" data-aos="fade-up" data-aos-delay="200">
+          <div class="icon-box bg-blue-100 text-blue-600">
+            <i class="fas fa-hand-holding-usd text-2xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Investment Opportunities</h3>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+              <span>Exclusive access to premium properties</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+              <span>Portfolio diversification strategies</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+              <span>ROI analysis and investment planning</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
     
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Property Sales and Buys -->
-      <div class="service-card bg-white rounded-xl shadow-lg p-8">
-        <div class="icon-box bg-blue-100 text-blue-600">
-          <i class="fas fa-home text-2xl"></i>
+    <!-- Sales & Purchases Content -->
+    <div class="service-content" id="sales-content">
+      <div class="flex flex-col md:flex-row items-center gap-12 mb-16">
+        <div class="md:w-1/2" data-aos="fade-right">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Property Sales" class="rounded-xl shadow-xl w-full">
         </div>
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Property Sales & Purchases</h3>
-        <ul class="space-y-3 text-gray-600">
-          <li class="flex items-start">
-            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
-            <span>Buying and selling residential, commercial and farm properties</span>
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
-            <span>Expert negotiation and closing support</span>
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
-            <span>Comprehensive market analysis for competitive pricing</span>
-          </li>
-        </ul>
+        <div class="md:w-1/2" data-aos="fade-left">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Property <span class="text-blue-600">Sales & Purchases</span></h2>
+          <p class="text-gray-600 mb-6">Our comprehensive property sales and purchase services ensure you get the best deals whether you're buying or selling.</p>
+          <div class="service-card bg-white rounded-xl shadow-lg p-8">
+            <ul class="space-y-3 text-gray-600">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                <span>Buying and selling residential, commercial and farm properties</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                <span>Expert negotiation and closing support</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                <span>Comprehensive market analysis for competitive pricing</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-
-      <!-- Property Management -->
-      <div class="service-card bg-white rounded-xl shadow-lg p-8">
-        <div class="icon-box bg-blue-100 text-blue-600">
-          <i class="fas fa-building text-2xl"></i>
+    </div>
+    
+    <!-- Property Management Content -->
+    <div class="service-content" id="management-content">
+      <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-16">
+        <div class="md:w-1/2" data-aos="fade-left">
+          <img src="https://images.unsplash.com/photo-1554469384-e58fac16e23a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Property Management" class="rounded-xl shadow-xl w-full">
         </div>
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Property Management</h3>
-        <ul class="space-y-3 text-gray-600">
-          <li class="flex items-start">
-            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
-            <span>Complete property maintenance and repair coordination</span>
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
-            <span>Rigorous tenant screening and lease administration</span>
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
-            <span>Transparent financial reporting and rent collection</span>
-          </li>
-        </ul>
+        <div class="md:w-1/2" data-aos="fade-right">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Property <span class="text-blue-600">Management</span></h2>
+          <p class="text-gray-600 mb-6">Let us handle the day-to-day operations of your property while you enjoy the benefits of ownership.</p>
+          <div class="service-card bg-white rounded-xl shadow-lg p-8">
+            <ul class="space-y-3 text-gray-600">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                <span>Complete property maintenance and repair coordination</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                <span>Rigorous tenant screening and lease administration</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                <span>Transparent financial reporting and rent collection</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-
-      <!-- Land Acquisition -->
-      <div class="service-card bg-white rounded-xl shadow-lg p-8">
-        <div class="icon-box bg-blue-100 text-blue-600">
-          <i class="fas fa-map-marked-alt text-2xl"></i>
+    </div>
+    
+    <!-- Consultancy Content -->
+    <div class="service-content" id="consultancy-content">
+      <div class="flex flex-col md:flex-row items-center gap-12 mb-16">
+        <div class="md:w-1/2" data-aos="fade-right">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Real Estate Consultancy" class="rounded-xl shadow-xl w-full">
         </div>
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Land Acquisition</h3>
-        <ul class="space-y-3 text-gray-600">
-          <li class="flex items-start">
-            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
-            <span>Identification of prime land parcels across Uganda</span>
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
-            <span>Legal assistance with title processing and documentation</span>
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
-            <span>Thorough due diligence to ensure clear ownership</span>
-          </li>
-        </ul>
+        <div class="md:w-1/2" data-aos="fade-left">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Real Estate <span class="text-blue-600">Consultancy</span></h2>
+          <p class="text-gray-600 mb-6">Our expert consultants provide strategic advice to help you make informed real estate decisions.</p>
+          <div class="service-card bg-white rounded-xl shadow-lg p-8">
+            <ul class="space-y-3 text-gray-600">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                <span>Strategic property investment advice</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                <span>In-depth market trend analysis and forecasting</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                <span>Legal and regulatory compliance guidance</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Real Estate Consultancy -->
-      <div class="service-card bg-white rounded-xl shadow-lg p-8">
-        <div class="icon-box bg-blue-100 text-blue-600">
-          <i class="fas fa-chart-line text-2xl"></i>
-        </div>
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Real Estate Consultancy</h3>
-        <ul class="space-y-3 text-gray-600">
-          <li class="flex items-start">
-            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
-            <span>Strategic property investment advice</span>
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
-            <span>In-depth market trend analysis and forecasting</span>
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
-            <span>Legal and regulatory compliance guidance</span>
-          </li>
-        </ul>
+  <!-- Process Section -->
+  <section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our <span class="text-blue-600">Process</span></h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">We follow a structured approach to ensure quality service delivery at every step.</p>
       </div>
-
-      <!-- Property Valuation -->
-      <div class="service-card bg-white rounded-xl shadow-lg p-8">
-        <div class="icon-box bg-blue-100 text-blue-600">
-          <i class="fas fa-search-dollar text-2xl"></i>
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="text-center" data-aos="fade-up">
+          <div class="hexagon bg-blue-600 text-white w-20 h-20 mx-auto flex items-center justify-center mb-4">
+            <span class="text-2xl font-bold">1</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Consultation</h3>
+          <p class="text-gray-600">Understanding your needs and objectives</p>
         </div>
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Property Valuation</h3>
-        <ul class="space-y-3 text-gray-600">
-          <li class="flex items-start">
-            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
-            <span>Accurate assessment of property values</span>
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
-            <span>Professional reports for financial institutions</span>
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
-            <span>Detailed valuation for sales, rentals and investments</span>
-          </li>
-        </ul>
+        
+        <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="hexagon bg-blue-600 text-white w-20 h-20 mx-auto flex items-center justify-center mb-4">
+            <span class="text-2xl font-bold">2</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Planning</h3>
+          <p class="text-gray-600">Developing a customized strategy</p>
+        </div>
+        
+        <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="hexagon bg-blue-600 text-white w-20 h-20 mx-auto flex items-center justify-center mb-4">
+            <span class="text-2xl font-bold">3</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Execution</h3>
+          <p class="text-gray-600">Implementing the agreed plan</p>
+        </div>
+        
+        <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+          <div class="hexagon bg-blue-600 text-white w-20 h-20 mx-auto flex items-center justify-center mb-4">
+            <span class="text-2xl font-bold">4</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Follow-up</h3>
+          <p class="text-gray-600">Ensuring your complete satisfaction</p>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Investment Opportunities -->
-      <div class="service-card bg-white rounded-xl shadow-lg p-8">
-        <div class="icon-box bg-blue-100 text-blue-600">
-          <i class="fas fa-hand-holding-usd text-2xl"></i>
-        </div>
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Investment Opportunities</h3>
-        <ul class="space-y-3 text-gray-600">
-          <li class="flex items-start">
-            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
-            <span>Exclusive access to premium properties</span>
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
-            <span>Portfolio diversification strategies</span>
-          </li>
-          <li class="flex items-start">
-            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
-            <span>ROI analysis and investment planning</span>
-          </li>
-        </ul>
+  <!-- CTA Section -->
+  <section class="py-16 bg-white text-gray-700">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6" data-aos="fade-up">Ready to Get Started?</h2>
+      <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        Contact us today to discuss how we can help with your real estate needs.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+        <a href="https://wa.me/256707346556" class="bg-green-500 hover:bg-green-600 transition-colors text-white px-8 py-3 rounded-lg font-semibold text-lg">
+          <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp
+        </a>
+        <a href="tel:+256707346556" class="px-8 py-3 bg-transparent border-2 border-gray-200 hover:bg-white hover:text-blue-300 rounded-md font-bold transition-all duration-300">
+          Call Now
+        </a>
       </div>
     </div>
   </section>
@@ -309,8 +489,8 @@
     </div>
   </footer>
 
-   <!-- Back to Top Button -->
-   <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-blue-700">
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
     </svg>
@@ -318,7 +498,7 @@
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <!-- Custom JS -->
   <script src="js/app.js"></script>
+
 </body>
 </html>
