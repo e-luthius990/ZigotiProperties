@@ -63,24 +63,56 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="relative text-white pt-32 pb-20 bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/towfiqu-barbhuiya-05XcCfTOzN4-unsplash.jpg');">
-    <div class="container mx-auto px-6 relative z-10">
-      <div class="max-w-2xl">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-          Expert Property Management <span class="text-blue-400">Solutions</span>
-        </h1>
-        <p class="text-xl mb-8">
-          We handle the complexities of property ownership so you can enjoy passive income without the stress.
-        </p>
-        <div class="flex flex-wrap gap-4">
-          <a href="contact.html" class="bg-white text-blue-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300 inline-flex items-center">
-            <i class="fas fa-phone-alt mr-2"></i> Contact Us
-          </a>
+<section class="relative bg-gray-900 overflow-hidden">
+  <!-- Background Image with Overlay -->
+  <div class="absolute inset-0">
+    <img 
+      src="images/propertymanagement.webp" 
+      alt="Well-maintained rental property by Zigoti" 
+      class="w-full h-full object-cover opacity-50"
+    >
+    <div class="absolute inset-0 bg-black opacity-70"></div>
+  </div>
+
+  <!-- Content Container -->
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+    <div class="text-center">
+      <!-- Headline -->
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+        <span class="block">Expert Property Management,</span>
+        <span class="text-yellow-400">Stress-Free Ownership</span>
+      </h1>
+
+      <!-- Subtext -->
+      <p class="max-w-2xl mx-auto text-xl text-blue-100 mb-10">
+        Maximize your rental income while we handle tenants, maintenance, and compliance. 
+        With Zigoti Properties your property is in expert hands.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a 
+          href="contact.html" 
+          class="px-8 py-3 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold rounded-lg transition duration-300 shadow-lg"
+        >
+          Get a Free Management Quote
+        </a>
+      </div>
+
+      <!-- Trust Badges (Optional) -->
+      <div class="mt-12 flex flex-wrap justify-center items-center gap-6 text-blue-100">
+        <div class="flex items-center">
+          <svg class="w-5 h-5 mr-2 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <span>4.9/5 Tenant Satisfaction</span>
+        </div>
+        <div class="flex items-center">
+          <svg class="w-5 h-5 mr-2 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span>24/7 Emergency Support</span>
         </div>
       </div>
     </div>
-    <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent"></div>
-  </section>
+  </div>
+</section>
 
   <!-- Benefits Section -->
   <section class="py-16 bg-gray-50">
@@ -138,7 +170,7 @@
   </section>
 
   <!-- Our Services Section -->
-  <section id="our-services" class="py-16 bg-white">
+  <section id="our-services" class="py-16 bg-blue-100">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Comprehensive Services</h2>
@@ -297,7 +329,7 @@
   </section>
 
   <!-- Process Section -->
-  <section class="py-16 gradient-bg text-white">
+  <section class="py-16 bg-blue-500 text-white">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
         <h2 class="text-3xl font-bold mb-4">Our Management Process</h2>
@@ -471,15 +503,10 @@
       </div>
       
       <!-- Copyright -->
-      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-        <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2023 Zigoti Properties Uganda Limited. All rights reserved.</p>
-        <div class="flex space-x-6">
-          <a href="#" class="text-gray-500 hover:text-white transition text-sm">Privacy Policy</a>
-          <a href="#" class="text-gray-500 hover:text-white transition text-sm">Terms of Service</a>
-          <a href="#" class="text-gray-500 hover:text-white transition text-sm">Sitemap</a>
-          <a href="#" class="text-gray-500 hover:text-white transition text-sm">FAQ</a>
-        </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col items-center text-center">
+        <p class="text-gray-500 text-sm">&copy; 2023 Zigoti Properties Uganda Limited. All rights reserved.</p> 
       </div>
+      
     </div>
   </footer>
 
