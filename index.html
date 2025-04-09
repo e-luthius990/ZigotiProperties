@@ -80,25 +80,50 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero-section relative bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('images/landfarmxx.webp');">
-    <div class="container mx-auto px-6 z-10">
-      <div class="max-w-2xl text-center mx-auto" data-aos="fade-up">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Discover Your Dream Property</h1>
-        <p class="text-xl text-gray-200 mb-8">Zigoti Properties offers premium real estate solutions with unmatched expertise and personalized service.</p>
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a href="exploreproperties.html" class="btn-primary text-white px-8 py-3 rounded-lg font-semibold text-lg">Explore Properties</a>
-        </div>
+  <!-- Preload the background image -->
+<link rel="preload" as="image" href="images/landfarm1.webp" type="image/webp">
+
+<!-- Hero Section -->
+<section class="relative bg-black">
+  <!-- Background Image as an <img> for better LCP -->
+  <img 
+    src="images/landfarm1.webp" 
+    alt="Scenic real estate background" 
+    class="absolute inset-0 w-full h-full object-cover z-0" 
+    fetchpriority="high"
+    decoding="async"
+  />
+  
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
+
+  <!-- Content -->
+  <div class="relative z-20 container mx-auto px-6 py-20 text-center text-white">
+    <div class="max-w-2xl mx-auto">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+        Discover Your Dream Property
+      </h1>
+      <p class="text-xl text-gray-200 mb-8">
+        Zigoti Properties offers premium real estate solutions with unmatched expertise and personalized service.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="exploreproperties.html" class="bg-blue-600 hover:bg-blue-700 transition text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg">
+          Explore Properties
+        </a>
       </div>
     </div>
-    <div class="absolute bottom-10 left-0 right-0 flex justify-center">
-      <a href="#listings" class="text-white animate-bounce">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-        </svg>
-      </a>
-    </div>
-  </section>
+  </div>
+
+  <!-- Scroll Down Indicator -->
+  <div class="absolute bottom-10 left-0 right-0 flex justify-center z-20">
+    <a href="#listings" class="text-white animate-bounce">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </a>
+  </div>
+</section>
+
 
   <!-- Property Listings Section -->
   <section id="listings" class="py-16 bg-gray-50">
