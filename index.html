@@ -3,9 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zigoti Properties</title>
+  <title>Zigoti Properties | Discover Your Dream Property</title>
 
   <meta name="description" content="Zigoti Properties, Your Gateway to Premium Real Estate in Uganda! Discover Homes, Prime Land & Smart Investments. Live, Own, Thrive!.">
+  <meta property="og:title" content="Discover Your Dream Property">
+  <meta property="og:description" content="Zigoti Properties, Your Gateway to Premium Real Estate in Uganda! Discover Homes, Prime Land & Smart Investments. Live, Own, Thrive!.">
+  <meta property="og:image" content="https://www.zigotiproperties.com/images/landfarm1.webp">
+  <meta property="og:url" content="https://www.zigotiproperties.com/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Discover Your Dream Property">
+  <meta name="twitter:description" content="Zigoti Properties, Your Gateway to Premium Real Estate in Uganda! Discover Homes, Prime Land & Smart Investments. Live, Own, Thrive!.">
+  <meta name="twitter:image" content="https://www.zigotiproperties.com/images/landfarm1.webp">
+
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -19,7 +29,8 @@
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
 
-  <link rel="preload" href="images/landfarmxx.webp" as="image" fetchpriority="high">
+    <!-- Preload the background image -->
+<link rel="preload" as="image" href="images/landfarm1.webp" type="image/webp">
 
   <!-- Instead of loading all.min.css -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" rel="stylesheet">
@@ -33,6 +44,34 @@
   
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="path/to/your/script.js" defer></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Zigoti Properties",
+      "url": "https://www.zigotiproperties.com/",
+      "logo": "https://www.zigotiproperties.com/images/logos/Zigoti-properties-New-Logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+256707346556",
+        "contactType": "Customer Service",
+        "areaServed": "UG",
+        "availableLanguage": "English"
+      }
+    }
+    </script>
+    
+  <style>
+    /* Critical CSS for the hero section */
+    .hero-section {
+      background-color: #000;
+      background-image: url('images/landfarm1.webp');
+      color: white;
+    }
+  </style>
+  
 </head>
 <body class="bg-gray-50">
 
@@ -80,19 +119,15 @@
     </div>
   </nav>
 
-  <!-- Preload the background image -->
-<link rel="preload" as="image" href="images/landfarm1.webp" type="image/webp">
-
 <!-- Hero Section -->
 <section class="relative bg-black">
   <!-- Background Image as an <img> for better LCP -->
-  <img 
-    src="images/landfarm1.webp" 
-    alt="Scenic real estate background" 
-    class="absolute inset-0 w-full h-full object-cover z-0" 
-    fetchpriority="high"
-    decoding="async"
-  />
+  <picture>
+    <source srcset="images/landfarm1.avif" type="image/avif">
+    <source srcset="images/landfarm1.webp" type="image/webp">
+    <img src="images/landfarm.jpg" alt="Scenic real estate background" class="absolute inset-0 w-full h-full object-cover z-0" fetchpriority="high" decoding="async">
+  </picture>
+  
   
   <!-- Overlay -->
   <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
