@@ -89,17 +89,102 @@
     </div>
   </nav>
 
+  <!-- Enhanced Hero Section with Improved Layout -->
+<section class="relative bg-gray-900 text-white overflow-hidden">
+  <!-- Background Elements -->
+  <div class="absolute inset-0">
+    <!-- Main Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900/30 to-gray-900">
+      <img src="images/skyline.webp" alt="Uganda real estate landscape" 
+           class="w-full h-full object-cover object-center opacity-40">
+    </div>
+    
+    <!-- Decorative Elements -->
+    <div class="absolute top-0 right-0 w-1/2 h-full">
+      <div class="absolute top-1/4 -right-20 w-96 h-96 bg-blue-600 rounded-full mix-blend-screen opacity-20"></div>
+      <div class="absolute top-1/2 -right-40 w-80 h-80 bg-indigo-500 rounded-full mix-blend-screen opacity-15"></div>
+    </div>
+  </div>
+
+  <div class="container mx-auto px-6 py-24 md:py-32 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+      <!-- Left Column - Main Content (3 columns) -->
+      <div class="lg:col-span-3">
+        <nav class="mb-6" aria-label="Breadcrumb">
+          <ol class="inline-flex items-center space-x-2">
+            <li class="inline-flex items-center">
+              <a href="index.html" class="inline-flex items-center text-sm font-medium text-blue-300 hover:text-white transition-colors duration-300 group">
+                <svg class="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
+                </svg>
+                Home
+              </a>
+            </li>
+            <li aria-current="page">
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="ml-2 text-sm font-medium text-gray-300">Blog</span>
+              </div>
+            </li>
+          </ol>
+        </nav>
+
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6" data-aos="fade-up">
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-blue-400 to-white">Market Intelligence</span> <br>for Uganda's Property Sector
+        </h1>
+        
+        <p class="text-xl text-gray-300 mb-8 max-w-2xl" data-aos="fade-up" data-aos-delay="100">
+          Data-driven insights and expert analysis to guide your real estate decisions in Uganda's dynamic market.
+        </p>
+        
+        <div class="flex flex-wrap gap-4" data-aos="fade-up" data-aos-delay="150">
+          <span class="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium border border-white/20">
+            Market Trends
+          </span>
+          <span class="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium border border-white/20">
+            Investment Guides
+          </span>
+          <span class="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium border border-white/20">
+            Legal Updates
+          </span>
+        </div>
+      </div>
+
+      <!-- Right Column - Featured Post (2 columns) -->
+      <div class="lg:col-span-2 mt-12 lg:mt-0" data-aos="fade-left">
+        <div class="relative group h-full min-h-[400px] rounded-2xl overflow-hidden shadow-2xl">
+          <!-- Featured Post Background -->
+          <img src="images/insight.webp" alt="Featured article" 
+               class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          
+          <!-- Gradient Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent"></div>
+          
+          <!-- Featured Post Content -->
+          <div class="relative h-full flex flex-col justify-end p-8">
+            <div class="mb-4">
+              <h3 class="text-2xl md:text-3xl font-bold text-white mb-3 leading-tight">
+                2025 Uganda Property Market Forecast
+              </h3>
+              <p class="text-gray-300 mb-5 line-clamp-2">
+                Exclusive insights into emerging opportunities and key growth areas across Uganda's real estate sectors.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Transition -->
+  <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-white to-transparent z-0"></div>
+</section>
+
   <!-- Blog Content Section -->
   <section class="py-16">
     <div class="container mx-auto px-6">
-      <!-- Categories Filter -->
-      <div class="mb-12 flex flex-wrap justify-center gap-3">
-        <button class="px-4 py-2 bg-white text-blue-600 rounded-full shadow-sm font-medium border border-blue-100 hover:bg-blue-50 transition-all category-tag">All Articles</button>
-        <button class="px-4 py-2 bg-white text-gray-700 rounded-full shadow-sm font-medium border border-gray-200 hover:bg-gray-50 transition-all category-tag">Market Trends</button>
-        <button class="px-4 py-2 bg-white text-gray-700 rounded-full shadow-sm font-medium border border-gray-200 hover:bg-gray-50 transition-all category-tag">Investment Tips</button>
-        <button class="px-4 py-2 bg-white text-gray-700 rounded-full shadow-sm font-medium border border-gray-200 hover:bg-gray-50 transition-all category-tag">Legal Guides</button>
-        <button class="px-4 py-2 bg-white text-gray-700 rounded-full shadow-sm font-medium border border-gray-200 hover:bg-gray-50 transition-all category-tag">Property Management</button>
-      </div>
 
       <!-- Featured Post -->
       <div class="mb-16 bg-white rounded-xl shadow-lg overflow-hidden blog-card">

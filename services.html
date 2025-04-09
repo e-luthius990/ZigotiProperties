@@ -63,33 +63,71 @@
     </div>
   </nav>
 
-  <section class="relative h-screen md:h-[70vh] flex items-center justify-center text-white">
-    <!-- Background Image with inline CSS -->
-    <div 
-      class="absolute inset-0"
-      style="
-        background-image: url('images/servicexxxx.avif');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-      "
-    ></div>
-  
-    <!-- Black Overlay -->
-    <div class="absolute inset-0 bg-black opacity-70"></div>
-  
-    <!-- Content -->
-    <div class="relative z-10 text-center px-6">
-      <h2 class="text-4xl md:text-5xl font-extrabold mb-4">Our Services</h2>
-      <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8">
-        We provide a wide range of tailored solutions to meet your unique needs—whether you're buying, selling, or investing in property.
-      </p>
-      <a 
-        href="explore-our-services.html" 
-        class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
-      >
-        Explore Services
-      </a>
+  <section class="bg-gradient-to-r from-gray-50 to-gray-100 py-16 md:py-24 lg:py-32">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <!-- Text Content -->
+        <div class="lg:w-1/2">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+            Expert <span class="text-blue-600">Services</span> Tailored for You
+          </h1>
+          <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl">
+            At Zigoti Properties, we understand that every real estate journey is unique. whether you're buying, selling, investing, or managing property, our teams delivers personalized solutions designed to meet your specific goals 
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="explore-our-services.html" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 transform hover:-translate-y-1">
+              Explore Services
+            </a>
+            <a href="contact.html" class="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 font-semibold py-3 px-6 rounded-lg transition duration-300 transform hover:-translate-y-1">
+              Get a Free Quote
+            </a>
+          </div>
+          
+          <!-- Trust indicators -->
+          <div class="mt-12 flex items-center gap-6">
+            <div class="flex -space-x-2">
+              <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/32.jpg" alt="Client">
+              <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/men/42.jpg" alt="Client">
+              <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/63.jpg" alt="Client">
+            </div>
+            <div>
+              <div class="flex items-center">
+                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                </svg>
+                <span class="ml-1 text-gray-800 font-medium">4.9/5</span>
+                <span class="mx-2 text-gray-300">|</span>
+                <span class="text-gray-600">Trusted by 50+ clients</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Image/Graphic -->
+        <div class="lg:w-1/2 mt-10 lg:mt-0">
+          <div class="relative">
+            <div class="absolute -right-4 -top-4 w-full h-full rounded-xl -z-10"></div>
+            <img 
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" 
+              alt="Team discussing services" 
+              class="rounded-xl shadow-lg w-full h-auto object-cover"
+              loading="lazy"
+            >
+            <!-- Floating card element -->
+            <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-md max-w-xs">
+              <div class="flex items-center mb-2">
+                <div class="p-2 bg-blue-100 rounded-full mr-3">
+                  <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div>
+                <h3 class="font-bold text-gray-900">Fast Results</h3>
+              </div>
+              <p class="text-sm text-gray-600">90% of clients appreciate our unique services</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -99,7 +137,6 @@
     <div class="service-content active" id="all-content">
       <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Comprehensive <span class="text-blue-600">Services</span></h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">We offer a full spectrum of real estate services to meet all your property needs in Uganda.</p>
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
