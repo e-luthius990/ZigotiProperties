@@ -30,7 +30,8 @@
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
 
     <!-- Preload the background image -->
-<link rel="preload" as="image" href="images/landfarm1.webp" type="image/webp">
+    <link rel="preload" as="image" href="/images/landfarm1.avif" type="image/avif" fetchpriority="high">
+
 
   <!-- Instead of loading all.min.css -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" rel="stylesheet">
@@ -62,15 +63,6 @@
       }
     }
     </script>
-    
-  <style>
-    /* Critical CSS for the hero section */
-    .hero-section {
-      background-color: #000;
-      background-image: url('images/landfarm1.webp');
-      color: white;
-    }
-  </style>
   
 </head>
 <body class="bg-gray-50">
@@ -121,14 +113,17 @@
 
 <!-- Hero Section -->
 <section class="relative bg-black">
+  
   <!-- Background Image as an <img> for better LCP -->
-  <picture>
-    <source srcset="images/landfarm1.avif" type="image/avif">
-    <source srcset="images/landfarm1.webp" type="image/webp">
-    <img src="images/landfarm.jpg" alt="Scenic real estate background" class="absolute inset-0 w-full h-full object-cover z-0" fetchpriority="high" decoding="async">
-  </picture>
-  
-  
+  <img
+  src="/images/landfarm1.avif"
+  alt="Scenic real estate background"
+  class="absolute inset-0 w-full h-full object-cover z-0"
+  fetchpriority="high"
+  decoding="async"
+  width="1920"
+  height="1080"
+>
   <!-- Overlay -->
   <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
 
