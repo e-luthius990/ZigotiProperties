@@ -5,48 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zigoti Properties | Discover Your Dream Property</title>
 
+  <!-- Meta SEO -->
   <meta name="description" content="Zigoti Properties, Your Gateway to Premium Real Estate in Uganda! Discover Homes, Prime Land & Smart Investments. Live, Own, Thrive!.">
   <meta property="og:title" content="Discover Your Dream Property">
   <meta property="og:description" content="Zigoti Properties, Your Gateway to Premium Real Estate in Uganda! Discover Homes, Prime Land & Smart Investments. Live, Own, Thrive!.">
   <meta property="og:image" content="https://www.zigotiproperties.com/images/landfarm1.webp">
   <meta property="og:url" content="https://www.zigotiproperties.com/">
-
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Discover Your Dream Property">
   <meta name="twitter:description" content="Zigoti Properties, Your Gateway to Premium Real Estate in Uganda! Discover Homes, Prime Land & Smart Investments. Live, Own, Thrive!.">
   <meta name="twitter:image" content="https://www.zigotiproperties.com/images/landfarm1.webp">
-
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
- 
-  
-  
-  <!-- Preload critical resources -->
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
 
-    <!-- Preload the background image -->
-    <link rel="preload" as="image" href="/images/landfarm1.avif" type="image/avif" fetchpriority="high">
+  <!-- Preload critical image for LCP -->
+  <link rel="preload" as="image" href="/images/landfarm1.avif" type="image/avif" fetchpriority="high">
 
-
-  <!-- Instead of loading all.min.css -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" rel="stylesheet">
-  
-  <!-- CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Custom built Tailwind CSS (purged & optimized) -->
+  <link rel="stylesheet" href="/css/output.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link href="css/styles.css" rel="stylesheet">
-  
+
+  <!-- Font Awesome (Only required icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/solid.min.css">
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <script src="path/to/your/script.js" defer></script>
+  <!-- Your local stylesheet -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Scripts -->
+  <script src="/js/app.js" defer></script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -62,7 +56,7 @@
         "availableLanguage": "English"
       }
     }
-    </script>
+  </script>
   
 </head>
 <body class="bg-gray-50">
@@ -113,7 +107,7 @@
 
 <!-- Hero Section -->
 <section class="relative bg-black">
-  
+
   <!-- Background Image as an <img> for better LCP -->
   <img
   src="/images/landfarm1.avif"
