@@ -29,9 +29,6 @@
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
 
-    <!-- Preload the background image -->
-<link rel="preload" as="image" href="images/landfarm1.webp" type="image/webp">
-
   <!-- Instead of loading all.min.css -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" rel="stylesheet">
@@ -62,15 +59,6 @@
       }
     }
     </script>
-    
-  <style>
-    /* Critical CSS for the hero section */
-    .hero-section {
-      background-color: #000;
-      background-image: url('images/landfarm1.webp');
-      color: white;
-    }
-  </style>
   
 </head>
 <body class="bg-gray-50">
@@ -119,26 +107,45 @@
     </div>
   </nav>
 
-<!-- Hero Section -->
-<section class="relative bg-black">
-  <!-- Background Image as an <img> for better LCP -->
-  <picture>
-    <source srcset="images/landfarm1.avif" type="image/avif">
-    <source srcset="images/landfarm1.webp" type="image/webp">
-    <img src="images/landfarm.jpg" alt="Scenic real estate background" class="absolute inset-0 w-full h-full object-cover z-0" fetchpriority="high" decoding="async">
-  </picture>
-  
-  
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
+  <!-- Hero Section -->
+<section class="relative bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 overflow-hidden">
 
-  <!-- Content -->
+  <!-- Background Image with responsive fallback -->
+  <picture>
+    <source 
+      srcset="images/landfarm1-400.avif 400w,
+              images/landfarm1-800.avif 800w,
+              images/landfarm1-1200.avif 1200w"
+      sizes="100vw"
+      type="image/avif"
+    />
+    <source 
+      srcset="images/landfarm-400.webp 400w,
+              images/landfarm-800.webp 800w,
+              images/landfarm-1200.webp 1200w"
+      sizes="100vw"
+      type="image/webp"
+    />
+    <img 
+      src="images/landfarm1-1200.jpg"
+      alt="Scenic real estate background"
+      class="absolute inset-0 w-full h-full object-cover z-0"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+    />
+  </picture>
+
+  <!-- Black Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-70 z-10"></div>
+
+  <!-- Content with fade-in animation -->
   <div class="relative z-20 container mx-auto px-6 py-20 text-center text-white">
-    <div class="max-w-2xl mx-auto">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+    <div class="max-w-2xl mx-auto animate-fade-in-up">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight drop-shadow-md">
         Discover Your Dream Property
       </h1>
-      <p class="text-xl text-gray-200 mb-8">
+      <p class="text-xl text-gray-200 mb-8 drop-shadow-sm">
         Zigoti Properties offers premium real estate solutions with unmatched expertise and personalized service.
       </p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
@@ -149,16 +156,15 @@
     </div>
   </div>
 
-  <!-- Scroll Down Indicator -->
+  <!-- Glowing Scroll Arrow -->
   <div class="absolute bottom-10 left-0 right-0 flex justify-center z-20">
     <a href="#listings" class="text-white animate-bounce">
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      <svg class="w-8 h-8 text-white drop-shadow-glow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
       </svg>
     </a>
   </div>
 </section>
-
 
   <!-- Property Listings Section -->
   <section id="listings" class="py-16 bg-gray-50">
@@ -175,15 +181,17 @@
         <!-- Residential & Commercial Properties -->
         <div class="property-card bg-white rounded-xl overflow-hidden shadow-md">
           <div class="relative">
-            <img
+            <img 
              src="images/residentialandcommercialimage/kisasi/house-webp.webp"
+             srcset="images/residentialandcommercialimage/kisasi/house-webp-400.webp 400w,
+                     images/residentialandcommercialimage/kisasi/house-webp-800.webp 800w,
+                     images/residentialandcommercialimage/kisasi/house-webp-1200.webp 1200w"
+             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 50vw"
              alt="Residential Properties"
              loading="lazy"
              decoding="async"
-             width="1200"
-             height="800"
              class="w-full h-64 md:h-80 object-cover"
-            >
+            />
             <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
             <div class="absolute bottom-0 left-0 p-6">
               <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">Residential & Commercial</h3>
@@ -203,15 +211,18 @@
         <!-- Lands & Plots -->
         <div class="property-card bg-white rounded-xl overflow-hidden shadow-md">
           <div class="relative">
-            <img
-             src="images/landsandplots/land-webp.webp"
-             alt="Prime Commercial Properties"
-             loading="lazy"
-             decoding="async"
-             width="1200"
-             height="800"
-             class="w-full h-64 md:h-80 object-cover"
-            >
+            <img 
+              src="images/landsandplots/land-webp.webp"
+              srcset="images/landsandplots/landxx-400.webp 400w,
+                      images/landsandplots/landxx-800.webp 800w,
+                      images/landsandplots/landxx-1200.webp 1200w"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 50vw"
+              alt="Prime Commercial Properties"
+              loading="lazy"
+              decoding="async"
+              class="w-full h-64 md:h-80 object-cover"
+            />
+
             <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
             <div class="absolute bottom-0 left-0 p-6">
               <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">Lands & Plots</h3>
@@ -246,15 +257,18 @@
           <div class="property-card bg-white rounded-lg overflow-hidden shadow-md relative">
             <div class="featured-badge">Featured</div>
             <div class="relative overflow-hidden h-48">
-              <img
-             src="images/residentialandcommercialimage/kira/house2.jpg"
-             alt="Luxury Home"
-             loading="lazy"
-             decoding="async"
-             width="1200"
-             height="800"
-             class="w-full h-64 md:h-80 object-cover"
-            >
+              <img 
+               src="images/residentialandcommercialimage/kira/house2.jpg"
+               srcset="images/residentialandcommercialimage/kira/house2-400.jpg 400w,
+                       images/residentialandcommercialimage/kira/house2-800.jpg 800w,
+                       images/residentialandcommercialimage/kira/house2-1200.jpg 1200w"
+               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 50vw"
+               alt="Luxury Home"
+               loading="lazy"
+               decoding="async"
+               class="w-full h-64 md:h-80 object-cover"
+              />
+
               <div class="absolute inset-0 bg-black opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
             </div>
             <div class="p-5">
@@ -279,15 +293,18 @@
           <!-- Property 2 -->
           <div class="property-card bg-white rounded-lg overflow-hidden shadow-md relative">
             <div class="relative overflow-hidden h-48">
-              <img
-             src="images/residentialandcommercialimage/kitende/house1.jpg"
-             alt="Luxury Home"
-             loading="lazy"
-             decoding="async"
-             width="1200"
-             height="800"
-             class="w-full h-64 md:h-80 object-cover"
-            >
+              <img 
+               src="images/residentialandcommercialimage/kitende/house1.jpg"
+               srcset="images/residentialandcommercialimage/kitende/house1-400.jpg 400w,
+                       images/residentialandcommercialimage/kitende/house1-800.jpg 800w,
+                       images/residentialandcommercialimage/kitende/house1-1200.jpg 1200w"
+               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 50vw"
+               alt="Luxury Home"
+               loading="lazy"
+               decoding="async"
+               class="w-full h-64 md:h-80 object-cover"
+              />
+
               <div class="absolute inset-0 bg-black opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
             </div>
             <div class="p-5">
@@ -313,15 +330,18 @@
           <div class="property-card bg-white rounded-lg overflow-hidden shadow-md relative">
             <div class="featured-badge">Featured</div>
             <div class="relative overflow-hidden h-48">
-              <img
-             src="images/residentialandcommercialimage/kyanja/house1.jpg"
-             alt="Luxury House"
-             loading="lazy"
-             decoding="async"
-             width="1200"
-             height="800"
-             class="w-full h-64 md:h-80 object-cover"
-            >
+              <img 
+               src="images/residentialandcommercialimage/kyanja/house1.jpg"
+               srcset="images/residentialandcommercialimage/kyanja/house1-400.jpg 400w,
+                       images/residentialandcommercialimage/kyanja/house1-800.jpg 800w,
+                       images/residentialandcommercialimage/kyanja/house1-1200.jpg 1200w"
+               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 50vw"
+               alt="Luxury House"
+               loading="lazy"
+               decoding="async"
+               class="w-full h-64 md:h-80 object-cover"
+              />
+
               <div class="absolute inset-0 bg-black opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
             </div>
             <div class="p-5">
