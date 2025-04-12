@@ -5,7 +5,6 @@ This is the official website for Zigoti Properties Uganda Limited. It showcases 
 ## Features
 - Home Page
 - About Us
-- Property Listings
 - Services
 - Virtual Tour
 - Blog
