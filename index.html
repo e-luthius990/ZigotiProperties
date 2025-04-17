@@ -28,6 +28,11 @@
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
 
+    <!-- Preload the background image -->
+  <link rel="preload" href="images/landfarm-sm.webp" as="image" media="(max-width: 640px)">
+  <link rel="preload" href="images/landfarm-md.webp" as="image" media="(min-width: 641px) and (max-width: 1024px)">
+  <link rel="preload" href="images/landfarm-lg.webp" as="image" media="(min-width: 1025px)">
+
 
   <!-- Instead of loading all.min.css -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" rel="stylesheet">
@@ -111,13 +116,29 @@
 <section class="relative bg-black">
   
   <!-- Background Image as an <img> for better LCP -->
-  <img 
-  src="images/land-leasing.webp" 
-  alt="Description of the farm landscape" 
-  class="w-full h-full object-cover absolute inset-0"
-  loading="lazy"
->
-
+  <picture>
+    <!-- WebP format for browsers that support it (better compression) -->
+    <source 
+      srcset="images/landfarm-sm.webp 640w,
+              images/landfarm-md.webp 1024w,
+              images/landfarm-lg.webp 1920w"
+      sizes="(max-width: 640px) 100vw,
+             (max-width: 1024px) 100vw,
+             100vw"
+      type="image/webp"
+    >
+    <!-- Final fallback for older browsers -->
+    <img
+      src="images/Landfarm-jpeg.jpg"
+      alt="Scenic real estate background"
+      class="absolute inset-0 w-full h-full object-cover z-0"
+      loading="eager"
+      decoding="async"
+      width="1920"
+      height="1080"
+      fetchpriority="high"
+    >
+  </picture>
   <!-- Overlay -->
   <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
 
