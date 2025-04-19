@@ -39,34 +39,36 @@
 
     <!-- Preload critical resources -->
     <link
-      rel="preload"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      as="style"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css"
+      media="print"
+      onload="this.media='all'"
     />
     <link
-      rel="preload"
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-      as="style"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      media="print"
+      onload="this.media='all'"
     />
 
     <!-- Preload the background image -->
     <link
       rel="preload"
-      href="images/landfarm-sm.webp"
       as="image"
-      media="(max-width: 640px)"
+      href="images/landfarm-lg.webp"
+      media="(min-width: 1025px)"
     />
     <link
       rel="preload"
-      href="images/landfarm-md.webp"
       as="image"
+      href="images/landfarm-md.webp"
       media="(min-width: 641px) and (max-width: 1024px)"
     />
     <link
       rel="preload"
-      href="images/landfarm-lg.webp"
       as="image"
-      media="(min-width: 1025px)"
+      href="images/landfarm-sm.webp"
+      media="(max-width: 640px)"
     />
 
     <!-- Instead of loading all.min.css -->
@@ -269,7 +271,7 @@
         />
         <!-- Final fallback for older browsers -->
         <img
-          src="images/Landfarm-jpeg.jpg"
+          src="images/landfarm-lg.webp"
           alt="Scenic real estate background"
           class="absolute inset-0 w-full h-full object-cover z-0"
           loading="eager"
