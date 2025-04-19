@@ -1,483 +1,912 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zigoti Properties | Discover Your Dream Property</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zigoti Properties | Discover Your Dream Property</title>
 
-  <meta name="description" content="Zigoti Properties, Your Gateway to Premium Real Estate in Uganda! Discover Homes, Prime Land & Smart Investments. Live, Own, Thrive!.">
-  <meta property="og:title" content="Discover Your Dream Property">
-  <meta property="og:description" content="Zigoti Properties, Your Gateway to Premium Real Estate in Uganda! Discover Homes, Prime Land & Smart Investments. Live, Own, Thrive!.">
-  <meta property="og:image" content="https://www.zigotiproperties.com/images/landfarm-lg.webp">
-  <meta property="og:url" content="https://www.zigotiproperties.com/">
+    <meta
+      name="description"
+      content="Zigoti Properties, Your Gateway to Premium Real Estate in Uganda! Discover Homes, Prime Land & Smart Investments. Live, Own, Thrive!."
+    />
+    <meta property="og:title" content="Discover Your Dream Property" />
+    <meta
+      property="og:description"
+      content="Zigoti Properties, Your Gateway to Premium Real Estate in Uganda! Discover Homes, Prime Land & Smart Investments. Live, Own, Thrive!."
+    />
+    <meta
+      property="og:image"
+      content="https://www.zigotiproperties.com/images/landfarm-lg.webp"
+    />
+    <meta property="og:url" content="https://www.zigotiproperties.com/" />
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Discover Your Dream Property">
-  <meta name="twitter:description" content="Zigoti Properties, Your Gateway to Premium Real Estate in Uganda! Discover Homes, Prime Land & Smart Investments. Live, Own, Thrive!.">
-  <meta name="twitter:image" content="https://www.zigotiproperties.com/images/landfarm-lg.webp">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Discover Your Dream Property" />
+    <meta
+      name="twitter:description"
+      content="Zigoti Properties, Your Gateway to Premium Real Estate in Uganda! Discover Homes, Prime Land & Smart Investments. Live, Own, Thrive!."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.zigotiproperties.com/images/landfarm-lg.webp"
+    />
 
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  
-  
-  <!-- Preload critical resources -->
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
+    <!-- Preload critical resources -->
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      as="style"
+    />
 
     <!-- Preload the background image -->
-  <link rel="preload" href="images/landfarm-sm.webp" as="image" media="(max-width: 640px)">
-  <link rel="preload" href="images/landfarm-md.webp" as="image" media="(min-width: 641px) and (max-width: 1024px)">
-  <link rel="preload" href="images/landfarm-lg.webp" as="image" media="(min-width: 1025px)">
+    <link
+      rel="preload"
+      href="images/landfarm-sm.webp"
+      as="image"
+      media="(max-width: 640px)"
+    />
+    <link
+      rel="preload"
+      href="images/landfarm-md.webp"
+      as="image"
+      media="(min-width: 641px) and (max-width: 1024px)"
+    />
+    <link
+      rel="preload"
+      href="images/landfarm-lg.webp"
+      as="image"
+      media="(min-width: 1025px)"
+    />
 
+    <!-- Instead of loading all.min.css -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Instead of loading all.min.css -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/solid.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css" rel="stylesheet">
-  
-  <!-- CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link href="css/styles.css" rel="stylesheet">
-  
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
 
-  <!-- Smooth scroll for anchor links -->
-  <style>
-    html { scroll-behavior: smooth; }
-  </style>
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <script src="path/to/your/script.js" defer></script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "RealEstateAgent",
-      "name": "Zigoti Properties",
-      "url": "https://www.zigotiproperties.com/",
-      "logo": "https://www.zigotiproperties.com/images/logos/logo-PNG.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+256707346556",
-        "contactType": "Customer Service",
-        "areaServed": "UG",
-        "availableLanguage": "English"
+    <!-- Smooth scroll for anchor links -->
+    <style>
+      html {
+        scroll-behavior: smooth;
       }
-    }
+    </style>
+
+    <script src="path/to/your/script.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "RealEstateAgent",
+        "name": "Zigoti Properties",
+        "url": "https://www.zigotiproperties.com/",
+        "logo": "https://www.zigotiproperties.com/images/logos/logo-PNG.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+256707346556",
+          "contactType": "Customer Service",
+          "areaServed": "UG",
+          "availableLanguage": "English"
+        }
+      }
     </script>
-  
-</head>
-<body class="bg-gray-50">
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav
+      class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-300"
+    >
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center">
+          <img
+            src="images/logos/logo-PNG.png"
+            alt="Zigoti Properties Logo"
+            class="h-10 md:h-12"
+          />
+        </a>
 
-  <!-- Navigation -->
-  <nav class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-300">
-    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-      <!-- Logo -->
-      <a href="index.html" class="flex items-center">
-        <img src="images/logos/logo-PNG.png" alt="Zigoti Properties Logo" class="h-10 md:h-12">
-      </a>
-      
-      <!-- Desktop Navigation -->
-      <div class="hidden lg:flex space-x-8">
-        <a href="index.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Home</a>
-        <a href="about.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">About Us</a>
-        <a href="services.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Services</a>
-        <a href="virtual-tour.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Virtual Tour</a>
-        <a href="blog.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Blog</a>
-        <a href="contact.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Contact</a>
-      </div>
-      
-      <!-- Mobile Menu Button -->
-      <div class="lg:hidden">
-        <button id="menu-toggle" class="text-gray-700 focus:outline-none">
-          <svg id="menu-open-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-          <svg id="menu-close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-    
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="lg:hidden hidden bg-white w-full absolute left-0 top-full shadow-lg transition-all duration-300 transform opacity-0 -translate-y-2">
-      <div class="px-6 py-4 space-y-3">
-        <a href="index.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">Home</a>
-        <a href="about.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">About Us</a>
-        <a href="services.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">Services</a>
-        <a href="virtual-tour.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">Virtual Tour</a>
-        <a href="blog.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">Blog</a>
-        <a href="contact.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium">Contact</a>
-      </div>
-    </div>
-  </nav>
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex space-x-8">
+          <a
+            href="index.html"
+            class="nav-link text-gray-800 font-medium hover:text-blue-600"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="nav-link text-gray-800 font-medium hover:text-blue-600"
+            >About Us</a
+          >
+          <a
+            href="services.html"
+            class="nav-link text-gray-800 font-medium hover:text-blue-600"
+            >Services</a
+          >
+          <a
+            href="virtual-tour.html"
+            class="nav-link text-gray-800 font-medium hover:text-blue-600"
+            >Virtual Tour</a
+          >
+          <a
+            href="blog.html"
+            class="nav-link text-gray-800 font-medium hover:text-blue-600"
+            >Blog</a
+          >
+          <a
+            href="contact.html"
+            class="nav-link text-gray-800 font-medium hover:text-blue-600"
+            >Contact</a
+          >
+        </div>
 
-<!-- Hero Section -->
-<section class="relative bg-black h-[75vh] flex items-center">
-  
-  <!-- Background Image as an <img> for better LCP -->
-  <picture>
-    <!-- WebP format for browsers that support it (better compression) -->
-    <source 
-      srcset="images/landfarm-sm.webp 640w,
-              images/landfarm-md.webp 1024w,
-              images/landfarm-lg.webp 1920w"
-      sizes="(max-width: 640px) 100vw,
+        <!-- Mobile Menu Button -->
+        <div class="lg:hidden">
+          <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+            <svg
+              id="menu-open-icon"
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+            <svg
+              id="menu-close-icon"
+              class="w-8 h-8 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="lg:hidden hidden bg-white w-full absolute left-0 top-full shadow-lg transition-all duration-300 transform opacity-0 -translate-y-2"
+      >
+        <div class="px-6 py-4 space-y-3">
+          <a
+            href="index.html"
+            class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100"
+            >About Us</a
+          >
+          <a
+            href="services.html"
+            class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100"
+            >Services</a
+          >
+          <a
+            href="virtual-tour.html"
+            class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100"
+            >Virtual Tour</a
+          >
+          <a
+            href="blog.html"
+            class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100"
+            >Blog</a
+          >
+          <a
+            href="contact.html"
+            class="block py-3 text-gray-700 hover:text-blue-600 font-medium"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-black h-[75vh] flex items-center">
+      <!-- Background Image as an <img> for better LCP -->
+      <picture>
+        <!-- WebP format for browsers that support it (better compression) -->
+        <source
+          srcset="
+            images/landfarm-sm.webp  640w,
+            images/landfarm-md.webp 1024w,
+            images/landfarm-lg.webp 1920w
+          "
+          sizes="(max-width: 640px) 100vw,
              (max-width: 1024px) 100vw,
              100vw"
-      type="image/webp"
-    >
-    <!-- Final fallback for older browsers -->
-    <img
-      src="images/Landfarm-jpeg.jpg"
-      alt="Scenic real estate background"
-      class="absolute inset-0 w-full h-full object-cover z-0"
-      loading="eager"
-      decoding="async"
-      width="1920"
-      height="1080"
-      fetchpriority="high"
-    >
-  </picture>
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
+          type="image/webp"
+        />
+        <!-- Final fallback for older browsers -->
+        <img
+          src="images/Landfarm-jpeg.jpg"
+          alt="Scenic real estate background"
+          class="absolute inset-0 w-full h-full object-cover z-0"
+          loading="eager"
+          decoding="async"
+          width="1920"
+          height="1080"
+          fetchpriority="high"
+        />
+      </picture>
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
 
-  <!-- Content -->
-  <div class="relative z-20 container mx-auto px-6 py-20 text-center text-white">
-    <div class="max-w-2xl mx-auto">
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-        Discover Your Dream Property
-      </h1>
-      <p class="text-xl text-gray-200 mb-8">
-        Zigoti Properties offers premium real estate solutions with unmatched expertise and personalized service.
-      </p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="exploreproperties.html" class="bg-blue-600 hover:bg-blue-700 transition text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg">
-          Explore Properties
+      <!-- Content -->
+      <div
+        class="relative z-20 container mx-auto px-6 py-20 text-center text-white"
+      >
+        <div class="max-w-2xl mx-auto">
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+          >
+            Discover Your Dream Property
+          </h1>
+          <p class="text-xl text-gray-200 mb-8">
+            Zigoti Properties offers premium real estate solutions with
+            unmatched expertise and personalized service.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a
+              href="exploreproperties.html"
+              class="bg-blue-600 hover:bg-blue-700 transition text-white px-8 py-3 rounded-lg font-semibold text-lg shadow-lg"
+            >
+              Explore Properties
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <div class="absolute bottom-10 left-0 right-0 flex justify-center z-20">
+        <a
+          href="#listings"
+          class="text-white animate-bounce hover:animate-pulse drop-shadow-lg"
+        >
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            ></path>
+          </svg>
         </a>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- Scroll Down Indicator -->
-  <div class="absolute bottom-10 left-0 right-0 flex justify-center z-20">
-    <a href="#listings" class="text-white animate-bounce hover:animate-pulse drop-shadow-lg">
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-      </svg>
-    </a>
-  </div>
-</section>
+    <!-- Property Listings Section -->
+    <section id="listings" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Featured Property Listings
+          </h2>
+          <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Discover our wide range of properties.
+          </p>
+        </div>
 
-
-  <!-- Property Listings Section -->
-  <section id="listings" class="py-16 bg-gray-50">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Featured Property Listings</h2>
-        <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Discover our wide range of properties.</p>
-      </div>
-
-      <!-- Property Categories -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-
-        <!-- Residential & Commercial Properties -->
-        <div class="property-card bg-white rounded-xl overflow-hidden shadow-md">
-          <div class="relative">
-            <img
-             src="images/residentialandcommercialimage/kisasi/house-webp.webp"
-             alt="Residential Properties"
-             loading="lazy"
-             decoding="async"
-             width="1200"
-             height="800"
-             class="w-full h-64 md:h-80 object-cover"
-            >
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
-            <div class="absolute bottom-0 left-0 p-6">
-              <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">Residential & Commercial</h3>
+        <!-- Property Categories -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          <!-- Residential & Commercial Properties -->
+          <div
+            class="property-card bg-white rounded-xl overflow-hidden shadow-md"
+          >
+            <div class="relative">
+              <img
+                src="images/residentialandcommercialimage/kisasi/house-webp.webp"
+                alt="Residential Properties"
+                loading="lazy"
+                decoding="async"
+                width="1200"
+                height="800"
+                class="w-full h-64 md:h-80 object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-6">
+                <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">
+                  Residential & Commercial
+                </h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-600 mb-6">
+                Explore our selection of luxury homes, apartments, and villas
+                across Uganda, designed for comfort and elegance.
+              </p>
+              <a
+                href="residential-properties.html"
+                class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors"
+              >
+                View All Residential & Commercial Properties
+                <svg
+                  class="w-4 h-4 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  ></path>
+                </svg>
+              </a>
             </div>
           </div>
-          <div class="p-6">
-            <p class="text-gray-600 mb-6">Explore our selection of luxury homes, apartments, and villas across Uganda, designed for comfort and elegance.</p>
-            <a href="residential-properties.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors">
-              View All Residential & Commercial Properties
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+
+          <!-- Lands & Plots -->
+          <div
+            class="property-card bg-white rounded-xl overflow-hidden shadow-md"
+          >
+            <div class="relative">
+              <img
+                src="images/landsandplots/land-webp.webp"
+                alt="Prime Commercial Properties"
+                loading="lazy"
+                decoding="async"
+                width="1200"
+                height="800"
+                class="w-full h-64 md:h-80 object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-6">
+                <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">
+                  Lands & Plots
+                </h3>
+              </div>
+            </div>
+            <div class="p-6">
+              <p class="text-gray-600 mb-6">
+                Find prime land and plots for development, agriculture, or
+                investment across Uganda.
+              </p>
+              <a
+                href="lands-and-plots.html"
+                class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors"
+              >
+                View All Lands & Plots
+                <svg
+                  class="w-4 h-4 ml-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Properties -->
+        <div>
+          <div class="flex justify-between items-center mb-8">
+            <a
+              href="exploreproperties.html"
+              class="text-blue-600 hover:text-blue-800 font-medium flex items-center"
+            >
+              View All Properties
+              <svg
+                class="w-4 h-4 ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                ></path>
               </svg>
             </a>
           </div>
-        </div>
 
-        <!-- Lands & Plots -->
-        <div class="property-card bg-white rounded-xl overflow-hidden shadow-md">
-          <div class="relative">
-            <img
-             src="images/landsandplots/land-webp.webp"
-             alt="Prime Commercial Properties"
-             loading="lazy"
-             decoding="async"
-             width="1200"
-             height="800"
-             class="w-full h-64 md:h-80 object-cover"
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Property 1 -->
+            <div
+              class="property-card bg-white rounded-lg overflow-hidden shadow-md relative"
             >
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
-            <div class="absolute bottom-0 left-0 p-6">
-              <h3 class="text-2xl md:text-3xl font-bold text-white mb-2">Lands & Plots</h3>
+              <div class="relative overflow-hidden h-48">
+                <img
+                  src="images/residentialandcommercialimage/kira/house2.jpg"
+                  alt="Luxury Home"
+                  loading="lazy"
+                  decoding="async"
+                  width="1200"
+                  height="800"
+                  class="w-full h-64 md:h-80 object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-black opacity-0 hover:opacity-20 transition-opacity duration-300"
+                ></div>
+              </div>
+              <div class="p-5">
+                <div class="flex justify-between items-start mb-2">
+                  <span
+                    class="text-xs text-blue-600 font-semibold bg-blue-100 px-2 py-1 rounded"
+                    >Residential</span
+                  >
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">
+                  House For Sale
+                </h3>
+                <p class="text-gray-600 mb-4 flex items-center">
+                  <svg
+                    class="w-4 h-4 mr-1 text-gray-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    ></path>
+                  </svg>
+                  Kira, Mamerito Road
+                </p>
+                <div
+                  class="flex justify-between items-center border-t border-gray-100 pt-4"
+                >
+                  <span class="text-lg font-bold text-gray-800">850M UGX</span>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="p-6">
-            <p class="text-gray-600 mb-6">Find prime land and plots for development, agriculture, or investment across Uganda.</p>
-            <a href="lands-and-plots.html" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors">
-              View All Lands & Plots
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-              </svg>
-            </a>
+
+            <!-- Property 2 -->
+            <div
+              class="property-card bg-white rounded-lg overflow-hidden shadow-md relative"
+            >
+              <div class="relative overflow-hidden h-48">
+                <img
+                  src="images/residentialandcommercialimage/kitende/house1.jpg"
+                  alt="Luxury Home"
+                  loading="lazy"
+                  decoding="async"
+                  width="1200"
+                  height="800"
+                  class="w-full h-64 md:h-80 object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-black opacity-0 hover:opacity-20 transition-opacity duration-300"
+                ></div>
+              </div>
+              <div class="p-5">
+                <div class="flex justify-between items-start mb-2">
+                  <span
+                    class="text-xs text-green-600 font-semibold bg-green-100 px-2 py-1 rounded"
+                    >Residential</span
+                  >
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">
+                  House For Sale
+                </h3>
+                <p class="text-gray-600 mb-4 flex items-center">
+                  <svg
+                    class="w-4 h-4 mr-1 text-gray-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    ></path>
+                  </svg>
+                  Kitende, Entebbe Road
+                </p>
+                <div
+                  class="flex justify-between items-center border-t border-gray-100 pt-4"
+                >
+                  <span class="text-lg font-bold text-gray-800">650M UGX</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Property 3 -->
+            <div
+              class="property-card bg-white rounded-lg overflow-hidden shadow-md relative"
+            >
+              <div class="relative overflow-hidden h-48">
+                <img
+                  src="images/residentialandcommercialimage/kyanja/house1.jpg"
+                  alt="Luxury House"
+                  loading="lazy"
+                  decoding="async"
+                  width="1200"
+                  height="800"
+                  class="w-full h-64 md:h-80 object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-black opacity-0 hover:opacity-20 transition-opacity duration-300"
+                ></div>
+              </div>
+              <div class="p-5">
+                <div class="flex justify-between items-start mb-2">
+                  <span
+                    class="text-xs text-blue-600 font-semibold bg-blue-100 px-2 py-1 rounded"
+                    >Residential</span
+                  >
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">
+                  Ready Private Milo Title
+                </h3>
+                <p class="text-gray-600 mb-4 flex items-center">
+                  <svg
+                    class="w-4 h-4 mr-1 text-gray-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    ></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    ></path>
+                  </svg>
+                  Kyanja
+                </p>
+                <div
+                  class="flex justify-between items-center border-t border-gray-100 pt-4"
+                >
+                  <span class="text-lg font-bold text-gray-800">1B UGX</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Featured Properties -->
-      <div>
-        <div class="flex justify-between items-center mb-8">
-          <a href="exploreproperties.html" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
-            View All Properties
-            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-            </svg>
-          </a>
+    <!-- Services Section - Replaced with Explore Services Link -->
+    <section class="py-16 bg-white text-black">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Discover Our Comprehensive Services
+        </h2>
+        <p class="text-lg max-w-2xl mx-auto mb-8">
+          We offer a full range of professional real estate services to meet all
+          your property needs.
+        </p>
+        <a
+          href="explore-our-services.html"
+          class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300"
+        >
+          Explore All Services
+          <svg
+            class="w-5 h-5 inline ml-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-700 text-gray-300 pt-16 pb-8">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <!-- Brand Column -->
+          <div>
+            <div class="mb-6">
+              <p class="mt-4 text-gray-400">
+                Zigoti Properties your trusted partner in real estate solutions
+                across Uganda.
+              </p>
+            </div>
+
+            <div class="flex space-x-4">
+              <a
+                href="https://www.facebook.com/eluthius990/"
+                class="bg-gray-800 hover:bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://x.com/zigotiproperty"
+                class="bg-gray-800 hover:bg-blue-400 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/zigoti-properties"
+                class="bg-gray-800 hover:bg-blue-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/zigotiproperties"
+                class="bg-gray-800 hover:bg-pink-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3
+              class="text-white text-lg font-semibold mb-4 uppercase tracking-wider"
+            >
+              Quick Links
+            </h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="explore-our-services.html"
+                  class="hover:text-white transition flex items-center"
+                >
+                  <i
+                    class="fas fa-chevron-right text-blue-400 text-xs mr-2"
+                  ></i>
+                  Our Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="agents.html"
+                  class="hover:text-white transition flex items-center"
+                >
+                  <i
+                    class="fas fa-chevron-right text-blue-400 text-xs mr-2"
+                  ></i>
+                  Agents</a
+                >
+              </li>
+              <li>
+                <a
+                  href="exploreproperties.html"
+                  class="hover:text-white transition flex items-center"
+                >
+                  <i
+                    class="fas fa-chevron-right text-blue-400 text-xs mr-2"
+                  ></i>
+                  Explore Properties</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="hover:text-white transition flex items-center"
+                >
+                  <i
+                    class="fas fa-chevron-right text-blue-400 text-xs mr-2"
+                  ></i>
+                  About Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h3
+              class="text-white text-lg font-semibold mb-4 uppercase tracking-wider"
+            >
+              Our Services
+            </h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="land-surveying.html"
+                  class="hover:text-white transition flex items-center"
+                >
+                  <i
+                    class="fas fa-chevron-right text-blue-400 text-xs mr-2"
+                  ></i>
+                  Land Surveying</a
+                >
+              </li>
+              <li>
+                <a
+                  href="property-management.html"
+                  class="hover:text-white transition flex items-center"
+                >
+                  <i
+                    class="fas fa-chevron-right text-blue-400 text-xs mr-2"
+                  ></i>
+                  Property Management</a
+                >
+              </li>
+              <li>
+                <a
+                  href="real-estate-consulting.html"
+                  class="hover:text-white transition flex items-center"
+                >
+                  <i
+                    class="fas fa-chevron-right text-blue-400 text-xs mr-2"
+                  ></i>
+                  Real Estate Consulting</a
+                >
+              </li>
+              <li>
+                <a
+                  href="legal-services.html"
+                  class="hover:text-white transition flex items-center"
+                >
+                  <i
+                    class="fas fa-chevron-right text-blue-400 text-xs mr-2"
+                  ></i>
+                  Legal Services</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h3
+              class="text-white text-lg font-semibold mb-4 uppercase tracking-wider"
+            >
+              Contact Us
+            </h3>
+            <address class="not-italic space-y-4">
+              <div class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-400"></i>
+                <div>
+                  <p class="text-gray-400">95H7+CM Zigoti, Uganda</p>
+                  <p class="text-gray-400">Mityana Road, Uganda</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-phone-alt mr-3 text-blue-400"></i>
+                <div>
+                  <p class="text-gray-400">+256 707346556</p>
+                  <p class="text-gray-400 text-sm">Office Line</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-envelope mr-3 text-blue-400"></i>
+                <a
+                  href="mailto:zigotiproperties@gmail.com"
+                  class="text-gray-400 hover:text-white transition"
+                  >zigotiproperties2023@gmail.com</a
+                >
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-clock mr-3 text-blue-400"></i>
+                <div>
+                  <p class="text-gray-400">Mon-Fri: 8:00 AM - 5:00 PM</p>
+                  <p class="text-gray-400 text-sm">Sat: 9:00 AM - 1:00 PM</p>
+                </div>
+              </div>
+            </address>
+          </div>
         </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Property 1 -->
-          <div class="property-card bg-white rounded-lg overflow-hidden shadow-md relative">
-            <div class="relative overflow-hidden h-48">
-              <img
-             src="images/residentialandcommercialimage/kira/house2.jpg"
-             alt="Luxury Home"
-             loading="lazy"
-             decoding="async"
-             width="1200"
-             height="800"
-             class="w-full h-64 md:h-80 object-cover"
-            >
-              <div class="absolute inset-0 bg-black opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
-            </div>
-            <div class="p-5">
-              <div class="flex justify-between items-start mb-2">
-                <span class="text-xs text-blue-600 font-semibold bg-blue-100 px-2 py-1 rounded">Residential</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">House For Sale</h3>
-              <p class="text-gray-600 mb-4 flex items-center">
-                <svg class="w-4 h-4 mr-1 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                </svg>
-                Kira, Mamerito Road
-              </p>
-              <div class="flex justify-between items-center border-t border-gray-100 pt-4">
-                <span class="text-lg font-bold text-gray-800">850M UGX</span>
-              </div>
-            </div>
-          </div>
 
-          <!-- Property 2 -->
-          <div class="property-card bg-white rounded-lg overflow-hidden shadow-md relative">
-            <div class="relative overflow-hidden h-48">
-              <img
-             src="images/residentialandcommercialimage/kitende/house1.jpg"
-             alt="Luxury Home"
-             loading="lazy"
-             decoding="async"
-             width="1200"
-             height="800"
-             class="w-full h-64 md:h-80 object-cover"
-            >
-              <div class="absolute inset-0 bg-black opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
-            </div>
-            <div class="p-5">
-              <div class="flex justify-between items-start mb-2">
-                <span class="text-xs text-green-600 font-semibold bg-green-100 px-2 py-1 rounded">Residential</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">House For Sale</h3>
-              <p class="text-gray-600 mb-4 flex items-center">
-                <svg class="w-4 h-4 mr-1 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                </svg>
-                Kitende, Entebbe Road
-              </p>
-              <div class="flex justify-between items-center border-t border-gray-100 pt-4">
-                <span class="text-lg font-bold text-gray-800">650M UGX</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Property 3 -->
-          <div class="property-card bg-white rounded-lg overflow-hidden shadow-md relative">
-            <div class="relative overflow-hidden h-48">
-              <img
-             src="images/residentialandcommercialimage/kyanja/house1.jpg"
-             alt="Luxury House"
-             loading="lazy"
-             decoding="async"
-             width="1200"
-             height="800"
-             class="w-full h-64 md:h-80 object-cover"
-            >
-              <div class="absolute inset-0 bg-black opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
-            </div>
-            <div class="p-5">
-              <div class="flex justify-between items-start mb-2">
-                <span class="text-xs text-blue-600 font-semibold bg-blue-100 px-2 py-1 rounded">Residential</span>
-              </div>
-              <h3 class="text-xl font-bold text-gray-800 mb-2">Ready Private Milo Title</h3>
-              <p class="text-gray-600 mb-4 flex items-center">
-                <svg class="w-4 h-4 mr-1 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                </svg>
-                Kyanja
-              </p>
-              <div class="flex justify-between items-center border-t border-gray-100 pt-4">
-                <span class="text-lg font-bold text-gray-800">1B UGX</span>
-              </div>
-            </div>
-          </div>
+        <!-- Copyright -->
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col items-center text-center"
+        >
+          <p class="text-gray-500 text-sm">
+            &copy; 2023 Zigoti Properties Uganda Limited. All rights reserved.
+          </p>
         </div>
       </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- Services Section - Replaced with Explore Services Link -->
-<section class="py-16 bg-white text-black">
-  <div class="container mx-auto px-6 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-6">Discover Our Comprehensive Services</h2>
-    <p class="text-lg max-w-2xl mx-auto mb-8">We offer a full range of professional real estate services to meet all your property needs.</p>
-    <a href="explore-our-services.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300">
-      Explore All Services
-      <svg class="w-5 h-5 inline ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+    <!-- Back to Top Button -->
+    <button
+      id="back-to-top"
+      class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 10l7-7m0 0l7 7m-7-7v18"
+        ></path>
       </svg>
-    </a>
-  </div>
-</section>
+    </button>
 
-  <!-- Footer -->
-  <footer class="bg-gray-700 text-gray-300 pt-16 pb-8">
-    <div class="container mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-        <!-- Brand Column -->
-        <div>
-          <div class="mb-6">
-            <p class="mt-4 text-gray-400">Zigoti Properties your trusted partner in real estate solutions across Uganda.</p>
-          </div>
-          
-          <div class="flex space-x-4">
-            <a href="https://www.facebook.com/eluthius990/" class="bg-gray-800 hover:bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://x.com/zigotiproperty" class="bg-gray-800 hover:bg-blue-400 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.linkedin.com/company/zigoti-properties" class="bg-gray-800 hover:bg-blue-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://www.instagram.com/zigotiproperties" class="bg-gray-800 hover:bg-pink-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-        </div>
-        
-        <!-- Quick Links -->
-        <div>
-          <h3 class="text-white text-lg font-semibold mb-4 uppercase tracking-wider">Quick Links</h3>
-          <ul class="space-y-3">
-            <li><a href="explore-our-services.html" class="hover:text-white transition flex items-center">
-              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> Our Services</a></li>
-            <li><a href="agents.html" class="hover:text-white transition flex items-center">
-              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> Agents</a></li>
-            <li><a href="exploreproperties.html" class="hover:text-white transition flex items-center">
-              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> Explore Properties</a></li>
-            <li><a href="about.html" class="hover:text-white transition flex items-center">
-              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> About Us</a></li>
-          </ul>
-        </div>
-        
-        <!-- Services -->
-        <div>
-          <h3 class="text-white text-lg font-semibold mb-4 uppercase tracking-wider">Our Services</h3>
-          <ul class="space-y-3">
-            <li><a href="land-surveying.html" class="hover:text-white transition flex items-center">
-              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> Land Surveying</a></li>
-            <li><a href="property-management.html" class="hover:text-white transition flex items-center">
-              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> Property Management</a></li>
-            <li><a href="real-estate-consulting.html" class="hover:text-white transition flex items-center">
-              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> Real Estate Consulting</a></li>
-            <li><a href="legal-services.html" class="hover:text-white transition flex items-center">
-              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> Legal Services</a></li>
-          </ul>
-        </div>
-        
-        <!-- Contact -->
-        <div>
-          <h3 class="text-white text-lg font-semibold mb-4 uppercase tracking-wider">Contact Us</h3>
-          <address class="not-italic space-y-4">
-            <div class="flex items-start">
-              <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-400"></i> 
-              <div>
-                <p class="text-gray-400">95H7+CM Zigoti, Uganda</p>
-                <p class="text-gray-400">Mityana Road, Uganda</p>
-              </div>
-            </div>
-            <div class="flex items-center">
-              <i class="fas fa-phone-alt mr-3 text-blue-400"></i> 
-              <div>
-                <p class="text-gray-400">+256 707346556</p>
-                <p class="text-gray-400 text-sm">Office Line</p>
-              </div>
-            </div>
-            <div class="flex items-center">
-              <i class="fas fa-envelope mr-3 text-blue-400"></i> 
-              <a href="mailto:zigotiproperties@gmail.com" class="text-gray-400 hover:text-white transition">zigotiproperties2023@gmail.com</a>
-            </div>
-            <div class="flex items-center">
-              <i class="fas fa-clock mr-3 text-blue-400"></i> 
-              <div>
-                <p class="text-gray-400">Mon-Fri: 8:00 AM - 5:00 PM</p>
-                <p class="text-gray-400 text-sm">Sat: 9:00 AM - 1:00 PM</p>
-              </div>
-            </div>
-          </address>
-        </div>
-      </div>
-      
-      <!-- Copyright -->
-      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col items-center text-center">
-      <p class="text-gray-500 text-sm">&copy; 2023 Zigoti Properties Uganda Limited. All rights reserved.</p>
-      </div>
-
-    </div>
-  </footer>
-
-  <!-- Back to Top Button -->
-  <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-    </svg>
-  </button>
-
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script src="js/app.js"></script>
-  
-</body>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>
