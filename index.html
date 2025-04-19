@@ -47,6 +47,11 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Smooth scroll for anchor links -->
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+
   <script src="path/to/your/script.js" defer></script>
   <script type="application/ld+json">
     {
@@ -113,7 +118,7 @@
   </nav>
 
 <!-- Hero Section -->
-<section class="relative bg-black">
+<section class="relative bg-black h-[75vh] flex items-center">
   
   <!-- Background Image as an <img> for better LCP -->
   <picture>
@@ -161,7 +166,7 @@
 
   <!-- Scroll Down Indicator -->
   <div class="absolute bottom-10 left-0 right-0 flex justify-center z-20">
-    <a href="#listings" class="text-white animate-bounce">
+    <a href="#listings" class="text-white animate-bounce hover:animate-pulse drop-shadow-lg">
       <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
       </svg>
