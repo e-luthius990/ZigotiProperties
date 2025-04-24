@@ -1,650 +1,963 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Primary Meta Tags (SEO) -->
- <title>3D Virtual Tours | Zigoti Properties - Explore Homes & Land Remotely</title>
- <meta name="description" content="Experience Zigoti Properties' real estate listings through immersive 3D virtual tours. Explore homes, land, and commercial properties in Uganda from anywhere.">
- <meta name="keywords" content="virtual tour Uganda, 3D property viewing Kampala, online real estate tours, remote home viewing Uganda, Zigoti Properties virtual experience">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Primary Meta Tags (SEO) -->
+    <title>
+      3D Virtual Tours | Zigoti Properties - Explore Homes & Land Remotely
+    </title>
+    <meta
+      name="description"
+      content="Experience Zigoti Properties' real estate listings through immersive 3D virtual tours. Explore homes, land, and commercial properties in Uganda from anywhere."
+    />
+    <meta
+      name="keywords"
+      content="virtual tour Uganda, 3D property viewing Kampala, online real estate tours, remote home viewing Uganda, Zigoti Properties virtual experience"
+    />
 
- <!-- Open Graph / Facebook -->
- <meta property="og:type" content="website">
- <meta property="og:url" content="https://www.zigotiproperties.com/virtual-tour">
- <meta property="og:title" content="Immersive 3D Virtual Tours | Zigoti Properties">
- <meta property="og:description" content="Walk through Zigoti Properties' listings remotely with our HD virtual tours. Perfect for overseas buyers and local clients alike.">
- <meta property="og:image" content="https://www.zigotiproperties.com/images/vitual-pic.avif">
- <meta property="og:site_name" content="Zigoti Properties">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.zigotiproperties.com/virtual-tour"
+    />
+    <meta
+      property="og:title"
+      content="Immersive 3D Virtual Tours | Zigoti Properties"
+    />
+    <meta
+      property="og:description"
+      content="Walk through Zigoti Properties' listings remotely with our HD virtual tours. Perfect for overseas buyers and local clients alike."
+    />
+    <meta
+      property="og:image"
+      content="https://www.zigotiproperties.com/images/vitual-pic.avif"
+    />
+    <meta property="og:site_name" content="Zigoti Properties" />
 
- <!-- Twitter Card -->
- <meta name="twitter:card" content="summary_large_image">
- <meta name="twitter:site" content="@ZigotiProperties">
- <meta name="twitter:title" content="🚀 Explore Ugandan Real Estate in 3D | Zigoti Properties">
- <meta name="twitter:description" content="No travel needed! Tour Zigoti Properties' homes & land virtually with our interactive 3D experiences. #VirtualRealEstate #UgandaHomes">
- <meta name="twitter:image" content="https://www.zigotiproperties.com/images/vitual-pic.avif">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ZigotiProperties" />
+    <meta
+      name="twitter:title"
+      content="🚀 Explore Ugandan Real Estate in 3D | Zigoti Properties"
+    />
+    <meta
+      name="twitter:description"
+      content="No travel needed! Tour Zigoti Properties' homes & land virtually with our interactive 3D experiences. #VirtualRealEstate #UgandaHomes"
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.zigotiproperties.com/images/vitual-pic.avif"
+    />
 
- <!-- Canonical URL -->
- <link rel="canonical" href="https://www.zigotiproperties.com/virtual-tour">
+    <!-- Canonical URL -->
+    <link
+      rel="canonical"
+      href="https://www.zigotiproperties.com/virtual-tour"
+    />
 
- <!-- Structured Data (Schema.org) -->
- <script type="application/ld+json">
- {
-   "@context": "https://schema.org",
-   "@type": "VirtualLocation",
-   "name": "Zigoti Properties Virtual Tours",
-   "description": "Interactive 3D tours of real estate properties in Uganda",
-   "url": "https://www.zigotiproperties.com/virtual-tour",
-   "image": "https://www.zigotiproperties.com/images/vitual-pic.avif",
-   "provider": {
-     "@type": "RealEstateAgent",
-     "name": "Zigoti Properties Uganda Limited"
-   }
- }
- </script>
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VirtualLocation",
+        "name": "Zigoti Properties Virtual Tours",
+        "description": "Interactive 3D tours of real estate properties in Uganda",
+        "url": "https://www.zigotiproperties.com/virtual-tour",
+        "image": "https://www.zigotiproperties.com/images/vitual-pic.avif",
+        "provider": {
+          "@type": "RealEstateAgent",
+          "name": "Zigoti Properties Uganda Limited"
+        }
+      }
+    </script>
 
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-  
-  <!-- Preload critical resources -->
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" as="style">
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style">
-  
-  <!-- CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link href="css/styles.css" rel="stylesheet">
-  
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-  <style>
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    .animate-fade-in {
+    <!-- Preload critical resources -->
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      as="style"
+    />
+
+    <!-- CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in {
         animation: fadeIn 1s ease-out forwards;
-    }
-    .animate-bounce {
+      }
+      .animate-bounce {
         animation: bounce 2s infinite;
-    }
-    @keyframes bounce {
-        0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-        40% {transform: translateY(-20px);}
-        60% {transform: translateY(-10px);}
-    }
-    
-    /* Tour card styles */
-    .tour-card {
-      transition: all 0.3s ease;
-    }
-    
-    .tour-card:hover {
-      transform: translateY(-5px);
-    }
-    
-    .tour-iframe-container {
-      position: relative;
-      height: 0;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
-      overflow: hidden;
-      background: #f5f5f5;
-    }
-    
-    .tour-iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-    
-    .iframe-loading {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #4b5563;
-      font-size: 1rem;
-    }
-    
-    /* Custom scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    
-    ::-webkit-scrollbar-track {
-      background: #f1f1f1;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-      background: #3b82f6;
-      border-radius: 4px;
-    }
-    
-    ::-webkit-scrollbar-thumb:hover {
-      background: #2563eb;
-    }
-  </style>
-</head>
-<body class="font-sans bg-gray-50 antialiased">
+      }
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-20px);
+        }
+        60% {
+          transform: translateY(-10px);
+        }
+      }
 
-  <!-- Navigation -->
-  <nav class="bg-white shadow-md w-full z-50 fixed top-0">
-    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-      <!-- Logo -->
-      <a href="index.html" class="flex items-center">
-        <img src="images/logos/logo-PNG.png" alt="Zigoti Properties Logo" class="h-10 md:h-12">
-      </a>
-      
-      <!-- Desktop Navigation -->
-      <div class="hidden lg:flex space-x-8">
-        <a href="index.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Home</a>
-        <a href="about.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">About Us</a>
-        <a href="services.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Services</a>
-        <a href="virtual-tour.html" class="nav-link text-blue-600 font-medium">Virtual Tour</a>
-        <a href="blog.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Blog</a>
-        <a href="contact.html" class="nav-link text-gray-800 font-medium hover:text-blue-600">Contact</a>
-      </div>
-      
-      <!-- Mobile Menu Button -->
-      <div class="lg:hidden">
-        <button id="menu-toggle" class="text-gray-700 focus:outline-none">
-          <svg id="menu-open-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-          </svg>
-          <svg id="menu-close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-    
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="lg:hidden hidden bg-white w-full absolute left-0 top-full shadow-lg transition-all duration-300 transform opacity-0 -translate-y-2">
-      <div class="px-6 py-4 space-y-3">
-        <a href="index.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">Home</a>
-        <a href="about.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">About Us</a>
-        <a href="services.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">Services</a>
-        <a href="virtual-tour.html" class="block py-3 text-blue-600 font-medium border-b border-gray-100">Virtual Tour</a>
-        <a href="blog.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100">Blog</a>
-        <a href="contact.html" class="block py-3 text-gray-700 hover:text-blue-600 font-medium">Contact</a>
-      </div>
-    </div>
-  </nav>
+      /* Tour card styles */
+      .tour-card {
+        transition: all 0.3s ease;
+      }
 
-  <!-- Hero Section -->
-  <section class="relative h-screen flex items-center justify-center overflow-hidden pt-16">
-    <!-- Video Background -->
-  <div class="absolute inset-0 z-0">
-    <div class="absolute inset-0 bg-black opacity-50"></div>
-    <video 
-      autoplay 
-      loop 
-      muted 
-      playsinline 
-      class="w-full h-full object-cover"
-      poster="images/vitual-pic.avif"
-    >
-      <source src="videos/3859438-uhd_3840_2160_24fps.mp4" type="video/mp4">
-      <!-- Fallback image if video doesn't load -->
-      <img 
-        src="images/vitual-pic.avif" 
-        alt="Fallback hero image"
-        class="w-full h-full object-cover"
+      .tour-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .tour-iframe-container {
+        position: relative;
+        height: 0;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        overflow: hidden;
+        background: #f5f5f5;
+      }
+
+      .tour-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .iframe-loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #4b5563;
+        font-size: 1rem;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #3b82f6;
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #2563eb;
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-gray-50 antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md w-full z-50 fixed top-0">
+      <div
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
       >
-    </video>
-  </div>
-
-    <!-- Content -->
-    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-      <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-        Explore Our Properties in <span class="text-blue-400">360°</span>
-      </h1>
-      <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">
-        Immerse yourself in our premium properties across Uganda with our interactive virtual tours.
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#tours" class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition duration-300 transform hover:scale-105">
-          View Tours
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center">
+          <img
+            src="images/logos/logo-PNG.png"
+            alt="Zigoti Properties Logo"
+            class="h-10 md:h-12"
+          />
         </a>
-        <a href="contact.html" class="px-8 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-gray-900 transition duration-300">
-          Schedule Viewing
-        </a>
-      </div>
-    </div>
 
-    <!-- Scroll indicator -->
-    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-      <a href="#tours" class="text-white">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-        </svg>
-      </a>
-    </div>
-  </section>
-
-  <!-- Virtual Tour Section -->
-  <section id="tours" class="container mx-auto px-6 py-16">
-    <div class="text-center mb-16" data-aos="fade-up">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Featured Property Tours</h2>
-      <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-      <p class="text-gray-600 max-w-2xl mx-auto text-lg">
-        Our virtual tours provide a realistic experience of each property, allowing you to explore every detail at your own pace.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-      <!-- Tour 1 -->
-      <div class="tour-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-500 hover:shadow-2xl" data-aos="fade-up">
-        <div class="tour-iframe-container">
-          <div class="iframe-loading">
-            <i class="fas fa-spinner fa-spin mr-2"></i> Loading tour...
-          </div>
-          <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID_1?autoplay=0&rel=0"
-            class="tour-iframe"
-            title="Luxury Apartment Virtual Tour - Zigoti Properties"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy"
-            onload="this.parentNode.querySelector('.iframe-loading').style.display = 'none';"
-          ></iframe>
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex space-x-8">
+          <a
+            href="index.html"
+            class="nav-link text-gray-800 font-medium hover:text-blue-600"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="nav-link text-gray-800 font-medium hover:text-blue-600"
+            >About Us</a
+          >
+          <a
+            href="services.html"
+            class="nav-link text-gray-800 font-medium hover:text-blue-600"
+            >Services</a
+          >
+          <a href="virtual-tour.html" class="nav-link text-blue-600 font-medium"
+            >Virtual Tour</a
+          >
+          <a
+            href="blog.html"
+            class="nav-link text-gray-800 font-medium hover:text-blue-600"
+            >Blog</a
+          >
+          <a
+            href="contact.html"
+            class="nav-link text-gray-800 font-medium hover:text-blue-600"
+            >Contact</a
+          >
         </div>
-        <div class="p-8">
-          <div class="flex items-center mb-4">
-            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">NEW</span>
-            <span class="ml-3 text-gray-500 text-sm"><i class="fas fa-map-marker-alt mr-1"></i> Kampala, Uganda</span>
-          </div>
-          <h3 class="text-2xl font-semibold mb-3 text-gray-800">Luxury Waterfront Apartment Tour</h3>
-          <p class="text-gray-600 mb-6">Experience this stunning 3-bedroom apartment with panoramic views of Lake Victoria, featuring modern finishes and premium amenities.</p>
-          <div class="flex justify-between items-center">
-            <div>
-              <span class="text-gray-900 font-bold text-xl">$450,000</span>
-              <span class="text-gray-500 text-sm block">3 Beds | 2 Baths | 1800 sqft</span>
-            </div>
-            <a href="property-details.html" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
-              Details <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
-      </div>
 
-      <!-- Tour 2 -->
-      <div class="tour-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-500 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="100">
-        <div class="tour-iframe-container">
-          <div class="iframe-loading">
-            <i class="fas fa-spinner fa-spin mr-2"></i> Loading tour...
-          </div>
-          <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID_2?autoplay=0&rel=0"
-            class="tour-iframe"
-            title="Modern Villa Virtual Tour - Zigoti Properties"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy"
-            onload="this.parentNode.querySelector('.iframe-loading').style.display = 'none';"
-          ></iframe>
-        </div>
-        <div class="p-8">
-          <div class="flex items-center mb-4">
-            <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">GATED COMMUNITY</span>
-            <span class="ml-3 text-gray-500 text-sm"><i class="fas fa-map-marker-alt mr-1"></i> Entebbe, Uganda</span>
-          </div>
-          <h3 class="text-2xl font-semibold mb-3 text-gray-800">Modern Luxury Villa Tour</h3>
-          <p class="text-gray-600 mb-6">Step inside this exquisite 5-bedroom villa featuring smart home technology, private gardens, and a stunning infinity pool.</p>
-          <div class="flex justify-between items-center">
-            <div>
-              <span class="text-gray-900 font-bold text-xl">$1,200,000</span>
-              <span class="text-gray-500 text-sm block">5 Beds | 4.5 Baths | 4200 sqft</span>
-            </div>
-            <a href="property-details.html" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
-              Details <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
+        <!-- Mobile Menu Button -->
+        <div class="lg:hidden">
+          <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+            <svg
+              id="menu-open-icon"
+              class="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+            <svg
+              id="menu-close-icon"
+              class="w-8 h-8 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
         </div>
       </div>
 
-      <!-- Tour 3 -->
-      <div class="tour-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-500 hover:shadow-2xl" data-aos="fade-up">
-        <div class="tour-iframe-container">
-          <div class="iframe-loading">
-            <i class="fas fa-spinner fa-spin mr-2"></i> Loading tour...
-          </div>
-          <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID_3?autoplay=0&rel=0"
-            class="tour-iframe"
-            title="Commercial Space Virtual Tour - Zigoti Properties"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy"
-            onload="this.parentNode.querySelector('.iframe-loading').style.display = 'none';"
-          ></iframe>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="lg:hidden hidden bg-white w-full absolute left-0 top-full shadow-lg transition-all duration-300 transform opacity-0 -translate-y-2"
+      >
+        <div class="px-6 py-4 space-y-3">
+          <a
+            href="index.html"
+            class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100"
+            >About Us</a
+          >
+          <a
+            href="services.html"
+            class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100"
+            >Services</a
+          >
+          <a
+            href="virtual-tour.html"
+            class="block py-3 text-blue-600 font-medium border-b border-gray-100"
+            >Virtual Tour</a
+          >
+          <a
+            href="blog.html"
+            class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100"
+            >Blog</a
+          >
+          <a
+            href="contact.html"
+            class="block py-3 text-gray-700 hover:text-blue-600 font-medium"
+            >Contact</a
+          >
         </div>
-        <div class="p-8">
-          <div class="flex items-center mb-4">
-            <span class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">COMMERCIAL</span>
-            <span class="ml-3 text-gray-500 text-sm"><i class="fas fa-map-marker-alt mr-1"></i> Kampala, Uganda</span>
-          </div>
-          <h3 class="text-2xl font-semibold mb-3 text-gray-800">Premium Office Space Tour</h3>
-          <p class="text-gray-600 mb-6">Explore this state-of-the-art commercial space in the heart of Kampala's business district, perfect for corporate offices or professional services.</p>
-          <div class="flex justify-between items-center">
-            <div>
-              <span class="text-gray-900 font-bold text-xl">$850,000</span>
-              <span class="text-gray-500 text-sm block">12 Offices | 3 Conference Rooms | 6500 sqft</span>
-            </div>
-            <a href="property-details.html" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
-              Details <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="relative h-screen flex items-center justify-center overflow-hidden pt-16"
+    >
+      <!-- Video Background -->
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          class="w-full h-full object-cover"
+          poster="images/vitual-pic.avif"
+        >
+          <source
+            src="videos/3859438-uhd_3840_2160_24fps.mp4"
+            type="video/mp4"
+          />
+          <!-- Fallback image if video doesn't load -->
+          <img
+            src="images/vitual-pic.avif"
+            alt="Fallback hero image"
+            class="w-full h-full object-cover"
+          />
+        </video>
+      </div>
+
+      <!-- Content -->
+      <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        <h1
+          class="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in"
+        >
+          Explore Our Properties in <span class="text-blue-400">360°</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto">
+          Immerse yourself in our premium properties across Uganda with our
+          interactive virtual tours.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#tours"
+            class="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full transition duration-300 transform hover:scale-105"
+          >
+            View Tours
+          </a>
+          <a
+            href="contact.html"
+            class="px-8 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-gray-900 transition duration-300"
+          >
+            Schedule Viewing
+          </a>
         </div>
       </div>
 
-      <!-- Tour 4 -->
-      <div class="tour-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-500 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="100">
-        <div class="tour-iframe-container">
-          <div class="iframe-loading">
-            <i class="fas fa-spinner fa-spin mr-2"></i> Loading tour...
-          </div>
-          <iframe
-            src="https://www.youtube.com/embed/VIDEO_ID_4?autoplay=0&rel=0"
-            class="tour-iframe"
-            title="Luxury Apartment Virtual Tour - Zigoti Properties"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy"
-            onload="this.parentNode.querySelector('.iframe-loading').style.display = 'none';"
-          ></iframe>
-        </div>
-        <div class="p-8">
-          <div class="flex items-center mb-4">
-            <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">INVESTMENT</span>
-            <span class="ml-3 text-gray-500 text-sm"><i class="fas fa-map-marker-alt mr-1"></i> Mbarara, Uganda</span>
-          </div>
-          <h3 class="text-2xl font-semibold mb-3 text-gray-800">Mixed-Use Development Tour</h3>
-          <p class="text-gray-600 mb-6">Discover this prime investment opportunity featuring retail spaces on the ground floor and luxury apartments above in Uganda's fastest growing city.</p>
-          <div class="flex justify-between items-center">
-            <div>
-              <span class="text-gray-900 font-bold text-xl">$2,500,000</span>
-              <span class="text-gray-500 text-sm block">8 Retail | 12 Apartments | 15,000 sqft</span>
-            </div>
-            <a href="property-details.html" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
-              Details <i class="fas fa-arrow-right ml-2"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Call to Action -->
-    <div class="mt-20 text-center" data-aos="fade-up">
-      <h3 class="text-2xl font-bold text-gray-800 mb-6">Want to See More Properties?</h3>
-      <p class="text-gray-600 max-w-2xl mx-auto mb-8">Contact us to schedule an in-person viewing or request a custom virtual tour of any property.</p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="https://wa.me/256707346556" class="inline-block bg-green-500 text-white font-semibold px-10 py-4 rounded-lg shadow-lg hover:bg-green-600 transition duration-300 transform hover:scale-105">
-          Chat on WhatsApp <i class="fab fa-whatsapp ml-2"></i>
-        </a>
-        <a href="tel:+256707346556" class="inline-block bg-blue-600 text-white font-semibold px-10 py-4 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105">
-          Call Us Now <i class="fas fa-phone-alt ml-2"></i>
+      <!-- Scroll indicator -->
+      <div
+        class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+      >
+        <a href="#tours" class="text-white">
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            ></path>
+          </svg>
         </a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Testimonials Section -->
-  <section class="bg-gray-100 py-16">
-    <div class="container mx-auto px-6">
+    <!-- Virtual Tour Section -->
+    <section id="tours" class="container mx-auto px-6 py-16">
       <div class="text-center mb-16" data-aos="fade-up">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">What Our Clients Say</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          Featured Property Tours
+        </h2>
         <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
         <p class="text-gray-600 max-w-2xl mx-auto text-lg">
-          Hear from clients who discovered their perfect property through our virtual tours.
+          Our virtual tours provide a realistic experience of each property,
+          allowing you to explore every detail at your own pace.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Testimonial 1 -->
-        <div class="bg-white p-8 rounded-lg shadow-md" data-aos="fade-up">
-          <div class="flex items-center mb-4">
-            <div class="text-yellow-400 text-xl mr-2">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Tour 1 -->
+        <div
+          class="tour-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-500 hover:shadow-2xl"
+          data-aos="fade-up"
+        >
+          <div class="tour-iframe-container">
+            <div class="iframe-loading">
+              <i class="fas fa-spinner fa-spin mr-2"></i> Loading tour...
             </div>
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_1?autoplay=0&rel=0"
+              class="tour-iframe"
+              title="Luxury Apartment Virtual Tour - Zigoti Properties"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+              onload="this.parentNode.querySelector('.iframe-loading').style.display = 'none';"
+            ></iframe>
           </div>
-          <p class="text-gray-600 mb-6 italic">
-            "The virtual tour saved me so much time! I was able to narrow down my choices before flying to Uganda. The apartment was exactly as shown in the tour."
-          </p>
-          <div class="flex items-center">
-            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah K." class="w-12 h-12 rounded-full mr-4 object-cover">
-            <div>
-              <h4 class="font-semibold text-gray-800">Sarah K.</h4>
-              <p class="text-gray-500 text-sm">Diaspora Investor</p>
+          <div class="p-8">
+            <div class="flex items-center mb-4">
+              <span
+                class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full"
+                >NEW</span
+              >
+              <span class="ml-3 text-gray-500 text-sm"
+                ><i class="fas fa-map-marker-alt mr-1"></i> Kampala,
+                Uganda</span
+              >
+            </div>
+            <h3 class="text-2xl font-semibold mb-3 text-gray-800">
+              Luxury Waterfront Apartment Tour
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Experience this stunning 3-bedroom apartment with panoramic views
+              of Lake Victoria, featuring modern finishes and premium amenities.
+            </p>
+            <div class="flex justify-between items-center">
+              <div>
+                <span class="text-gray-900 font-bold text-xl">$450,000</span>
+                <span class="text-gray-500 text-sm block"
+                  >3 Beds | 2 Baths | 1800 sqft</span
+                >
+              </div>
+              <a
+                href="property-details.html"
+                class="text-blue-600 hover:text-blue-800 font-medium flex items-center"
+              >
+                Details <i class="fas fa-arrow-right ml-2"></i>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- Testimonial 2 -->
-        <div class="bg-white p-8 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
-          <div class="flex items-center mb-4">
-            <div class="text-yellow-400 text-xl mr-2">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+        <!-- Tour 2 -->
+        <div
+          class="tour-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-500 hover:shadow-2xl"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="tour-iframe-container">
+            <div class="iframe-loading">
+              <i class="fas fa-spinner fa-spin mr-2"></i> Loading tour...
             </div>
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_2?autoplay=0&rel=0"
+              class="tour-iframe"
+              title="Modern Villa Virtual Tour - Zigoti Properties"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+              onload="this.parentNode.querySelector('.iframe-loading').style.display = 'none';"
+            ></iframe>
           </div>
-          <p class="text-gray-600 mb-6 italic">
-            "As an international buyer, the 360° virtual tour gave me confidence in my purchase. Zigoti Properties made the entire process seamless."
-          </p>
-          <div class="flex items-center">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="James M." class="w-12 h-12 rounded-full mr-4 object-cover">
-            <div>
-              <h4 class="font-semibold text-gray-800">James M.</h4>
-              <p class="text-gray-500 text-sm">UK Based Investor</p>
+          <div class="p-8">
+            <div class="flex items-center mb-4">
+              <span
+                class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full"
+                >GATED COMMUNITY</span
+              >
+              <span class="ml-3 text-gray-500 text-sm"
+                ><i class="fas fa-map-marker-alt mr-1"></i> Entebbe,
+                Uganda</span
+              >
+            </div>
+            <h3 class="text-2xl font-semibold mb-3 text-gray-800">
+              Modern Luxury Villa Tour
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Step inside this exquisite 5-bedroom villa featuring smart home
+              technology, private gardens, and a stunning infinity pool.
+            </p>
+            <div class="flex justify-between items-center">
+              <div>
+                <span class="text-gray-900 font-bold text-xl">$1,200,000</span>
+                <span class="text-gray-500 text-sm block"
+                  >5 Beds | 4.5 Baths | 4200 sqft</span
+                >
+              </div>
+              <a
+                href="property-details.html"
+                class="text-blue-600 hover:text-blue-800 font-medium flex items-center"
+              >
+                Details <i class="fas fa-arrow-right ml-2"></i>
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- Testimonial 3 -->
-        <div class="bg-white p-8 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
-          <div class="flex items-center mb-4">
-            <div class="text-yellow-400 text-xl mr-2">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star-half-alt"></i>
+        <!-- Tour 3 -->
+        <div
+          class="tour-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-500 hover:shadow-2xl"
+          data-aos="fade-up"
+        >
+          <div class="tour-iframe-container">
+            <div class="iframe-loading">
+              <i class="fas fa-spinner fa-spin mr-2"></i> Loading tour...
+            </div>
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_3?autoplay=0&rel=0"
+              class="tour-iframe"
+              title="Commercial Space Virtual Tour - Zigoti Properties"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+              onload="this.parentNode.querySelector('.iframe-loading').style.display = 'none';"
+            ></iframe>
+          </div>
+          <div class="p-8">
+            <div class="flex items-center mb-4">
+              <span
+                class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full"
+                >COMMERCIAL</span
+              >
+              <span class="ml-3 text-gray-500 text-sm"
+                ><i class="fas fa-map-marker-alt mr-1"></i> Kampala,
+                Uganda</span
+              >
+            </div>
+            <h3 class="text-2xl font-semibold mb-3 text-gray-800">
+              Premium Office Space Tour
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Explore this state-of-the-art commercial space in the heart of
+              Kampala's business district, perfect for corporate offices or
+              professional services.
+            </p>
+            <div class="flex justify-between items-center">
+              <div>
+                <span class="text-gray-900 font-bold text-xl">$850,000</span>
+                <span class="text-gray-500 text-sm block"
+                  >12 Offices | 3 Conference Rooms | 6500 sqft</span
+                >
+              </div>
+              <a
+                href="property-details.html"
+                class="text-blue-600 hover:text-blue-800 font-medium flex items-center"
+              >
+                Details <i class="fas fa-arrow-right ml-2"></i>
+              </a>
             </div>
           </div>
-          <p class="text-gray-600 mb-6 italic">
-            "The virtual tour helped me visualize the space better than photos ever could. I knew it was the right office for my business before I even visited."
-          </p>
-          <div class="flex items-center">
-            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Grace N." class="w-12 h-12 rounded-full mr-4 object-cover">
-            <div>
-              <h4 class="font-semibold text-gray-800">Grace N.</h4>
-              <p class="text-gray-500 text-sm">Local Entrepreneur</p>
+        </div>
+
+        <!-- Tour 4 -->
+        <div
+          class="tour-card bg-white rounded-xl shadow-xl overflow-hidden transition duration-500 hover:shadow-2xl"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="tour-iframe-container">
+            <div class="iframe-loading">
+              <i class="fas fa-spinner fa-spin mr-2"></i> Loading tour...
+            </div>
+            <iframe
+              src="https://www.youtube.com/embed/VIDEO_ID_4?autoplay=0&rel=0"
+              class="tour-iframe"
+              title="Luxury Apartment Virtual Tour - Zigoti Properties"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+              onload="this.parentNode.querySelector('.iframe-loading').style.display = 'none';"
+            ></iframe>
+          </div>
+          <div class="p-8">
+            <div class="flex items-center mb-4">
+              <span
+                class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full"
+                >INVESTMENT</span
+              >
+              <span class="ml-3 text-gray-500 text-sm"
+                ><i class="fas fa-map-marker-alt mr-1"></i> Mbarara,
+                Uganda</span
+              >
+            </div>
+            <h3 class="text-2xl font-semibold mb-3 text-gray-800">
+              Mixed-Use Development Tour
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Discover this prime investment opportunity featuring retail spaces
+              on the ground floor and luxury apartments above in Uganda's
+              fastest growing city.
+            </p>
+            <div class="flex justify-between items-center">
+              <div>
+                <span class="text-gray-900 font-bold text-xl">$2,500,000</span>
+                <span class="text-gray-500 text-sm block"
+                  >8 Retail | 12 Apartments | 15,000 sqft</span
+                >
+              </div>
+              <a
+                href="property-details.html"
+                class="text-blue-600 hover:text-blue-800 font-medium flex items-center"
+              >
+                Details <i class="fas fa-arrow-right ml-2"></i>
+              </a>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- How It Works Section -->
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-16" data-aos="fade-up">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">How Our Virtual Tours Work</h2>
-        <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-        <p class="text-gray-600 max-w-2xl mx-auto text-lg">
-          Experience our properties from anywhere in the world with our easy-to-use virtual tours.
+      <!-- Call to Action -->
+      <div class="mt-20 text-center" data-aos="fade-up">
+        <h3 class="text-2xl font-bold text-gray-800 mb-6">
+          Want to See More Properties?
+        </h3>
+        <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+          Contact us to schedule an in-person viewing or request a custom
+          virtual tour of any property.
         </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="https://wa.me/256707346556"
+            class="inline-block bg-green-500 text-white font-semibold px-10 py-4 rounded-lg shadow-lg hover:bg-green-600 transition duration-300 transform hover:scale-105"
+          >
+            Chat on WhatsApp <i class="fab fa-whatsapp ml-2"></i>
+          </a>
+          <a
+            href="tel:+256707346556"
+            class="inline-block bg-blue-600 text-white font-semibold px-10 py-4 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 transform hover:scale-105"
+          >
+            Call Us Now <i class="fas fa-phone-alt ml-2"></i>
+          </a>
+        </div>
       </div>
+    </section>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Step 1 -->
-        <div class="text-center p-6" data-aos="fade-up">
-          <div class="bg-blue-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6">
-            <span class="text-blue-600 text-2xl font-bold">1</span>
-          </div>
-          <h3 class="text-xl font-semibold mb-3 text-gray-800">Select a Property</h3>
-          <p class="text-gray-600">
-            Browse our collection of virtual tours and choose a property that interests you.
+    <!-- How It Works Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            How Our Virtual Tours Work
+          </h2>
+          <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+          <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+            Experience our properties from anywhere in the world with our
+            easy-to-use virtual tours.
           </p>
         </div>
 
-        <!-- Step 2 -->
-        <div class="text-center p-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="bg-blue-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6">
-            <span class="text-blue-600 text-2xl font-bold">2</span>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Step 1 -->
+          <div class="text-center p-6" data-aos="fade-up">
+            <div
+              class="bg-blue-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6"
+            >
+              <span class="text-blue-600 text-2xl font-bold">1</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">
+              Select a Property
+            </h3>
+            <p class="text-gray-600">
+              Browse our collection of virtual tours and choose a property that
+              interests you.
+            </p>
           </div>
-          <h3 class="text-xl font-semibold mb-3 text-gray-800">Explore in 360°</h3>
-          <p class="text-gray-600">
-            Navigate through the property just like you would in person - look around, move between rooms.
+
+          <!-- Step 2 -->
+          <div class="text-center p-6" data-aos="fade-up" data-aos-delay="100">
+            <div
+              class="bg-blue-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6"
+            >
+              <span class="text-blue-600 text-2xl font-bold">2</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">
+              Explore in 360°
+            </h3>
+            <p class="text-gray-600">
+              Navigate through the property just like you would in person - look
+              around, move between rooms.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="text-center p-6" data-aos="fade-up" data-aos-delay="200">
+            <div
+              class="bg-blue-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6"
+            >
+              <span class="text-blue-600 text-2xl font-bold">3</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">Contact Us</h3>
+            <p class="text-gray-600">
+              When you're ready, contact us to schedule an in-person viewing or
+              make an offer.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center" data-aos="fade-up">
+          <div
+            class="inline-flex items-center bg-blue-50 px-6 py-3 rounded-full"
+          >
+            <i class="fas fa-info-circle text-blue-600 mr-2"></i>
+            <p class="text-blue-600 font-medium">
+              Tip: Use headphones for the most immersive experience
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 pt-16 pb-8">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <!-- Brand Column -->
+          <div>
+            <div class="mb-6">
+              <h2 class="text-white text-xl font-bold mb-2">
+                Zigoti Properties
+              </h2>
+              <p class="text-gray-400 leading-relaxed">
+                Your trusted partner in real estate solutions across Uganda.
+              </p>
+            </div>
+
+            <div class="flex space-x-4">
+              <a
+                href="https://www.facebook.com/eluthius990/"
+                class="bg-gray-700 hover:bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-105"
+                aria-label="Facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://x.com/zigotiproperty"
+                class="bg-gray-700 hover:bg-blue-400 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-105"
+                aria-label="Twitter"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/zigoti-properties"
+                class="bg-gray-700 hover:bg-blue-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-105"
+                aria-label="LinkedIn"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/zigotiproperties"
+                class="bg-gray-700 hover:bg-pink-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-105"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3
+              class="text-white text-lg font-semibold mb-6 uppercase tracking-wider border-b border-gray-700 pb-2"
+            >
+              Quick Links
+            </h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="agents.html"
+                  class="hover:text-blue-400 transition flex items-center group"
+                >
+                  <i
+                    class="fas fa-chevron-right text-blue-500 text-xs mr-3 group-hover:translate-x-1 transition-transform"
+                  ></i>
+                  Agents
+                </a>
+              </li>
+              <li>
+                <a
+                  href="exploreproperties.html"
+                  class="hover:text-blue-400 transition flex items-center group"
+                >
+                  <i
+                    class="fas fa-chevron-right text-blue-500 text-xs mr-3 group-hover:translate-x-1 transition-transform"
+                  ></i>
+                  Explore Properties
+                </a>
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="hover:text-blue-400 transition flex items-center group"
+                >
+                  <i
+                    class="fas fa-chevron-right text-blue-500 text-xs mr-3 group-hover:translate-x-1 transition-transform"
+                  ></i>
+                  About Us
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h3
+              class="text-white text-lg font-semibold mb-6 uppercase tracking-wider border-b border-gray-700 pb-2"
+            >
+              Contact Us
+            </h3>
+            <address class="not-italic space-y-4">
+              <div class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-500"></i>
+                <div>
+                  <p class="text-gray-400">95H7+CM Zigoti, Uganda</p>
+                  <p class="text-gray-400 text-sm">Mityana Road, Uganda</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-phone-alt mr-3 text-blue-500"></i>
+                <div>
+                  <p class="text-gray-400">+256 707346556</p>
+                  <p class="text-gray-400 text-sm">Office Line</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-envelope mr-3 text-blue-500"></i>
+                <a
+                  href="mailto:zigotiproperties@gmail.com"
+                  class="text-gray-400 hover:text-blue-400 transition"
+                  >zigotiproperties2023@gmail.com</a
+                >
+              </div>
+            </address>
+          </div>
+
+          <!-- Newsletter (Updated with Formspree) -->
+          <div>
+            <h3
+              class="text-white text-lg font-semibold mb-6 uppercase tracking-wider border-b border-gray-700 pb-2"
+            >
+              Newsletter
+            </h3>
+            <p class="text-gray-400 mb-4">
+              Subscribe for the latest property updates.
+            </p>
+            <form
+              id="contactForm"
+              action="https://formspree.io/f/mqapgkop"
+              method="POST"
+              class="flex flex-col space-y-3 newsletter-form"
+            >
+              <!-- Formspree requires these fields -->
+              <input type="text" name="_gotcha" style="display: none" />
+              <!-- Anti-spam -->
+              <input
+                type="hidden"
+                name="_subject"
+                value="New Newsletter Subscriber"
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder="zigotiproperties2023@gmail.com"
+                class="bg-gray-700 border border-gray-600 rounded px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                required
+              />
+              <button
+                type="submit"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition duration-300"
+              >
+                Subscribe
+              </button>
+            </form>
+            <div class="thank-you-message hidden mt-3 text-green-400 text-sm">
+              <i class="fas fa-check-circle mr-1"></i> Thank you for
+              subscribing!
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div
+          class="border-t border-gray-700 mt-12 pt-8 flex flex-col items-center text-center"
+        >
+          <p class="text-gray-500 text-sm">
+            &copy; <span id="current-year"></span> Zigoti Properties Uganda
+            Limited. All rights reserved.
           </p>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="text-center p-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="bg-blue-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-6">
-            <span class="text-blue-600 text-2xl font-bold">3</span>
-          </div>
-          <h3 class="text-xl font-semibold mb-3 text-gray-800">Contact Us</h3>
-          <p class="text-gray-600">
-            When you're ready, contact us to schedule an in-person viewing or make an offer.
-          </p>
-        </div>
-      </div>
-
-      <div class="mt-12 text-center" data-aos="fade-up">
-        <div class="inline-flex items-center bg-blue-50 px-6 py-3 rounded-full">
-          <i class="fas fa-info-circle text-blue-600 mr-2"></i>
-          <p class="text-blue-600 font-medium">Tip: Use headphones for the most immersive experience</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-700 text-gray-300 pt-16 pb-8">
-    <div class="container mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-        <!-- Brand Column -->
-        <div>
-          <div class="mb-6">
-            <img src="images/logos/Zigoti-properties-New-Logo.png" alt="Zigoti Properties Logo" class="h-12">
-            <p class="mt-4 text-gray-400">Zigoti Properties your trusted partner in real estate solutions across Uganda.</p>
-          </div>
-          
-          <div class="flex space-x-4">
-            <a href="https://www.facebook.com/eluthius990/" class="bg-gray-800 hover:bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://x.com/zigotiproperty" class="bg-gray-800 hover:bg-blue-400 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://www.linkedin.com/company/zigoti-properties" class="bg-gray-800 hover:bg-blue-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://www.instagram.com/zigotiproperties" class="bg-gray-800 hover:bg-pink-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300">
-              <i class="fab fa-instagram"></i>
-            </a>
+          <div class="mt-2 flex space-x-4">
+            <a
+              href="#"
+              class="text-gray-500 hover:text-blue-400 text-sm transition"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="text-gray-500 hover:text-blue-400 text-sm transition"
+              >Terms of Service</a
+            >
           </div>
         </div>
-        
-        <!-- Quick Links -->
-        <div>
-          <h3 class="text-white text-lg font-semibold mb-4 uppercase tracking-wider">Quick Links</h3>
-          <ul class="space-y-3">
-            <li><a href="explore-our-services.html" class="hover:text-white transition flex items-center">
-              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> Our Services</a></li>
-            <li><a href="agents.html" class="hover:text-white transition flex items-center">
-              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> Agents</a></li>
-            <li><a href="exploreproperties.html" class="hover:text-white transition flex items-center">
-              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> Explore Properties</a></li>
-            <li><a href="about.html" class="hover:text-white transition flex items-center">
-              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> About Us</a></li>
-          </ul>
-        </div>
-        
-        <!-- Services -->
-        <div>
-          <h3 class="text-white text-lg font-semibold mb-4 uppercase tracking-wider">Our Services</h3>
-          <ul class="space-y-3">
-            <li><a href="land-surveying.html" class="hover:text-white transition flex items-center">
-              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> Land Surveying</a></li>
-            <li><a href="property-management.html" class="hover:text-white transition flex items-center">
-              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> Property Management</a></li>
-            <li><a href="real-estate-consulting.html" class="hover:text-white transition flex items-center">
-              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> Real Estate Consulting</a></li>
-            <li><a href="legal-services.html" class="hover:text-white transition flex items-center">
-              <i class="fas fa-chevron-right text-blue-400 text-xs mr-2"></i> Legal Services</a></li>
-          </ul>
-        </div>
-        
-        <!-- Contact -->
-        <div>
-          <h3 class="text-white text-lg font-semibold mb-4 uppercase tracking-wider">Contact Us</h3>
-          <address class="not-italic space-y-4">
-            <div class="flex items-start">
-              <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-400"></i> 
-              <div>
-                <p class="text-gray-400">95H7+CM Zigoti, Uganda</p>
-                <p class="text-gray-400">Mityana Road, Uganda</p>
-              </div>
-            </div>
-            <div class="flex items-center">
-              <i class="fas fa-phone-alt mr-3 text-blue-400"></i> 
-              <div>
-                <p class="text-gray-400">+256 707346556</p>
-                <p class="text-gray-400 text-sm">Office Line</p>
-              </div>
-            </div>
-            <div class="flex items-center">
-              <i class="fas fa-envelope mr-3 text-blue-400"></i> 
-              <a href="mailto:zigotiproperties@gmail.com" class="text-gray-400 hover:text-white transition">zigotiproperties2023@gmail.com</a>
-            </div>
-            <div class="flex items-center">
-              <i class="fas fa-clock mr-3 text-blue-400"></i> 
-              <div>
-                <p class="text-gray-400">Mon-Fri: 8:00 AM - 5:00 PM</p>
-                <p class="text-gray-400 text-sm">Sat: 9:00 AM - 1:00 PM</p>
-              </div>
-            </div>
-          </address>
-        </div>
       </div>
-      
-      <!-- Copyright -->
-      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col items-center text-center">
-        <p class="text-gray-500 text-sm">&copy; 2023 Zigoti Properties Uganda Limited. All rights reserved.</p> 
-      </div>
-      
-    </div>
-  </footer>
+    </footer>
 
-  <!-- Back to Top Button -->
-  <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-blue-700">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-    </svg>
-  </button>
+    <!-- Back to Top Button -->
+    <button
+      id="back-to-top"
+      class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-blue-700"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 10l7-7m0 0l7 7m-7-7v18"
+        ></path>
+      </svg>
+    </button>
 
-  <!-- Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script src="js/app.js"></script>
-  
-</body>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>

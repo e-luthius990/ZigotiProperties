@@ -250,3 +250,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// Form submission handler with Formspree
+document.querySelector('.newsletter-form')?.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const form = this;
+  const thankYouMessage = document.querySelector('.thank-you-message');
+  
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+    
+    if (response.ok) {
+      form.reset();
+      thankYouMessage.classList.remove('hidden');
+      setTimeout(() => thankYouMessage.classList.add('hidden'), 5000);
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  }
+});
+
+// Auto-update copyright year
+document.getElementById('current-year').textContent = new Date().getFullYear();
