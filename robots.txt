@@ -1,6 +1,3 @@
 User-agent: *
-Disallow: /admin/
-Allow: /properties/
-Allow: /contact/
-
+Allow: / 
 Sitemap: https://www.zigotiproperties.com/sitemap.xml
