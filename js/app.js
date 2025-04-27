@@ -6,6 +6,16 @@
   once: true
 });
 
+// Loading animation
+window.addEventListener("load", function () {
+  const loading = document.getElementById("loading");
+  loading.classList.add("opacity-0");
+  setTimeout(() => {
+    loading.style.display = "none";
+  }, 500);
+});
+
+
 // Back to top button
 const backToTopButton = document.getElementById('back-to-top');
 
@@ -40,6 +50,19 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// Scroll progress indicator
+window.addEventListener("scroll", function () {
+  const scrollProgress = document.getElementById("scroll-progress");
+  const scrollTop =
+    document.documentElement.scrollTop || document.body.scrollTop;
+  const scrollHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  const progress = (scrollTop / scrollHeight) * 100;
+  scrollProgress.style.width = progress + "%";
+});
+
+
 // Mobile menu toggle
 const menuToggle = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
@@ -61,6 +84,24 @@ document.querySelectorAll('#mobile-menu a').forEach(link => {
     menuOpenIcon.classList.remove('hidden');
     menuCloseIcon.classList.add('hidden');
   });
+});
+
+// Intersection Observer for scroll animations
+const sections = document.querySelectorAll(".section-hidden");
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("section-visible");
+        entry.target.classList.remove("section-hidden");
+      }
+    });
+  },
+  { threshold: 0.1 }
+);
+
+sections.forEach((section) => {
+  observer.observe(section);
 });
 
  // FAQ toggle functionality

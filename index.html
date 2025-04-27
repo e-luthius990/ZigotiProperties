@@ -72,11 +72,12 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-    <noscript
-      ><link
+    <noscript>
+      <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    /></noscript>
+      />
+    </noscript>
 
     <!-- just preload the actually used URL -->
     <link rel="preload" as="image" href="images/landfarm-lg.webp" />
@@ -146,41 +147,74 @@
       @keyframes fadeIn {
         from {
           opacity: 0;
+          transform: translateY(20px);
         }
         to {
           opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
         }
       }
 
       .animate-fade-in {
-        animation: fadeIn 1s ease-in-out;
+        animation: fadeIn 1s ease-in-out forwards;
       }
 
-      .property-card:hover {
-        transform: translateY(-5px);
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
       }
 
-      .nav-link {
-        position: relative;
+      /* Loading animation */
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
       }
 
-      .nav-link::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: -4px;
-        left: 0;
-        background-color: #2563eb;
-        transition: width 0.3s ease;
+      /* Section animations */
+      .section-hidden {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease;
       }
 
-      .nav-link:hover::after {
-        width: 100%;
+      .section-visible {
+        opacity: 1;
+        transform: translateY(0);
       }
     </style>
   </head>
   <body class="bg-gray-50 font-sans">
+    <!-- Loading Animation -->
+    <div
+      id="loading"
+      class="fixed inset-0 bg-white flex items-center justify-center z-50 transition-opacity duration-500"
+    >
+      <div
+        class="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"
+      ></div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div
+      id="scroll-progress"
+      class="fixed top-0 left-0 h-1 bg-blue-600 z-40 transition-all duration-100"
+    ></div>
+
     <!-- Navigation -->
     <nav
       class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-300 backdrop-blur-sm bg-white/90"
@@ -200,32 +234,32 @@
         <div class="hidden lg:flex space-x-8">
           <a
             href="index.html"
-            class="nav-link text-gray-800 font-medium hover:text-blue-600"
+            class="nav-link text-gray-800 font-medium hover:text-blue-600 transition-colors duration-300"
             >Home</a
           >
           <a
             href="about.html"
-            class="nav-link text-gray-800 font-medium hover:text-blue-600"
+            class="nav-link text-gray-800 font-medium hover:text-blue-600 transition-colors duration-300"
             >About Us</a
           >
           <a
             href="services.html"
-            class="nav-link text-gray-800 font-medium hover:text-blue-600"
+            class="nav-link text-gray-800 font-medium hover:text-blue-600 transition-colors duration-300"
             >Services</a
           >
           <a
             href="virtual-tour.html"
-            class="nav-link text-gray-800 font-medium hover:text-blue-600"
+            class="nav-link text-gray-800 font-medium hover:text-blue-600 transition-colors duration-300"
             >Virtual Tour</a
           >
           <a
             href="blog.html"
-            class="nav-link text-gray-800 font-medium hover:text-blue-600"
+            class="nav-link text-gray-800 font-medium hover:text-blue-600 transition-colors duration-300"
             >Blog</a
           >
           <a
             href="contact.html"
-            class="nav-link text-gray-800 font-medium hover:text-blue-600"
+            class="nav-link text-gray-800 font-medium hover:text-blue-600 transition-colors duration-300"
             >Contact</a
           >
         </div>
@@ -272,32 +306,32 @@
         <div class="px-6 py-4 space-y-3">
           <a
             href="index.html"
-            class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100 transition-colors"
+            class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100 transition-colors duration-300"
             >Home</a
           >
           <a
             href="about.html"
-            class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100 transition-colors"
+            class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100 transition-colors duration-300"
             >About Us</a
           >
           <a
             href="services.html"
-            class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100 transition-colors"
+            class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100 transition-colors duration-300"
             >Services</a
           >
           <a
             href="virtual-tour.html"
-            class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100 transition-colors"
+            class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100 transition-colors duration-300"
             >Virtual Tour</a
           >
           <a
             href="blog.html"
-            class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100 transition-colors"
+            class="block py-3 text-gray-700 hover:text-blue-600 font-medium border-b border-gray-100 transition-colors duration-300"
             >Blog</a
           >
           <a
             href="contact.html"
-            class="block py-3 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+            class="block py-3 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300"
             >Contact</a
           >
         </div>
@@ -305,7 +339,9 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative bg-black h-[85vh] min-h-[600px] flex items-center">
+    <section
+      class="relative bg-black h-[85vh] min-h-[600px] flex items-center overflow-hidden"
+    >
       <picture>
         <source
           srcset="
@@ -332,29 +368,37 @@
       <!-- Overlay -->
       <div class="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
       <div
-        class="relative z-20 container mx-auto px-6 py-20 text-center text-white animate-fade-in"
+        class="relative z-20 container mx-auto px-6 py-20 text-center text-white"
       >
         <div class="max-w-3xl mx-auto">
           <h1
-            class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
+            class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fade-in animate-duration-1000"
           >
             Welcome to Zigoti Properties
           </h1>
-          <p class="text-xl md:text-2xl text-gray-200 mb-8">
+          <p
+            class="text-xl md:text-2xl text-gray-200 mb-8 animate-fade-in animate-delay-200 animate-duration-1000"
+          >
             Your partner in land that grows in value and purpose.
           </p>
+          <a
+            href="land.html"
+            class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg transform animate-bounce animate-infinite animate-duration-2000 animate-delay-1000"
+          >
+            Explore Properties
+          </a>
         </div>
       </div>
     </section>
 
     <!-- Property Listings Section -->
-    <section id="listings" class="py-16">
+    <section id="listings" class="py-16 section-hidden">
       <div class="container mx-auto px-6">
         <!-- Property Categories -->
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20">
           <!-- Plots -->
           <div
-            class="group relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
+            class="group relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-fade-in-up animate-delay-100"
           >
             <div class="relative h-96 overflow-hidden">
               <img
@@ -362,7 +406,7 @@
                 alt="Luxury residential and commercial properties in Uganda"
                 loading="lazy"
                 decoding="async"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 width="1200"
                 height="800"
               />
@@ -382,7 +426,7 @@
               </p>
               <a
                 href="plots.html"
-                class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors group"
+                class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-800 transition-colors duration-300 group"
               >
                 <span class="group-hover:underline"
                   >Explore Available Plots</span
@@ -406,7 +450,7 @@
 
           <!-- Land -->
           <div
-            class="group relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
+            class="group relative bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-fade-in-up animate-delay-200"
           >
             <div class="relative h-96 overflow-hidden">
               <img
@@ -414,7 +458,7 @@
                 alt="Prime land and plots for sale in Uganda"
                 loading="lazy"
                 decoding="async"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 width="1200"
                 height="800"
               />
@@ -434,7 +478,7 @@
               </p>
               <a
                 href="land.html"
-                class="inline-flex items-center text-green-600 font-semibold hover:text-green-800 transition-colors group"
+                class="inline-flex items-center text-green-600 font-semibold hover:text-green-800 transition-colors duration-300 group"
               >
                 <span class="group-hover:underline"
                   >Explore Available Land</span
@@ -474,7 +518,7 @@
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Property 1 -->
             <div
-              class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-100"
+              class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-100 transform hover:-translate-y-2 animate-fade-in-up animate-delay-100"
             >
               <div class="relative h-72 overflow-hidden">
                 <img
@@ -500,7 +544,7 @@
                 </div>
                 <div class="absolute top-4 right-4">
                   <button
-                    class="p-2 bg-white/90 rounded-full text-gray-800 hover:bg-white transition-colors"
+                    class="p-2 bg-white/90 rounded-full text-gray-800 hover:bg-white transition-colors duration-300"
                     aria-label="Save property"
                   >
                     <svg
@@ -529,7 +573,7 @@
               </div>
               <div class="p-6">
                 <h3
-                  class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors"
+                  class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300"
                 >
                   8 ACRES PRIME LAND FOR SALE IN GAYAZA-BUSIIKA
                 </h3>
@@ -549,7 +593,7 @@
 
             <!-- Property 2 -->
             <div
-              class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-100"
+              class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-100 transform hover:-translate-y-2 animate-fade-in-up animate-delay-200"
             >
               <div class="relative h-72 overflow-hidden">
                 <img
@@ -578,7 +622,7 @@
               </div>
               <div class="p-6">
                 <h3
-                  class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors"
+                  class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300"
                 >
                   30 Acres of Prime Fertile Land for Sale
                 </h3>
@@ -600,7 +644,7 @@
 
             <!-- Property 3 -->
             <div
-              class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-100"
+              class="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-100 transform hover:-translate-y-2 animate-fade-in-up animate-delay-300"
             >
               <div class="relative h-72 overflow-hidden">
                 <img
@@ -627,7 +671,7 @@
               </div>
               <div class="p-6">
                 <h3
-                  class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors"
+                  class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300"
                 >
                   Fully titled Private Mailo Land
                 </h3>
@@ -635,8 +679,8 @@
                   class="flex justify-between items-center pt-4 border-t border-gray-100"
                 >
                   <span class="text-xl font-bold text-blue-600"
-                    >UGX 350 Million
-                  </span>
+                    >UGX 350 Million</span
+                  >
                   <a
                     href="/property-details/kyanja-plot.html"
                     class="text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-all duration-300 hover:shadow-md"
@@ -652,17 +696,17 @@
     </section>
 
     <!-- About Us Section -->
-    <section class="py-16 bg-white">
+    <section class="py-16 bg-white section-hidden">
       <div class="container mx-auto px-6">
         <div class="flex flex-col lg:flex-row items-center gap-12">
-          <div class="lg:w-1/2">
+          <div class="lg:w-1/2 animate-slide-left">
             <div
-              class="relative rounded-xl overflow-hidden shadow-xl h-96 w-full"
+              class="relative rounded-xl overflow-hidden shadow-xl h-96 w-full group"
             >
               <img
                 src="images/Who-we-are.webp"
                 alt="Zigoti Properties team"
-                class="w-full h-full object-cover"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"
                 decoding="async"
                 width="800"
@@ -673,7 +717,7 @@
               ></div>
             </div>
           </div>
-          <div class="lg:w-1/2">
+          <div class="lg:w-1/2 animate-slide-right">
             <span class="text-blue-600 font-semibold mb-3 inline-block"
               >WHO WE ARE</span
             >
@@ -690,7 +734,9 @@
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div class="flex items-start">
-                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                <div
+                  class="bg-blue-100 p-3 rounded-full mr-4 transition-all duration-300 hover:rotate-6"
+                >
                   <svg
                     class="w-6 h-6 text-blue-600"
                     fill="none"
@@ -716,7 +762,9 @@
                 </div>
               </div>
               <div class="flex items-start">
-                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                <div
+                  class="bg-blue-100 p-3 rounded-full mr-4 transition-all duration-300 hover:rotate-6"
+                >
                   <svg
                     class="w-6 h-6 text-blue-600"
                     fill="none"
@@ -742,7 +790,9 @@
                 </div>
               </div>
               <div class="flex items-start">
-                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                <div
+                  class="bg-blue-100 p-3 rounded-full mr-4 transition-all duration-300 hover:rotate-6"
+                >
                   <svg
                     class="w-6 h-6 text-blue-600"
                     fill="none"
@@ -768,7 +818,9 @@
                 </div>
               </div>
               <div class="flex items-start">
-                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                <div
+                  class="bg-blue-100 p-3 rounded-full mr-4 transition-all duration-300 hover:rotate-6"
+                >
                   <svg
                     class="w-6 h-6 text-blue-600"
                     fill="none"
@@ -795,7 +847,7 @@
             </div>
             <a
               href="about.html"
-              class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-300"
+              class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               Learn More About Us
               <svg
@@ -818,7 +870,7 @@
     </section>
 
     <!-- Services Section -->
-    <section class="py-16 bg-gray-50">
+    <section class="py-16 bg-gray-50 section-hidden">
       <div class="container mx-auto px-6">
         <div class="text-center mb-16">
           <span class="text-blue-600 font-semibold mb-3 inline-block"
@@ -837,10 +889,10 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <!-- Property Sales & Purchases -->
           <div
-            class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-blue-100"
+            class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 hover:border-blue-100 transform hover:-translate-y-2"
           >
             <div
-              class="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors"
+              class="bg-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 group-hover:rotate-6"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -864,7 +916,7 @@
               </svg>
             </div>
             <h3
-              class="text-xl font-semibold mb-3 group-hover:text-blue-600 transition-colors"
+              class="text-xl font-semibold mb-3 group-hover:text-blue-600 transition-colors duration-300"
             >
               Property Sales & Purchases
             </h3>
@@ -876,10 +928,10 @@
 
           <!-- Surveying -->
           <div
-            class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-blue-100"
+            class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 hover:border-blue-100 transform hover:-translate-y-2"
           >
             <div
-              class="bg-teal-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-teal-600 group-hover:text-white transition-colors"
+              class="bg-teal-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-teal-600 group-hover:text-white transition-all duration-300 group-hover:rotate-6"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -897,7 +949,7 @@
               </svg>
             </div>
             <h3
-              class="text-xl font-semibold mb-3 group-hover:text-teal-600 transition-colors"
+              class="text-xl font-semibold mb-3 group-hover:text-teal-600 transition-colors duration-300"
             >
               Surveying
             </h3>
@@ -909,10 +961,10 @@
 
           <!-- Property Management -->
           <div
-            class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-blue-100"
+            class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 hover:border-blue-100 transform hover:-translate-y-2"
           >
             <div
-              class="bg-yellow-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-yellow-600 group-hover:text-white transition-colors"
+              class="bg-yellow-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-yellow-600 group-hover:text-white transition-all duration-300 group-hover:rotate-6"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -930,7 +982,7 @@
               </svg>
             </div>
             <h3
-              class="text-xl font-semibold mb-3 group-hover:text-yellow-600 transition-colors"
+              class="text-xl font-semibold mb-3 group-hover:text-yellow-600 transition-colors duration-300"
             >
               Property Management
             </h3>
@@ -942,10 +994,10 @@
 
           <!-- Real Estate Consultancy -->
           <div
-            class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-blue-100"
+            class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 hover:border-blue-100 transform hover:-translate-y-2"
           >
             <div
-              class="bg-indigo-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-colors"
+              class="bg-indigo-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-all duration-300 group-hover:rotate-6"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -963,7 +1015,7 @@
               </svg>
             </div>
             <h3
-              class="text-xl font-semibold mb-3 group-hover:text-indigo-600 transition-colors"
+              class="text-xl font-semibold mb-3 group-hover:text-indigo-600 transition-colors duration-300"
             >
               Real Estate Consultancy
             </h3>
@@ -977,7 +1029,7 @@
         <div class="text-center">
           <a
             href="services.html"
-            class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:from-blue-700 hover:to-blue-800"
+            class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:from-blue-700 hover:to-blue-800 hover:scale-105"
           >
             View All Services
             <svg
@@ -1013,28 +1065,28 @@
             <div class="flex space-x-4">
               <a
                 href="https://www.facebook.com/eluthius990/"
-                class="bg-gray-700 hover:bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-105"
+                class="bg-gray-700 hover:bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:rotate-12"
                 aria-label="Facebook"
               >
                 <i class="fab fa-facebook-f"></i>
               </a>
               <a
                 href="https://x.com/zigotiproperty"
-                class="bg-gray-700 hover:bg-blue-400 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-105"
+                class="bg-gray-700 hover:bg-blue-400 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:rotate-12"
                 aria-label="Twitter"
               >
                 <i class="fab fa-twitter"></i>
               </a>
               <a
                 href="https://www.linkedin.com/company/zigoti-properties"
-                class="bg-gray-700 hover:bg-blue-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-105"
+                class="bg-gray-700 hover:bg-blue-700 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:rotate-12"
                 aria-label="LinkedIn"
               >
                 <i class="fab fa-linkedin-in"></i>
               </a>
               <a
                 href="https://www.instagram.com/zigotiproperties"
-                class="bg-gray-700 hover:bg-pink-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-105"
+                class="bg-gray-700 hover:bg-pink-600 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:rotate-12"
                 aria-label="Instagram"
               >
                 <i class="fab fa-instagram"></i>
@@ -1053,10 +1105,10 @@
               <li>
                 <a
                   href="agents.html"
-                  class="hover:text-blue-400 transition flex items-center group"
+                  class="hover:text-blue-400 transition flex items-center group duration-300"
                 >
                   <i
-                    class="fas fa-chevron-right text-blue-500 text-xs mr-3 group-hover:translate-x-1 transition-transform"
+                    class="fas fa-chevron-right text-blue-500 text-xs mr-3 group-hover:translate-x-1 transition-transform duration-300"
                   ></i>
                   Agents
                 </a>
@@ -1064,10 +1116,10 @@
               <li>
                 <a
                   href="about.html"
-                  class="hover:text-blue-400 transition flex items-center group"
+                  class="hover:text-blue-400 transition flex items-center group duration-300"
                 >
                   <i
-                    class="fas fa-chevron-right text-blue-500 text-xs mr-3 group-hover:translate-x-1 transition-transform"
+                    class="fas fa-chevron-right text-blue-500 text-xs mr-3 group-hover:translate-x-1 transition-transform duration-300"
                   ></i>
                   About Us
                 </a>
@@ -1075,10 +1127,10 @@
               <li>
                 <a
                   href="blog.html"
-                  class="hover:text-blue-400 transition flex items-center group"
+                  class="hover:text-blue-400 transition flex items-center group duration-300"
                 >
                   <i
-                    class="fas fa-chevron-right text-blue-500 text-xs mr-3 group-hover:translate-x-1 transition-transform"
+                    class="fas fa-chevron-right text-blue-500 text-xs mr-3 group-hover:translate-x-1 transition-transform duration-300"
                   ></i>
                   Blog
                 </a>
@@ -1086,10 +1138,10 @@
               <li>
                 <a
                   href="contact.html"
-                  class="hover:text-blue-400 transition flex items-center group"
+                  class="hover:text-blue-400 transition flex items-center group duration-300"
                 >
                   <i
-                    class="fas fa-chevron-right text-blue-500 text-xs mr-3 group-hover:translate-x-1 transition-transform"
+                    class="fas fa-chevron-right text-blue-500 text-xs mr-3 group-hover:translate-x-1 transition-transform duration-300"
                   ></i>
                   Contact
                 </a>
@@ -1123,7 +1175,7 @@
                 <i class="fas fa-envelope mr-3 text-blue-500"></i>
                 <a
                   href="mailto:zigotiproperties@gmail.com"
-                  class="text-gray-400 hover:text-blue-400 transition"
+                  class="text-gray-400 hover:text-blue-400 transition duration-300"
                 >
                   zigotiproperties2023@gmail.com
                 </a>
@@ -1165,12 +1217,12 @@
                 type="email"
                 name="email"
                 placeholder="Your email address"
-                class="bg-gray-700 border border-gray-600 rounded px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="bg-gray-700 border border-gray-600 rounded px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
                 required
               />
               <button
                 type="submit"
-                class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded transition duration-300"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded transition-all duration-300 hover:scale-105"
               >
                 Subscribe
               </button>
@@ -1197,7 +1249,7 @@
     <!-- Back to Top Button -->
     <button
       id="back-to-top"
-      class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-blue-700"
+      class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-blue-700 hover:scale-110"
       aria-label="Back to top"
     >
       <svg
@@ -1218,6 +1270,7 @@
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
     <script src="js/app.js"></script>
   </body>
 </html>
