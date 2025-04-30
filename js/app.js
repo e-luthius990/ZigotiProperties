@@ -335,3 +335,40 @@ tailwind.config = {
     }
   }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  const whatsappFloat = document.querySelector('.whatsapp-float');
+  
+  // Add animation on scroll
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 100) {
+      whatsappFloat.style.transform = 'translateY(0)';
+      whatsappFloat.style.opacity = '1';
+    } else {
+      whatsappFloat.style.transform = 'translateY(100px)';
+      whatsappFloat.style.opacity = '0';
+    }
+  });
+  
+  // Initialize position
+  whatsappFloat.style.transform = 'translateY(100px)';
+  whatsappFloat.style.opacity = '0';
+  setTimeout(() => {
+    whatsappFloat.style.transition = 'transform 0.4s ease, opacity 0.4s ease';
+    whatsappFloat.style.transform = 'translateY(0)';
+    whatsappFloat.style.opacity = '1';
+  }, 1000);
+});
+
+// Gallery image switcher
+function changeMainImage(src, element) {
+  document.getElementById("main-image").src = src;
+
+  // Remove active class from all thumbnails
+  document.querySelectorAll(".gallery-thumbnail").forEach((thumb) => {
+    thumb.classList.remove("active");
+  });
+
+  // Add active class to clicked thumbnail
+  element.classList.add("active");
+}

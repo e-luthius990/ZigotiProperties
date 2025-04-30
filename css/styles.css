@@ -43,3 +43,60 @@ body {
 .social-icon:hover {
   transform: scale(1.2);
 }
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  left: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  transition: all 0.4s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #128C7E;
+  transform: scale(1.1);
+}
+
+.whatsapp-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+}
+
+.whatsapp-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-text {
+  display: none;
+  font-size: 14px;
+  margin-left: 5px;
+  font-family: Arial, sans-serif;
+}
+
+@media (min-width: 768px) {
+  .whatsapp-float {
+    width: auto;
+    height: auto;
+    padding: 10px 15px;
+    border-radius: 30px;
+  }
+  
+  .whatsapp-text {
+    display: inline;
+  }
+}
